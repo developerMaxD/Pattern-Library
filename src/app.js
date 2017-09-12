@@ -2,12 +2,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ComponentsIndex from './pages/components-index.jsx';
+import IndexPage from './pages/index-page.jsx';
 
 // Import app's main styles table
-//import './app.scss';
+import './app.scss';
 
 ReactDOM.render(
-    <ComponentsIndex />,
+    <IndexPage />,
     document.getElementById('root')
 );
