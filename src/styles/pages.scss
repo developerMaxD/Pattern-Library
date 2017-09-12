@@ -45,33 +45,6 @@
 // -------------------- index-page <end> --------------------
 
 // -------------------- style-guideline <start> --------------------
-// .title-base {
-//     position: absolute;
-//     z-index: 10;
-//     background-color: white;
-//     width: 100%;
-//     font-family: "Helvetica Neue", Gotham, sans-serif;
-//     text-align: left;
-// }
-
-// .title-level-01 {
-//     left: 5px;
-//     height: 30px;
-//     font-size: 20px;
-// }
-
-// .title-level-02 {
-//     left: 15px;
-//     height: 25px;
-//     font-size: 18px;
-// }
-
-// .title-level-03 {
-//     left: 30px;
-//     height: 20px;
-//     font-size: 16px;
-// }
-
 .title-level-01 {
     position: absolute;
     left: 5px;
@@ -92,116 +65,118 @@
             left: 10px;
             height: 20px;
             font-size: 16px;
+            > .title-level-04 {
+                position: relative;
+                left: 10px;
+                height: 20px;
+                font-size: 14px;
+                > .title-level-05 {
+                    position: relative;
+                    left: 10px;
+                    height: 16px;
+                    font-size: 14px;
+                }
+            }
         }
+    }
+}
 
+.title-guideline {
+    top: 60px;
+    > .title-base-colors {
+        top: 10px;
         > .title-polychrome {
             top: 10px;
-
             > .content-red-light {
                 color: white;
                 background-color: $color-red-light;
                 top: 20px;
                 left: 40px;
             }
-            
             > .content-red-base {
                 color: white;
                 background-color: $color-red-base;
                 top: 20px;
                 left: 140px;
             }
-            
             > .content-orange-light {
                 color: white;
                 background-color: $color-orange-light;
                 top: 20px;
                 left: 260px;
             }
-            
             > .content-orange-base {
                 color: white;
                 background-color: $color-orange-base;
                 top: 20px;
                 left: 360px;
             }
-            
             > .content-green-light {
                 color: white;
                 background-color: $color-green-light;
                 top: 20px;
                 left: 480px;
             }
-            
             > .content-green-base {
                 color: white;
                 background-color: $color-green-base;
                 top: 20px;
                 left: 580px;
             }
-            
             > .content-aqua-light {
                 color: white;
                 background-color: $color-aqua-light;
                 top: 20px;
                 left: 700px;
             }
-            
             > .content-aqua-base {
                 color: white;
                 background-color: $color-aqua-base;
                 top: 20px;
                 left: 800px;
             }
-            
             > .content-blue-light {
                 color: white;
                 background-color: $color-blue-light;
                 top: 90px;
                 left: 40px;
             }
-            
             > .content-blue-base {
                 color: white;
                 background-color: $color-blue-base;
                 top: 90px;
                 left: 140px;
             }
-            
             > .content-sky-light {
                 color: white;
                 background-color: $color-sky-light;
                 top: 90px;
                 left: 260px;
             }
-            
             > .content-sky-base {
                 color: white;
                 background-color: $color-sky-base;
                 top: 90px;
                 left: 360px;
             }
-            
             > .content-violet-light {
                 color: white;
                 background-color: $color-violet-light;
                 top: 90px;
                 left: 480px;
             }
-            
             > .content-violet-base {
                 color: white;
                 background-color: $color-violet-base;
                 top: 90px;
                 left: 580px;
             }
-            
             > .content-pink-light {
                 color: white;
                 background-color: $color-pink-light;
                 top: 90px;
                 left: 700px;
             }
-            
             > .content-pink-base {
                 color: white;
                 background-color: $color-pink-base;
@@ -211,70 +186,60 @@
         }
         > .title-grayscale {
             top: 140px;
-
             > .content-whitesmoke {
                 color: $color-gray-level-7;
                 background-color: $color-whitesmoke;
                 top: 20px;
                 left: 40px;
             }
-			
             > .content-gray-level-0 {
                 color: $color-gray-level-6;
                 background-color: $color-gray-level-0;
                 top: 20px;
                 left: 130px;
             }
-			
 			> .content-gray-level-1 {
                 color: $color-gray-level-6;
                 background-color: $color-gray-level-1;
                 top: 20px;
                 left: 220px;
             }
-			
 			> .content-gray-level-2 {
                 color: $color-gray-level-5;
                 background-color: $color-gray-level-2;
                 top: 20px;
                 left: 310px;
             }
-			
 			> .content-gray-level-3 {
                 color: $color-gray-level-5;
                 background-color: $color-gray-level-3;
                 top: 20px;
                 left: 400px;
             }
-			
 			> .content-gray-level-4 {
                 color: $color-gray-level-1;
                 background-color: $color-gray-level-4;
                 top: 20px;
                 left: 490px;
             }
-			
 			> .content-gray-level-5 {
                 color: $color-gray-level-0;
                 background-color: $color-gray-level-5;
                 top: 20px;
                 left: 580px;
             }
-			
 			> .content-gray-level-6 {
                 color: $color-gray-level-0;
                 background-color: $color-gray-level-6;
                 top: 20px;
                 left: 670px;
             }
-			
 			> .content-gray-level-7 {
                 color: $color-whitesmoke;
                 background-color: $color-gray-level-7;
                 top: 20px;
                 left: 760px;
             }
-			
 			> .content-dimgray {
                 color: $color-whitesmoke;
                 background-color: $color-dimgray;
@@ -283,14 +248,121 @@
             }
         }
     }
-
-    > .title-base-colors {
-        top: 10px;
+    > .title-animation-setting {
+        top: 250px;
+        > .animation-example {
+            color: white;
+            background-color: $color-sky-base;
+            top: 30px;
+            left: 40px;
+            font-size: 16px;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            width: 875px;
+        }
+        > .animation-example:hover {
+            background-color: $color-orange-base;
+        }
+    }
+    > .title-components-style {
+        top: 320px;
+        > .title-component-base {
+            top: 0px;
+        }
+        > .title-basic-components {
+            top: 60px;
+            > .title-display-components {
+                top: 5px;
+                > .title-components-label {
+                    top: 5px;
+                }
+                > .title-components-image {
+                    top: 105px;
+                }
+                > .title-components-list {
+                    top: 205px;
+                }
+                > .title-components-tree-list {
+                    top: 305px;
+                }
+                > .title-components-progress {
+                    top: 405px;
+                }
+            }
+            > .title-input-components {
+                top: 600px;
+                > .title-components-editor {
+                    top: 5px;
+                }
+                > .title-components-search-editor {
+                    top: 105px;
+                }
+                > .title-components-rating-editor {
+                    top: 205px;
+                }
+            }
+            > .title-button-components {
+                top: 1000px;
+                > .title-components-standard-button {
+                    top: 5px;
+                }
+                > .title-components-image-button {
+                    top: 105px;
+                }
+                > .title-components-switch-button {
+                    top: 205px;
+                }
+            }
+            > .title-selector-components {
+                top: 1400px;
+                > .title-components-combo-selector {
+                    top: 5px;
+                }
+                > .title-components-radio-selector {
+                    top: 105px;
+                }
+                > .title-components-checkbox-selector {
+                    top: 205px;
+                }
+            }
+            > .title-dialog-components {
+                top: 1800px;
+                > .title-components-standard-dialog {
+                    top: 5px;
+                }
+                > .title-components-feature-dialog {
+                    top: 105px;
+                }
+                > .title-components-toaster {
+                    top: 205px;
+                }
+            }
+            > .title-picker-components {
+                top: 2200px;
+                > .title-components-date-picker {
+                    top: 5px;
+                }
+                > .title-components-time-picker {
+                    top: 105px;
+                }
+            }
+            > .title-subpage-components {
+                top: 2400px;
+                > .title-components-pagination {
+                    top: 5px;
+                }
+            }
+        }
     }
 }
 
-.title-guideline {
-    top: 60px;
+.content-block-single {
+    position: absolute;
+    z-index: 20;
+    font-family: "Helvetica Neue", Gotham, sans-serif;
+    text-align: center;
+    border-radius: 8px;
 }
 
 .content-block-left {
@@ -337,7 +409,17 @@
     line-height: 50px;
     width: 90px;
 }
-
+.temp {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    height: 40px;
+    width: 80px;
+    outline: none;
+    border: 2px solid $color-aqua-base;
+    border-radius: 6px;
+    box-shadow: 0 0 10px $color-sky-base;
+}
 // -------------------- style-guideline <end> --------------------
 
 // -------------------- components-list <start> --------------------

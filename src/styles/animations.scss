@@ -1,0 +1,28 @@
+.animation-base {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.animation-trans-backcolor {
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.animation-smooth {
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+}
+
+.animation-bang-up {
+    -webkit-animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.animation-bang-down {
+    -webkit-animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
+    animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
+}
