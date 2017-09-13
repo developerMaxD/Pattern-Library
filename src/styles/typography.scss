@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+%typography-font-base {
+    font-family: "Open Sans", sans-serif;
+}
+
+%typography-bold-normal {
+    @extend %typography-font-base;
+    font-weight: $bold-font-weight;
+    font-style: normal;
+}
+
+%typography-semi-bold-normal {
+    @extend %typography-font-base;
+    font-weight: $semi-bold-font-weight;
+    font-style: normal;
+}
+
+%typography-regular-normal {
+    @extend %typography-font-base;
+    font-weight: $regular-font-weight;
+    font-style: normal;
+}
+
+%typography-light-normal {
+    @extend %typography-font-base;
+    font-weight: $light-font-weight;
+    font-style: normal;
+}
+
+%typography-light-italic {
+    @extend %typography-font-base;
+    font-weight: $light-font-weight;
+    font-style: italic;
+}
+
+.main-title {
+    @extend %typography-bold-normal;
+    font-size: 32px;
+}
+
+.sub-title {
+    @extend %typography-bold-normal;
+    font-size: 28px;
+}
+
+.page-heading {
+    @extend %typography-bold-normal;
+    font-size: 26px;
+}
+
+.subpage-heading {
+    @extend %typography-bold-normal;
+    font-size: 24px;
+}
+
+.main-section {
+    @extend %typography-semi-bold-normal;
+    font-size: 24px;
+}
+
+.sub-section {
+    @extend %typography-semi-bold-normal;
+    font-size: 22px;
+}
+
+.regular-section {
+    @extend %typography-regular-normal;
+    font-size: 20px;
+}
+
+.light-section {
+    @extend %typography-regular-normal;
+    font-size: 18px;
+}
+
+.little-section {
+    @extend %typography-light-normal;
+    font-size: 16px;
+}
+
+.main-content {
+    @extend %typography-light-normal;
+    font-size: 14px;
+}
+
+.main-content-italic {
+    @extend %typography-light-italic;
+    font-size: 14px;
+}
+
+.light-content {
+    @extend %typography-light-normal;
+    font-size: 12px;
+}
+
+.light-content-italic {
+    @extend %typography-light-italic;
+    font-size: 12px;
+}
+
+.tip-content {
+    @extend %typography-light-normal;
+    font-size: 11px;
+}
+
+.tip-content-italic {
+    @extend %typography-light-italic;
+    font-size: 11px;
+}

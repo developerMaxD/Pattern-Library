@@ -7,8 +7,6 @@
     line-height: 50px;
     padding-left: 10px;
     width: 100%;
-    font-family: "Helvetica Neue", Gotham, sans-serif;
-    font-size: 22px;
     text-align: left;
     color: $color-whitesmoke;
     background-color: $color-sky-base;
@@ -30,15 +28,13 @@
     }
     > .index-page-navigater-styles {
         position: absolute;
-        left: 600px;
+        left: 630px;
         top: 6px;
-        font-size: 14px;
     }
     > .index-page-navigater-components {
         position: absolute;
-        left: 740px;
+        left: 770px;
         top: 6px;
-        font-size: 14px;
     }
 }
 
@@ -51,30 +47,24 @@
     z-index: 10;
     background-color: white;
     width: 100%;
-    font-family: "Helvetica Neue", Gotham, sans-serif;
-    font-size: 20px;
     text-align: left;
     height: 30px;
     > .title-level-02 {
         position: relative;
         left: 10px;
         height: 25px;
-        font-size: 18px;
         > .title-level-03 {
             position: relative;
             left: 10px;
             height: 20px;
-            font-size: 16px;
             > .title-level-04 {
                 position: relative;
                 left: 10px;
                 height: 20px;
-                font-size: 14px;
                 > .title-level-05 {
                     position: relative;
                     left: 10px;
                     height: 16px;
-                    font-size: 14px;
                 }
             }
         }
@@ -90,49 +80,49 @@
             > .content-red-light {
                 color: white;
                 background-color: $color-red-light;
-                top: 20px;
+                top: 25px;
                 left: 40px;
             }
             > .content-red-base {
                 color: white;
                 background-color: $color-red-base;
-                top: 20px;
+                top: 25px;
                 left: 140px;
             }
             > .content-orange-light {
                 color: white;
                 background-color: $color-orange-light;
-                top: 20px;
+                top: 25px;
                 left: 260px;
             }
             > .content-orange-base {
                 color: white;
                 background-color: $color-orange-base;
-                top: 20px;
+                top: 25px;
                 left: 360px;
             }
             > .content-green-light {
                 color: white;
                 background-color: $color-green-light;
-                top: 20px;
+                top: 25px;
                 left: 480px;
             }
             > .content-green-base {
                 color: white;
                 background-color: $color-green-base;
-                top: 20px;
+                top: 25px;
                 left: 580px;
             }
             > .content-aqua-light {
                 color: white;
                 background-color: $color-aqua-light;
-                top: 20px;
+                top: 25px;
                 left: 700px;
             }
             > .content-aqua-base {
                 color: white;
                 background-color: $color-aqua-base;
-                top: 20px;
+                top: 25px;
                 left: 800px;
             }
             > .content-blue-light {
@@ -189,73 +179,85 @@
             > .content-whitesmoke {
                 color: $color-gray-level-7;
                 background-color: $color-whitesmoke;
-                top: 20px;
+                top: 25px;
                 left: 40px;
             }
             > .content-gray-level-0 {
                 color: $color-gray-level-6;
                 background-color: $color-gray-level-0;
-                top: 20px;
+                top: 25px;
                 left: 130px;
             }
 			> .content-gray-level-1 {
                 color: $color-gray-level-6;
                 background-color: $color-gray-level-1;
-                top: 20px;
+                top: 25px;
                 left: 220px;
             }
 			> .content-gray-level-2 {
                 color: $color-gray-level-5;
                 background-color: $color-gray-level-2;
-                top: 20px;
+                top: 25px;
                 left: 310px;
             }
 			> .content-gray-level-3 {
                 color: $color-gray-level-5;
                 background-color: $color-gray-level-3;
-                top: 20px;
+                top: 25px;
                 left: 400px;
             }
 			> .content-gray-level-4 {
                 color: $color-gray-level-1;
                 background-color: $color-gray-level-4;
-                top: 20px;
+                top: 25px;
                 left: 490px;
             }
 			> .content-gray-level-5 {
                 color: $color-gray-level-0;
                 background-color: $color-gray-level-5;
-                top: 20px;
+                top: 25px;
                 left: 580px;
             }
 			> .content-gray-level-6 {
                 color: $color-gray-level-0;
                 background-color: $color-gray-level-6;
-                top: 20px;
+                top: 25px;
                 left: 670px;
             }
 			> .content-gray-level-7 {
                 color: $color-whitesmoke;
                 background-color: $color-gray-level-7;
-                top: 20px;
+                top: 25px;
                 left: 760px;
             }
 			> .content-dimgray {
                 color: $color-whitesmoke;
                 background-color: $color-dimgray;
-                top: 20px;
+                top: 25px;
                 left: 850px;
             }
         }
     }
-    > .title-animation-setting {
+    > .title-typography {
         top: 250px;
+        > .typography-item {
+            position: absolute;
+            left: 0px;
+            padding: 2px 0px 0px 40px;
+        }
+        > .typography-description {
+            position: relative;
+            top: 0px;
+            left: 255px;
+        }
+    }
+    > .title-animation-setting {
+        top: 670px;
         > .animation-example {
             color: white;
             background-color: $color-sky-base;
             top: 30px;
             left: 40px;
-            font-size: 16px;
             text-align: center;
             height: 50px;
             line-height: 50px;
@@ -266,9 +268,36 @@
         }
     }
     > .title-components-style {
-        top: 320px;
+        top: 740px;
         > .title-component-base {
             top: 0px;
+            > .border-example-normal {
+                position: absolute;
+                top: 40px;
+                left: 40px;
+                height: 25px;
+                line-height: 25px;
+                width: 120px;
+                text-align: center;
+            }
+            > .border-example-onfocus {
+                position: absolute;
+                top: 40px;
+                left: 180px;
+                height: 25px;
+                line-height: 25px;
+                width: 120px;
+                text-align: center;
+            }
+            > .border-example-onerror {
+                position: absolute;
+                top: 40px;
+                left: 320px;
+                height: 25px;
+                line-height: 25px;
+                width: 120px;
+                text-align: center;
+            }
         }
         > .title-basic-components {
             top: 60px;
@@ -276,6 +305,16 @@
                 top: 5px;
                 > .title-components-label {
                     top: 5px;
+                    > .label-example-normal {
+                        position: absolute;
+                        top: 25px;
+                        left: 40px;
+                    }
+                    > .label-example-shadow {
+                        position: absolute;
+                        top: 85px;
+                        left: 40px;
+                    }
                 }
                 > .title-components-image {
                     top: 105px;
@@ -360,7 +399,6 @@
 .content-block-single {
     position: absolute;
     z-index: 20;
-    font-family: "Helvetica Neue", Gotham, sans-serif;
     text-align: center;
     border-radius: 8px;
 }
@@ -368,7 +406,6 @@
 .content-block-left {
     position: absolute;
     z-index: 20;
-    font-family: "Helvetica Neue", Gotham, sans-serif;
     text-align: center;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -377,7 +414,6 @@
 .content-block-middle {
     position: absolute;
     z-index: 20;
-    font-family: "Helvetica Neue", Gotham, sans-serif;
     text-align: center;
     border-left: 1px black;
     border-right: 1px black;
@@ -386,15 +422,12 @@
 .content-block-right {
     position: absolute;
     z-index: 20;
-    font-family: "Helvetica Neue", Gotham, sans-serif;
     text-align: center;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
 .content-colors {
-    font-family: "Helvetica Neue", Gotham, sans-serif;
-    font-size: 14px;
     text-align: center;
     height: 50px;
     line-height: 50px;
@@ -402,23 +435,10 @@
 }
 
 .content-grays {
-    font-family: "Helvetica Neue", Gotham, sans-serif;
-    font-size: 14px;
     text-align: center;
     height: 50px;
     line-height: 50px;
     width: 90px;
-}
-.temp {
-    position: absolute;
-    top: 30px;
-    left: 40px;
-    height: 40px;
-    width: 80px;
-    outline: none;
-    border: 2px solid $color-aqua-base;
-    border-radius: 6px;
-    box-shadow: 0 0 10px $color-sky-base;
 }
 // -------------------- style-guideline <end> --------------------
 

@@ -1,5 +1,9 @@
 @import './styles/constants';
+@import './styles/typography';
+@import './styles/components-base';
 @import './styles/animations';
+
+@import './styles/basic-components/index';
 
 // -------------------- CSS Style for development --------------------
 @import './styles/pages'

@@ -1,4 +1,11 @@
 // -------------------- Styles of component 'Label' <start> --------------------
+.label-color-default {
+    color: $fore-color;
+    background-color: $back-color;
+}
+.label-text-shadow {
+    text-shadow: 3px 3px 3px $color-gray-level-3;
+}
 // -------------------- Styles of component 'Label' <end> --------------------
 
 // -------------------- Styles of component 'Image' <start> --------------------

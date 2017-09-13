@@ -1,4 +1,4 @@
-// ---------- Constants: colors ----------
+// -------------------- Constants: colors <start> --------------------
 // Polychrome:
 $color-red-base : #E9573F;
 $color-red-light : #FC6E51;
@@ -27,3 +27,11 @@ $color-gray-level-5 : #4D4D4D;
 $color-gray-level-6 : #333333;
 $color-gray-level-7 : #2B2B2B;
 $color-dimgray : #141414;
+// -------------------- Constants: colors <end> --------------------
+
+// -------------------- Constants: typography <start> --------------------
+$light-font-weight: 300;
+$regular-font-weight: 400;
+$semi-bold-font-weight: 600;
+$bold-font-weight: 700;
+// -------------------- Constants: typography <end> --------------------

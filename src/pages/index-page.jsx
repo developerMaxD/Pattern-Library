@@ -26,12 +26,12 @@ export default class IndexPage extends React.Component {
         }
         return (
             <div>
-                <div className="index-page-header">
+                <div className="index-page-header sub-section">
                     A study project of create a pattern library based on React.js
-                    <div className="index-page-navigater-styles">
+                    <div className="index-page-navigater-styles main-content">
                         <a href="#" onClick={this.handleShowStylesGuideline}>Show style guideline</a>
                     </div>
-                    <div className="index-page-navigater-components">
+                    <div className="index-page-navigater-components main-content">
                         <a href="#" onClick={this.handleShowComponentsList}>Show components list</a>
                     </div>
                 </div>

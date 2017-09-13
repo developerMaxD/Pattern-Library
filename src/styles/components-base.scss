@@ -1,0 +1,25 @@
+// -------------------- Components default values <start> --------------------
+$fore-color: $color-dimgray !default;
+$back-color: $color-whitesmoke !default;
+// -------------------- Components default values <end> --------------------
+
+// -------------------- Components default styles: border <start> --------------------
+.border-base-normal {
+    outline: none;
+    border: 1px solid $color-sky-base;
+    border-radius: 4px;
+    box-shadow: 0 0 0px $color-aqua-base;
+}
+.border-base-focus {
+    outline: none;
+    border: 1px solid $color-sky-base;
+    border-radius: 4px;
+    box-shadow: 0 0 6px $color-aqua-base;
+}
+.border-base-error {
+    outline: none;
+    border: 1px solid $color-red-base;
+    border-radius: 4px;
+    box-shadow: 0 0 6px $color-red-light;
+}
+// -------------------- Components default styles: border <end> --------------------
