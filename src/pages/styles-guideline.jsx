@@ -200,13 +200,13 @@ export default class StylesGuideline extends React.Component {
                         Components style:
                         <div className="title-level-03 little-section title-component-base">
                             Base of components:
-                            <div className="border-example-normal border-base-normal main-content">
+                            <div className="border-example-normal main-content">
                                 Normal border
                             </div>
-                            <div className="border-example-onfocus border-base-focus main-content">
+                            <div className="border-example-onfocus main-content">
                                 Focus border
                             </div>
-                            <div className="border-example-onerror border-base-error main-content">
+                            <div className="border-example-onerror main-content">
                                 Error border
                             </div>
                         </div>
@@ -242,12 +242,91 @@ export default class StylesGuideline extends React.Component {
                                 2. Input components:
                                 <div className="title-level-05 main-content-italic title-components-editor">
                                     <li>Editor:</li>
+                                    {/* ******************** component [Editor] <start> ******************** */}
+                                    <div className="editor-example-normal editor-default main-content ">
+                                        <input type="text" value="normal editor" className="input-default" />
+                                        <span className="fa-stack close-button">
+                                            <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                            <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div className="editor-example-focus editor-focus main-content ">
+                                        <input type="text" value="on focus editor" className="input-default"/>
+                                        <span className="fa-stack close-button">
+                                            <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                            <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div className="editor-example-error editor-error main-content ">
+                                        <input type="text" value="on error editor" className="input-default"/>
+                                        <span className="fa-stack close-button">
+                                            <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                            <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div className="editor-example-disabled editor-disabled main-content ">
+                                        <input type="text" value="disabled editor" className="input-default" disabled />
+                                        <span className="fa-stack close-button">
+                                            <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                            <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    {/* ******************** component [Editor] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 main-content-italic title-components-search-editor">
                                     <li>Search Editor:</li>
+                                    {/* ******************** component [Search Editor] <start> ******************** */}
+                                    <div className="search-editor-example-normal search-editor-default main-content ">
+                                        <input type="text" value="normal search editor" className="input-default"/>
+                                        <span className="fa-stack close-button">
+                                            <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                            <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                        </span>
+                                        <i className="fa fa-search search-button" aria-hidden="true"></i>
+                                    </div>
+                                    <div className="search-editor-example-focus search-editor-focus main-content ">
+                                        <input type="text" value="on focus search editor" className="input-default"/>
+                                        <span className="fa-stack close-button">
+                                            <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                            <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                        </span>
+                                        <i className="fa fa-search search-button" aria-hidden="true"></i>
+                                    </div>
+                                    <div className="search-editor-example-disabled search-editor-disabled main-content ">
+                                        <input type="text" value="normal search editor" className="input-default" disabled/>
+                                        <span className="fa-stack close-button">
+                                            <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                            <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                        </span>
+                                        <i className="fa fa-search search-button" aria-hidden="true"></i>
+                                    </div>
+                                    {/* ******************** component [Search Editor] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 main-content-italic title-components-rating-editor">
                                     <li>Rating Editor:</li>
+                                    {/* ******************** component [Rating Editor] <start> ******************** */}
+                                    <div className="rating-editor-star-empty rating-editor-default">
+                                        <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
+                                        <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
+                                        <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
+                                        <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
+                                        <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
+                                    </div>
+                                    <div className="rating-editor-star-half rating-editor-readonly">
+                                        <i className="fa fa-star rating-item" aria-hidden="true"></i>
+                                        <i className="fa fa-star rating-item" aria-hidden="true"></i>
+                                        <i className="fa fa-star rating-item" aria-hidden="true"></i>
+                                        <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
+                                        <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
+                                    </div>
+                                    <div className="rating-editor-heart-full rating-editor-red-heart">
+                                        <i className="fa fa-heart rating-item" aria-hidden="true"></i>
+                                        <i className="fa fa-heart rating-item" aria-hidden="true"></i>
+                                        <i className="fa fa-heart-o rating-item" aria-hidden="true"></i>
+                                        <i className="fa fa-heart-o rating-item" aria-hidden="true"></i>
+                                        <i className="fa fa-heart-o rating-item" aria-hidden="true"></i>
+                                    </div>
+                                    {/* ******************** component [Rating Editor] <end> ******************** */}
                                 </div>
                             </div>
                             <div className="title-level-04 main-content title-button-components">

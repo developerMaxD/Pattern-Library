@@ -1,0 +1,41 @@
+// -------------------- Styles of pebble component 'close button' <start> --------------------
+@mixin close-button($top, $right, $color, $size, $offset, $cursor: pointer) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    cursor: $cursor;
+    > .close-button-left {
+        color: $color;
+        font-size: $size;
+    }
+    > .close-button-right {
+        color: $color;
+        font-size: $size;
+        left: $offset;
+    }
+}
+// -------------------- Styles of pebble component 'close button' <end> --------------------
+
+// -------------------- Styles of pebble component 'search button' <start> --------------------
+@mixin search-button($top, $right, $color, $size, $cursor: pointer) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    cursor: $cursor;
+    color: $color;
+    font-size: $size;
+}
+// -------------------- Styles of pebble component 'search button' <end> --------------------
+
+// -------------------- Styles of pebble component 'rating item' <start> --------------------
+@mixin rating-item($color, $size, $offset, $cursor: pointer) {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    cursor: $cursor;
+    margin: $offset;
+    font-size: $size;
+    color: $color;
+    background-color: $back-color;
+}
+// -------------------- Styles of pebble component 'rating item' <end> --------------------

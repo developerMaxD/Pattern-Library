@@ -272,6 +272,7 @@
         > .title-component-base {
             top: 0px;
             > .border-example-normal {
+                @extend %border-base-normal;
                 position: absolute;
                 top: 40px;
                 left: 40px;
@@ -281,6 +282,7 @@
                 text-align: center;
             }
             > .border-example-onfocus {
+                @extend %border-base-focus;
                 position: absolute;
                 top: 40px;
                 left: 180px;
@@ -290,6 +292,7 @@
                 text-align: center;
             }
             > .border-example-onerror {
+                @extend %border-base-error;
                 position: absolute;
                 top: 40px;
                 left: 320px;
@@ -333,16 +336,69 @@
                 top: 600px;
                 > .title-components-editor {
                     top: 5px;
+                    > .editor-example-normal {
+                        position: absolute;
+                        top: 25px;
+                        left: 40px;
+                    }
+                    > .editor-example-focus {
+                        position: absolute;
+                        top: 25px;
+                        left: 240px;
+                    }
+                    > .editor-example-error {
+                        position: absolute;
+                        top: 25px;
+                        left: 440px;
+                    }
+                    > .editor-example-disabled {
+                        position: absolute;
+                        top: 25px;
+                        left: 640px;
+                    }
                 }
                 > .title-components-search-editor {
-                    top: 105px;
+                    top: 65px;
+                    > .search-editor-example-normal {
+                        position: absolute;
+                        top: 25px;
+                        left: 40px;
+                        width: 202px;
+                    }
+                    > .search-editor-example-focus {
+                        position: absolute;
+                        top: 25px;
+                        left: 255px;
+                        width: 202px;
+                    }
+                    > .search-editor-example-disabled {
+                        position: absolute;
+                        top: 25px;
+                        left: 470px;
+                        width: 202px;
+                    }
                 }
                 > .title-components-rating-editor {
-                    top: 205px;
+                    top: 120px;
+                    > .rating-editor-star-empty {
+                        position: absolute;
+                        top: 25px;
+                        left: 40px;
+                    }
+                    > .rating-editor-star-half {
+                        position: absolute;
+                        top: 65px;
+                        left: 40px;
+                    }
+                    > .rating-editor-heart-full {
+                        position: absolute;
+                        top: 105px;
+                        left: 40px;
+                    }
                 }
             }
             > .title-button-components {
-                top: 1000px;
+                top: 900px;
                 > .title-components-standard-button {
                     top: 5px;
                 }
