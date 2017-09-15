@@ -6,60 +6,60 @@
 
 %typography-bold-normal {
     @extend %typography-font-base;
-    font-weight: $bold-font-weight;
+    font-weight: $bold;
     font-style: normal;
 }
 
 %typography-semi-bold-normal {
     @extend %typography-font-base;
-    font-weight: $semi-bold-font-weight;
+    font-weight: $semi-bold;
     font-style: normal;
 }
 
 %typography-regular-normal {
     @extend %typography-font-base;
-    font-weight: $regular-font-weight;
+    font-weight: $regular;
     font-style: normal;
 }
 
 %typography-light-normal {
     @extend %typography-font-base;
-    font-weight: $light-font-weight;
+    font-weight: $light;
     font-style: normal;
 }
 
 %typography-light-italic {
     @extend %typography-font-base;
-    font-weight: $light-font-weight;
+    font-weight: $light;
     font-style: italic;
 }
 
-.main-title {
+.large-title {
     @extend %typography-bold-normal;
     font-size: 32px;
 }
 
-.sub-title {
+.regular-title {
     @extend %typography-bold-normal;
     font-size: 28px;
 }
 
-.page-heading {
+.large-heading {
     @extend %typography-bold-normal;
     font-size: 26px;
 }
 
-.subpage-heading {
+.regular-heading {
     @extend %typography-bold-normal;
     font-size: 24px;
 }
 
-.main-section {
+.huge-section {
     @extend %typography-semi-bold-normal;
     font-size: 24px;
 }
 
-.sub-section {
+.large-section {
     @extend %typography-semi-bold-normal;
     font-size: 22px;
 }
@@ -69,42 +69,42 @@
     font-size: 20px;
 }
 
-.light-section {
+.small-section {
     @extend %typography-regular-normal;
     font-size: 18px;
 }
 
-.little-section {
+.tiny-section {
     @extend %typography-light-normal;
     font-size: 16px;
 }
 
-.main-content {
+.regular-content {
     @extend %typography-light-normal;
     font-size: 14px;
 }
 
-.main-content-italic {
+.regular-content-italic {
     @extend %typography-light-italic;
     font-size: 14px;
 }
 
-.light-content {
+.small-content {
     @extend %typography-light-normal;
     font-size: 12px;
 }
 
-.light-content-italic {
+.small-content-italic {
     @extend %typography-light-italic;
     font-size: 12px;
 }
 
-.tip-content {
+.tiny-content {
     @extend %typography-light-normal;
     font-size: 11px;
 }
 
-.tip-content-italic {
+.tiny-content-italic {
     @extend %typography-light-italic;
     font-size: 11px;
 }

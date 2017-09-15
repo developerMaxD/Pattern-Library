@@ -1,10 +1,10 @@
 // -------------------- Styles of component 'Label' <start> --------------------
-.label-color-default {
+.lbl-default {
     color: $fore-color;
     background-color: $back-color;
 }
-.label-text-shadow {
-    text-shadow: 3px 3px 3px $color-gray-level-3;
+.lbl-shadow {
+    text-shadow: 3px 3px 3px $gray-level-3;
 }
 // -------------------- Styles of component 'Label' <end> --------------------
 

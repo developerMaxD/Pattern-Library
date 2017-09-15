@@ -39,3 +39,14 @@
     background-color: $back-color;
 }
 // -------------------- Styles of pebble component 'rating item' <end> --------------------
+
+// -------------------- Styles of pebble component 'image' that show in 'Image Button' <start> --------------------
+@mixin button-image($top, $side, $offset, $color, $size, $cursor: pointer) {
+    position: absolute;
+    top: $top;
+    #{$side}: $offset;
+    cursor: $cursor;
+    color: $color;
+    font-size: $size;
+}
+// -------------------- Styles of pebble component 'image' that show in 'Image Button' <end> --------------------
