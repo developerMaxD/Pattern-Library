@@ -334,28 +334,28 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-standard-button">
                                     <li>Standard button:</li>
                                     {/* ******************** component [Standard button] <start> ******************** */}
-                                    <div unselectable="on" className="btn-ex-a btn large btn-plain regular-section">
+                                    <div unselectable="on" className="btn-ex-a btn plain btn-large regular-section">
                                         Large Palin
                                     </div>
-                                    <div unselectable="on" className="btn-ex-b btn regular btn-primary regular-content">
+                                    <div unselectable="on" className="btn-ex-b btn primary btn-regular regular-content">
                                         Regular Primary
                                     </div>
-                                    <div unselectable="on" className="btn-ex-c btn regular btn-warning regular-content">
+                                    <div unselectable="on" className="btn-ex-c btn warning btn-regular regular-content">
                                         Regular Warning
                                     </div>
-                                    <div unselectable="on" className="btn-ex-d btn regular btn-alarm regular-content">
+                                    <div unselectable="on" className="btn-ex-d btn alarm btn-regular regular-content">
                                         Regular Alarm
                                     </div>
-                                    <div unselectable="on" className="btn-ex-e btn regular btn-prompt regular-content">
+                                    <div unselectable="on" className="btn-ex-e btn prompt btn-regular regular-content">
                                         Regular Prompt
                                     </div>
-                                    <div unselectable="on" className="btn-ex-f btn regular btn-attention regular-content">
+                                    <div unselectable="on" className="btn-ex-f btn attention btn-regular regular-content">
                                         Regular<br/>Attention
                                     </div>
-                                    <div unselectable="on" className="btn-ex-g btn regular btn-attention regular-content" disabled>
+                                    <div unselectable="on" className="btn-ex-g btn attention btn-regular regular-content" disabled>
                                         Regular Disabled
                                     </div>
-                                    <div unselectable="on" className="btn-ex-h btn small btn-primary small-content">
+                                    <div unselectable="on" className="btn-ex-h btn primary btn-small small-content">
                                         Small Primary
                                     </div>
                                     {/* ******************** component [Standard button] <end> ******************** */}

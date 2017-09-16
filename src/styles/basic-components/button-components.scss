@@ -51,40 +51,40 @@
 
 // -------------------- Styles of component 'Standard button' <start> --------------------
 .btn {
-    &.large {
-        @extend %large-button;
+    &.plain {
+        @include base-button($backcolor: $whitesmoke, $hovercolor: $whitesmoke);
+        color: $gray-level-1;
+        border: 1px solid $whitesmoke;
     }
-    &.regular {
-        @extend %regular-button;
+    &.primary {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
     }
-    &.small {
-        @extend %small-button;
+    &.warning {
+        @include base-button($backcolor: $orange-base, $hovercolor: $orange-light);
+        color: $whitesmoke;
+    }
+    &.alarm {
+        @include base-button($backcolor: $red-base, $hovercolor: $red-light);
+        color: $whitesmoke;
+    }
+    &.prompt {
+        @include base-button($backcolor: $green-base, $hovercolor: $green-light);
+        color: $whitesmoke;
+    }
+    &.attention {
+        @include base-button($backcolor: $pink-base, $hovercolor: $pink-light);
+        color: $whitesmoke;
     }
 }
-.btn-plain {
-    @include base-button($backcolor: $whitesmoke, $hovercolor: $whitesmoke);
-    color: $gray-level-1;
-    border: 1px solid $whitesmoke;
+.btn-large {
+    @extend %large-button;
 }
-.btn-primary {
-    @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
-    color: $whitesmoke;
+.btn-regular {
+    @extend %regular-button;
 }
-.btn-warning {
-    @include base-button($backcolor: $orange-base, $hovercolor: $orange-light);
-    color: $whitesmoke;
-}
-.btn-alarm {
-    @include base-button($backcolor: $red-base, $hovercolor: $red-light);
-    color: $whitesmoke;
-}
-.btn-prompt {
-    @include base-button($backcolor: $green-base, $hovercolor: $green-light);
-    color: $whitesmoke;
-}
-.btn-attention {
-    @include base-button($backcolor: $pink-base, $hovercolor: $pink-light);
-    color: $whitesmoke;
+.btn-small {
+    @extend %small-button;
 }
 // -------------------- Styles of component 'Standard button' <end> --------------------
 
