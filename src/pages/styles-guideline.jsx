@@ -334,43 +334,335 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-standard-button">
                                     <li>Standard button:</li>
                                     {/* ******************** component [Standard button] <start> ******************** */}
-                                    <div unselectable="on" className="btn-ex-a btn plain btn-large regular-section">
-                                        Large Palin
+                                    <div unselectable="on" className="btn-ex-a btn plain">
+                                        <div className="large-text">
+                                            Large Palin
+                                        </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-b btn primary btn-regular regular-content">
-                                        Regular Primary
+                                    <div unselectable="on" className="btn-ex-b btn primary">
+                                        <div className="regular-text">
+                                            Regular Primary
+                                        </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-c btn warning btn-regular regular-content">
-                                        Regular Warning
+                                    <div unselectable="on" className="btn-ex-c btn warning">
+                                        <div className="regular-text">
+                                            Regular Warning
+                                        </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-d btn alarm btn-regular regular-content">
-                                        Regular Alarm
+                                    <div unselectable="on" className="btn-ex-d btn alarm">
+                                        <div className="regular-text">
+                                            Regular Alarm
+                                        </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-e btn prompt btn-regular regular-content">
-                                        Regular Prompt
+                                    <div unselectable="on" className="btn-ex-e btn prompt">
+                                        <div className="regular-text">
+                                            Regular Prompt
+                                        </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-f btn attention btn-regular regular-content">
-                                        Regular<br/>Attention
+                                    <div unselectable="on" className="btn-ex-f btn attention">
+                                        <div className="regular-text">
+                                            Regular<br/>Attention
+                                        </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-g btn attention btn-regular regular-content" disabled>
-                                        Regular Disabled
+                                    <div unselectable="on" className="btn-ex-g btn attention" disabled>
+                                        <div className="regular-text">
+                                            Regular Disabled
+                                        </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-h btn primary btn-small small-content">
-                                        Small Primary
+                                    <div unselectable="on" className="btn-ex-h btn primary">
+                                        <div className="small-text">
+                                            Small Primary
+                                        </div>
                                     </div>
                                     {/* ******************** component [Standard button] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-image-button">
                                     <li>Image button:</li>
                                     {/* ******************** component [Image button] <start> ******************** */}
-                                    <div className="imgbtn regular">
-                                        <div ref="img">
-                                            <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                        </div>
-                                        <div ref="txt">
-                                            Edit
+                                    <div className="imgbtn-ex-l11 imgbtn edit">
+                                        <i className="fa fa-pencil-square-o large-icon left" aria-hidden="true"></i>
+                                        <div className="large-text left">
+                                            E
                                         </div>
                                     </div>
+                                    <div className="imgbtn-ex-l12 imgbtn edit">
+                                        <i className="fa fa-pencil-square-o regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            E
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-l13 imgbtn edit">
+                                        <i className="fa fa-pencil-square-o small-icon left" aria-hidden="true"></i>
+                                        <div className="small-text left">
+                                            E
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-l21 imgbtn edit">
+                                        <i className="fa fa-pencil-square-o large-icon left" aria-hidden="true"></i>
+                                        <div className="large-text left">
+                                            Edit image button
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-l22 imgbtn edit">
+                                        <i className="fa fa-pencil-square-o regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            Edit image button
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-l23 imgbtn edit">
+                                        <i className="fa fa-pencil-square-o small-icon left" aria-hidden="true"></i>
+                                        <div className="small-text left">
+                                            Edit image button
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-l31 imgbtn edit">
+                                        <i className="fa fa-pencil-square-o large-icon right" aria-hidden="true"></i>
+                                        <div className="large-text right">
+                                            Edit image button
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-l32 imgbtn edit">
+                                        <i className="fa fa-pencil-square-o regular-icon right" aria-hidden="true"></i>
+                                        <div className="regular-text right">
+                                            Edit image button
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-l33 imgbtn edit">
+                                        <i className="fa fa-pencil-square-o small-icon right" aria-hidden="true"></i>
+                                        <div className="small-text right">
+                                            Edit image button
+                                        </div>
+                                    </div>
+                                    {/* ******************** ******************** ******************** */}
+                                    <div className="imgbtn-ex-a1 imgbtn edit">
+                                        <i className="fa fa-pencil-square-o regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            edit
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-a2 imgbtn file">
+                                        <i className="fa fa-file-text-o regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            file
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-a3 imgbtn list">
+                                        <i className="fa fa-list regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            list
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-a4 imgbtn dele">
+                                        <i className="fa fa-trash-o regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            delete
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-a5 imgbtn addr">
+                                        <i className="fa fa-address-card-o regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            address
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-a6 imgbtn dshb-a">
+                                        <i className="fa fa-tachometer regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            dashboard
+                                        </div>
+                                    </div>
+                                    {/* ******************** ******************** ******************** */}
+                                    <div className="imgbtn-ex-b1 imgbtn dshb-b">
+                                        <i className="fa fa-id-card-o regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            dashboard
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-b2 imgbtn set-a">
+                                        <i className="fa fa-cog regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            setting1
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-b3 imgbtn set-b">
+                                        <i className="fa fa-cogs regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            setting2
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-b4 imgbtn set-c">
+                                        <i className="fa fa-sliders regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            setting3
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-b5 imgbtn hnor">
+                                        <i className="fa fa-heartbeat regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            honor*
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-b6 imgbtn cald">
+                                        <i className="fa fa-calendar regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            calendar
+                                        </div>
+                                    </div>
+                                    {/* ******************** ******************** ******************** */}
+                                    <div className="imgbtn-ex-c1 imgbtn bell">
+                                        <i className="fa fa-bell-o regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            bell
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-c2 imgbtn user">
+                                        <i className="fa fa-user-circle-o regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            user
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-c3 imgbtn warn">
+                                        <i className="fa fa-exclamation-triangle regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            warning
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-c4 imgbtn tack">
+                                        <i className="fa fa-thumb-tack regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            tack
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-c5 imgbtn tags">
+                                        <i className="fa fa-tags regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            tags
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-c6 imgbtn sort">
+                                        <i className="fa fa-sort-alpha-desc regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            sort
+                                        </div>
+                                    </div>
+                                    {/* ******************** ******************** ******************** */}
+                                    <div className="imgbtn-ex-d1 imgbtn sign-in">
+                                        <i className="fa fa-sign-in regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            sign-in
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-d2 imgbtn sign-out">
+                                        <i className="fa fa-sign-out regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            sign-out
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-d3 imgbtn refh">
+                                        <i className="fa fa-refresh regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            refresh
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-d4 imgbtn pict">
+                                        <i className="fa fa-picture-o regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            picture
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-d5 imgbtn chrt">
+                                        <i className="fa fa-line-chart regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            chart
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-d6 imgbtn bulb">
+                                        <i className="fa fa-lightbulb-o regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            light-bulb
+                                        </div>
+                                    </div>
+                                    {/* ******************** ******************** ******************** */}
+                                    <div className="imgbtn-ex-e1 imgbtn key">
+                                        <i className="fa fa-key regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            key
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-e3 imgbtn info">
+                                        <i className="fa fa-info-circle regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            info
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-e2 imgbtn beat">
+                                        <i className="fa fa-heartbeat regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            heart-beat
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-e4 imgbtn hsty">
+                                        <i className="fa fa-history regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            history
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-e5 imgbtn home">
+                                        <i className="fa fa-home regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            home
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-e6 imgbtn flag">
+                                        <i className="fa fa-flag regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            flag
+                                        </div>
+                                    </div>
+                                    {/* ******************** ******************** ******************** */}
+                                    <div className="imgbtn-ex-f1 imgbtn bolt">
+                                        <i className="fa fa-bolt regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            bolt
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-f2 imgbtn mail">
+                                        <i className="fa fa-envelope-o regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            mail
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-f3 imgbtn lock">
+                                        <i className="fa fa-lock regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            lock
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-f4 imgbtn unlk">
+                                        <div className="regular-icon left">
+                                            <i className="fa fa-unlock-alt" aria-hidden="true"></i>
+                                        </div>
+                                        <div className="regular-text left">
+                                            unlock
+                                        </div>
+                                    </div>
+                                    {/* <div className="imgbtn-ex-f4 imgbtn unlk">
+                                        <i className="fa fa-unlock-alt regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            unlock
+                                        </div>
+                                    </div> */}
+                                    <div className="imgbtn-ex-f5 imgbtn beat">
+                                        <div className="regular-icon left">
+                                            <i className="fa fa-heartbeat" aria-hidden="true"></i>
+                                        </div>
+                                        {/* <div className="regular-text left"></div> */}
+                                    </div>
+                                    {/* <div className="imgbtn-ex-f6 imgbtn beat">
+                                        <i className="fa fa-heartbeat regular-icon left" aria-hidden="true"></i>
+                                        <div className="regular-text left">
+                                            heart-beat
+                                        </div>
+                                    </div> */}
                                     {/* ******************** component [Image button] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-switch-button">

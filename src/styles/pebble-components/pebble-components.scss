@@ -40,8 +40,19 @@
 }
 // -------------------- Styles of pebble component 'rating item' <end> --------------------
 
-// -------------------- Styles of pebble component 'image' that show in 'Image Button' <start> --------------------
-@mixin button-image($top, $side, $offset, $color, $size, $cursor: pointer) {
+// -------------------- Styles of pebble component 'icon' <start> --------------------
+// @mixin icon($top, $side, $offset, $color, $size) {
+    @mixin icon($top, $side, $offset, $size) {
+    position: absolute;
+    top: $top;
+    #{$side}: $offset;
+    // color: $color;
+    font-size: $size;
+}
+// -------------------- Styles of pebble component 'icon' <end> --------------------
+
+// -------------------- Styles of pebble component 'text' <start> --------------------
+@mixin text($top, $side, $offset, $color, $size, $cursor: pointer) {
     position: absolute;
     top: $top;
     #{$side}: $offset;
@@ -49,4 +60,4 @@
     color: $color;
     font-size: $size;
 }
-// -------------------- Styles of pebble component 'image' that show in 'Image Button' <end> --------------------
+// -------------------- Styles of pebble component 'text' <end> --------------------

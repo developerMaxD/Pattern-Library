@@ -32,19 +32,25 @@
         cursor: default;
     }
 }
-%large-button {
+@mixin large-button-text($marginSide: margin-left, $marginOffset: 0px) {
+    @extend .regular-section;
     min-height: 24px;
-    min-width: 56px;
-    padding: 5px 12px;
-}
-%regular-button {
-    min-height: 20px;
     min-width: 40px;
+    #{$marginSide}: $marginOffset;
     padding: 5px 12px;
 }
-%small-button {
-    min-height: 16px;
+@mixin regular-button-text($marginSide: margin-left, $marginOffset: 0px) {
+    @extend .regular-content;
+    min-height: 20px;
     min-width: 30px;
+    #{$marginSide}: $marginOffset;
+    padding: 5px 12px;
+}
+@mixin small-button-text($marginSide: margin-left, $marginOffset: 0px) {
+    @extend .small-content;
+    min-height: 16px;
+    min-width: 25px;
+    #{$marginSide}: $marginOffset;
     padding: 2px 6px;
 }
 // -------------------- Base styles of buttons <end> --------------------
@@ -76,31 +82,203 @@
         @include base-button($backcolor: $pink-base, $hovercolor: $pink-light);
         color: $whitesmoke;
     }
-}
-.btn-large {
-    @extend %large-button;
-}
-.btn-regular {
-    @extend %regular-button;
-}
-.btn-small {
-    @extend %small-button;
+    > .large-text {
+        @include large-button-text;
+    }
+    > .regular-text {
+        @include regular-button-text;
+    }
+    > .small-text {
+        @include small-button-text;
+    }
 }
 // -------------------- Styles of component 'Standard button' <end> --------------------
 
 // -------------------- Styles of component 'Image button' <start> --------------------
 .imgbtn {
-    &.large {
-        @extend %large-button;
+    &.edit {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
     }
-    &.regular {
-        @extend %regular-button;
+    &.file {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
     }
-    &.small {
-        @extend %small-button;
+    &.list {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
     }
-    > .btn-img {
-        @include button-image($top: 0px, $side: left, $offset: 10px, $color: white, $size: 1.2em, $cursor: pointer);
+    &.dele {
+        @include base-button($backcolor: $red-base, $hovercolor: $red-light);
+        color: $whitesmoke;
+    }
+    &.addr {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.dshb-a {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.dshb-b {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.set-a {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.set-b {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.set-c {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.hnor { //[pebble]
+        @include base-button($backcolor: $violet-base, $hovercolor: $violet-light);
+        color: $whitesmoke;
+    }
+    &.cald {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.bell {
+        @include base-button($backcolor: $orange-base, $hovercolor: $orange-light);
+        color: $whitesmoke;
+    }
+    &.user {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.warn {
+        @include base-button($backcolor: $orange-base, $hovercolor: $orange-light);
+        color: $whitesmoke;
+    }
+    &.tack {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.tags {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.sort {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.sign-in {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.sign-out {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.refh {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.pict {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.chrt {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.bulb {
+        @include base-button($backcolor: $orange-base, $hovercolor: $orange-light);
+        color: $whitesmoke;
+    }
+    &.key {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.info {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.beat {
+        @include base-button($backcolor: $red-base, $hovercolor: $red-light);
+        color: $whitesmoke;
+    }
+    &.hsty {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.home {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.flag {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.bolt {
+        @include base-button($backcolor: $red-base, $hovercolor: $red-light);
+        color: $whitesmoke;
+    }
+    &.mail {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.lock {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    &.unlk {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
+    > .large-icon {
+        &.left {
+            @include icon($top: 8px, $side: left, $offset: 8px, $size: 1.8em);
+        }
+        &.right {
+            @include icon($top: 8px, $side: right, $offset: 8px, $size: 1.8em);
+        }
+    }
+    > .regular-icon {
+        &.left {
+            @include icon($top: 8px, $side: left, $offset: 8px, $size: 1.2em);
+        }
+        &.right {
+            @include icon($top: 8px, $side: right, $offset: 8px, $size: 1.2em);
+        }
+    }
+    > .small-icon {
+        &.left {
+            @include icon($top: 6px, $side: left, $offset: 8px, $size: 0.8em);
+        }
+        &.right {
+            @include icon($top: 6px, $side: right, $offset: 8px, $size: 0.8em);
+        }
+    }
+    > .large-text {
+        &.left {
+            @include large-button-text($marginSide: margin-left, $marginOffset: 25px);
+        }
+        &.right {
+            @include large-button-text($marginSide: margin-right, $marginOffset: 25px);
+        }
+    }
+    > .regular-text {
+        &.left {
+            @include regular-button-text($marginSide: margin-left, $marginOffset: 18px);
+        }
+        &.right {
+            @include regular-button-text($marginSide: margin-right, $marginOffset: 18px);
+        }
+    }
+    > .small-text {
+        &.left {
+            @include small-button-text($marginSide: margin-left, $marginOffset: 15px);
+        }
+        &.right {
+            @include small-button-text($marginSide: margin-right, $marginOffset: 15px);
+        }
     }
 }
 // -------------------- Styles of component 'Image button' <end> --------------------
