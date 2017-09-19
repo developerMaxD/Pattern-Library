@@ -10,6 +10,19 @@
 }
 // -------------------- Base styles of input element <end> --------------------
 
+// -------------------- Base styles of rating element <start> --------------------
+@mixin rating-item($color, $size, $offset, $cursor: pointer) {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    cursor: $cursor;
+    margin: $offset;
+    font-size: $size;
+    color: $color;
+    background-color: $back-color;
+}
+// -------------------- Base styles of rating element <end> --------------------
+
 // -------------------- Styles of component 'Editor' <start> --------------------
 .edt-default {
     @extend %border-base-normal;
@@ -21,7 +34,7 @@
     }
     > .close-button {
         // Include from pebble components
-        @include close-button($top: 0px, $right: 5px, $color: $gray-level-4, $size: 1.2em, $offset: 4px);
+        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 5px);
     }
 }
 .edt-focus {
@@ -33,7 +46,7 @@
     }
     > .close-button {
         // Include from pebble components
-        @include close-button($top: 0px, $right: 5px, $color: $gray-level-4, $size: 1.2em, $offset: 4px);
+        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 5px);
     }
 }
 .edt-error {
@@ -45,7 +58,7 @@
     }
     > .close-button {
         // Include from pebble components
-        @include close-button($top: 0px, $right: 5px, $color: $gray-level-4, $size: 1.2em, $offset: 4px);
+        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 5px);
     }
 }
 .edt-disabled {
@@ -58,7 +71,7 @@
     }
     > .close-button {
         // Include from pebble components
-        @include close-button($top: 0px, $right: 5px, $color: $gray-level-0, $size: 1.2em, $offset: 4px, $cursor: default);
+        @include close-button($top: 0px, $color: $gray-level-0, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 5px, $cursor: default);
     }
 }
 // -------------------- Styles of component 'Editor' <end> --------------------
@@ -73,11 +86,11 @@
     }
     > .close-button {
         // Include from pebble components
-        @include close-button($top: 0px, $right: 22px, $color: $gray-level-4, $size: 1.2em, $offset: 4px);
+        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 22px);
     }
     > .search-button {
         // Include from pebble components
-        @include search-button($top: 9px, $right: 10px, $color: $gray-level-4, $size: 0.9em);
+        @include search-button($top: 9px, $color: $gray-level-4, $size: 0.9em, $side: right, $sideOffset: 10px);
     }
 }
 .search-focus {
@@ -89,11 +102,11 @@
     }
     > .close-button {
         // Include from pebble components
-        @include close-button($top: 0px, $right: 22px, $color: $gray-level-4, $size: 1.2em, $offset: 4px);
+        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 22px);
     }
     > .search-button {
         // Include from pebble components
-        @include search-button($top: 9px, $right: 10px, $color: $gray-level-4, $size: 0.9em);
+        @include search-button($top: 9px, $color: $gray-level-4, $size: 0.9em, $side: right, $sideOffset: 10px);
     }
 }
 .search-disabled {
@@ -105,11 +118,11 @@
     }
     > .close-button {
         // Include from pebble components
-        @include close-button($top: 0px, $right: 22px, $color: $gray-level-0, $size: 1.2em, $offset: 4px, $cursor: default);
+        @include close-button($top: 0px, $color: $gray-level-0, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 22px, $cursor: default);
     }
     > .search-button {
         // Include from pebble components
-        @include search-button($top: 9px, $right: 10px, $color: $gray-level-0, $size: 0.9em, $cursor: default);
+        @include search-button($top: 9px, $color: $gray-level-0, $size: 0.9em, $side: right, $sideOffset: 10px, $cursor: default);
     }
 }
 // -------------------- Styles of component 'Search Editor' <end> --------------------

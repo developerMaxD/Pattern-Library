@@ -1,8 +1,8 @@
 // -------------------- Styles of pebble component 'close button' <start> --------------------
-@mixin close-button($top, $right, $color, $size, $offset, $cursor: pointer) {
+@mixin close-button($top, $color, $size, $offset, $side: left, $sideOffset: 0px, $cursor: pointer) {
     position: absolute;
     top: $top;
-    right: $right;
+    #{$side}: $sideOffset;
     cursor: $cursor;
     > .close-button-left {
         color: $color;
@@ -17,47 +17,27 @@
 // -------------------- Styles of pebble component 'close button' <end> --------------------
 
 // -------------------- Styles of pebble component 'search button' <start> --------------------
-@mixin search-button($top, $right, $color, $size, $cursor: pointer) {
+@mixin search-button($top, $color, $size, $side: left, $sideOffset: 0px, $cursor: pointer) {
     position: absolute;
     top: $top;
-    right: $right;
+    #{$side}: $sideOffset;
     cursor: $cursor;
     color: $color;
     font-size: $size;
 }
 // -------------------- Styles of pebble component 'search button' <end> --------------------
 
-// -------------------- Styles of pebble component 'rating item' <start> --------------------
-@mixin rating-item($color, $size, $offset, $cursor: pointer) {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    cursor: $cursor;
-    margin: $offset;
-    font-size: $size;
-    color: $color;
-    background-color: $back-color;
-}
-// -------------------- Styles of pebble component 'rating item' <end> --------------------
-
-// -------------------- Styles of pebble component 'icon' <start> --------------------
-// @mixin icon($top, $side, $offset, $color, $size) {
-    @mixin icon($top, $side, $offset, $size) {
+// -------------------- Styles of pebble component 'medal' <start> --------------------
+@mixin medal($top, $size, $offset, $side: left, $sideOffset: 0px) {
     position: absolute;
     top: $top;
-    #{$side}: $offset;
-    // color: $color;
-    font-size: $size;
+    #{$side}: $sideOffset;
+    > .medal-ribbon {
+        font-size: $size * 0.6;
+        top: $offset;
+    }
+    > .medal-star {
+        font-size: $size;
+    }
 }
-// -------------------- Styles of pebble component 'icon' <end> --------------------
-
-// -------------------- Styles of pebble component 'text' <start> --------------------
-@mixin text($top, $side, $offset, $color, $size, $cursor: pointer) {
-    position: absolute;
-    top: $top;
-    #{$side}: $offset;
-    cursor: $cursor;
-    color: $color;
-    font-size: $size;
-}
-// -------------------- Styles of pebble component 'text' <end> --------------------
+// -------------------- Styles of pebble component 'medal' <end> --------------------

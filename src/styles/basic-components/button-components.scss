@@ -4,6 +4,7 @@
     border: 0px solid transparent;
     box-shadow: 2px 2px 5px $gray-level-2;
     text-align: center;
+    padding: 2px 2px;
     // ---------- unselectable ----------
     user-select: none;
     -moz-user-select: none;
@@ -35,23 +36,46 @@
 @mixin large-button-text($marginSide: margin-left, $marginOffset: 0px) {
     @extend .regular-section;
     min-height: 24px;
-    min-width: 40px;
+    min-width: 30px;
     #{$marginSide}: $marginOffset;
-    padding: 5px 12px;
+    padding: 4px 8px;
 }
 @mixin regular-button-text($marginSide: margin-left, $marginOffset: 0px) {
     @extend .regular-content;
     min-height: 20px;
-    min-width: 30px;
+    min-width: 20px;
     #{$marginSide}: $marginOffset;
-    padding: 5px 12px;
+    padding: 4px 8px;
 }
 @mixin small-button-text($marginSide: margin-left, $marginOffset: 0px) {
     @extend .small-content;
     min-height: 16px;
-    min-width: 25px;
+    min-width: 18px;
     #{$marginSide}: $marginOffset;
-    padding: 2px 6px;
+    padding: 2px 8px;
+}
+@mixin icon($top, $side, $offset, $size, $singleSize: 0px) {
+    @if $singleSize == 0px {
+        position: absolute;
+        top: $top;
+        #{$side}: $offset;
+    } @else {
+        position: relative;
+        min-height: $singleSize;
+        min-width: $singleSize;
+        // display: flex;
+        // -ms-flex-pack: center;
+        // align-items: center;
+        // -ms-flex-align: center;
+        // justify-content: center;
+    }
+    display: flex;
+    -ms-flex-pack: center;
+    align-items: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    color: inherit;
+    font-size: $size;
 }
 // -------------------- Base styles of buttons <end> --------------------
 
@@ -232,52 +256,80 @@
         @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
         color: $whitesmoke;
     }
+    &.top {
+        @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
+        color: $whitesmoke;
+    }
     > .large-icon {
         &.left {
-            @include icon($top: 8px, $side: left, $offset: 8px, $size: 1.8em);
+            @include icon($top: 8px, $side: left, $offset: 10px, $size: 1.8em);
         }
         &.right {
-            @include icon($top: 8px, $side: right, $offset: 8px, $size: 1.8em);
+            @include icon($top: 8px, $side: right, $offset: 10px, $size: 1.8em);
         }
+        &.single {
+            @include icon($top: 8px, $side: left, $offset: 10px, $size: 1.8em, $singleSize: 40px);
+        }
+        // .medal {
+        //     @include medal($top: -11px, $size: 1.0em, $offset: 9px, $side: left, $sideOffset: -10px);
+        // }
     }
     > .regular-icon {
         &.left {
-            @include icon($top: 8px, $side: left, $offset: 8px, $size: 1.2em);
+            @include icon($top: 8px, $side: left, $offset: 10px, $size: 1.2em);
+            > .medal {
+                @include medal($top: -11px, $size: 1.0em, $offset: 9px, $side: left, $sideOffset: -10px);
+            }
         }
         &.right {
-            @include icon($top: 8px, $side: right, $offset: 8px, $size: 1.2em);
+            @include icon($top: 8px, $side: right, $offset: 10px, $size: 1.2em);
+            > .medal {
+                @include medal($top: -11px, $size: 1.0em, $offset: 9px, $side: left, $sideOffset: -10px);
+            }
+        }
+        &.single {
+            @include icon($top: 8px, $side: left, $offset: 10px, $size: 1.2em, $singleSize: 30px);
+            > .medal {
+                @include medal($top: -4px, $size: 1.0em, $offset: 9px, $side: left, $sideOffset: -2px);
+            }
         }
     }
     > .small-icon {
         &.left {
-            @include icon($top: 6px, $side: left, $offset: 8px, $size: 0.8em);
+            @include icon($top: 8px, $side: left, $offset: 8px, $size: 0.8em);
         }
         &.right {
-            @include icon($top: 6px, $side: right, $offset: 8px, $size: 0.8em);
+            @include icon($top: 8px, $side: right, $offset: 8px, $size: 0.8em);
         }
+        &.single {
+            @include icon($top: 8px, $side: left, $offset: 8px, $size: 0.8em, $singleSize: 22px);
+        }
+        // .medal {
+        //     @include medal($top: -11px, $size: 1.0em, $offset: 9px, $side: left, $sideOffset: -10px);
+        // }
     }
     > .large-text {
         &.left {
-            @include large-button-text($marginSide: margin-left, $marginOffset: 25px);
+            @include large-button-text($marginSide: margin-left, $marginOffset: 30px);
         }
         &.right {
-            @include large-button-text($marginSide: margin-right, $marginOffset: 25px);
+            @include large-button-text($marginSide: margin-right, $marginOffset: 30px);
         }
     }
     > .regular-text {
         &.left {
-            @include regular-button-text($marginSide: margin-left, $marginOffset: 18px);
+            @include regular-button-text($marginSide: margin-left, $marginOffset: 22px);
         }
         &.right {
-            @include regular-button-text($marginSide: margin-right, $marginOffset: 18px);
+            @include regular-button-text($marginSide: margin-right, $marginOffset: 22px);
         }
     }
     > .small-text {
         &.left {
-            @include small-button-text($marginSide: margin-left, $marginOffset: 15px);
+            @include small-button-text($marginSide: margin-left, $marginOffset: 16px);
         }
         &.right {
-            @include small-button-text($marginSide: margin-right, $marginOffset: 15px);
+            @include small-button-text($marginSide: margin-right, $marginOffset: 16px);
         }
     }
 }
