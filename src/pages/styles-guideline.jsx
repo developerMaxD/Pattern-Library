@@ -334,32 +334,32 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-standard-button">
                                     <li>Standard button:</li>
                                     {/* ******************** component [Standard button] <start> ******************** */}
-                                    <div unselectable="on" className="btn-ex-a btn plain">
+                                    <div unselectable="on" className="btn-ex-a btn plain clickable">
                                         <div className="large-text">
                                             Large Palin
                                         </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-b btn primary">
+                                    <div unselectable="on" className="btn-ex-b btn primary clickable">
                                         <div className="regular-text">
                                             Regular Primary
                                         </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-c btn warning">
+                                    <div unselectable="on" className="btn-ex-c btn warning clickable">
                                         <div className="regular-text">
                                             Regular Warning
                                         </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-d btn alarm">
+                                    <div unselectable="on" className="btn-ex-d btn alarm clickable">
                                         <div className="regular-text">
                                             Regular Alarm
                                         </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-e btn prompt">
+                                    <div unselectable="on" className="btn-ex-e btn prompt clickable">
                                         <div className="regular-text">
                                             Regular Prompt
                                         </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-f btn attention">
+                                    <div unselectable="on" className="btn-ex-f btn attention clickable">
                                         <div className="regular-text">
                                             Regular<br/>Attention
                                         </div>
@@ -369,7 +369,7 @@ export default class StylesGuideline extends React.Component {
                                             Regular Disabled
                                         </div>
                                     </div>
-                                    <div unselectable="on" className="btn-ex-h btn primary">
+                                    <div unselectable="on" className="btn-ex-h btn primary clickable">
                                         <div className="small-text">
                                             Small Primary
                                         </div>
@@ -379,7 +379,7 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-image-button">
                                     <li>Image button:</li>
                                     {/* ******************** component [Image button] <start> ******************** */}
-                                    <div className="imgbtn-ex-l11 imgbtn edit">
+                                    <div className="imgbtn-ex-l11 imgbtn edit clickable">
                                         <div className="large-icon left">
                                             <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </div>
@@ -387,7 +387,7 @@ export default class StylesGuideline extends React.Component {
                                             E
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-l12 imgbtn edit">
+                                    <div className="imgbtn-ex-l12 imgbtn edit clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </div>
@@ -395,7 +395,7 @@ export default class StylesGuideline extends React.Component {
                                             E
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-l13 imgbtn edit">
+                                    <div className="imgbtn-ex-l13 imgbtn edit clickable">
                                         <div className="small-icon left">
                                             <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </div>
@@ -403,7 +403,7 @@ export default class StylesGuideline extends React.Component {
                                             E
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-l21 imgbtn edit">
+                                    <div className="imgbtn-ex-l21 imgbtn edit clickable">
                                         <div className="large-icon left">
                                             <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </div>
@@ -411,7 +411,7 @@ export default class StylesGuideline extends React.Component {
                                             Edit image button
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-l22 imgbtn edit">
+                                    <div className="imgbtn-ex-l22 imgbtn edit clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </div>
@@ -419,7 +419,7 @@ export default class StylesGuideline extends React.Component {
                                             Edit image button
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-l23 imgbtn edit">
+                                    <div className="imgbtn-ex-l23 imgbtn edit clickable">
                                         <div className="small-icon left">
                                             <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </div>
@@ -427,7 +427,7 @@ export default class StylesGuideline extends React.Component {
                                             Edit image button
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-l31 imgbtn edit">
+                                    <div className="imgbtn-ex-l31 imgbtn edit clickable">
                                         <div className="large-icon right">
                                             <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </div>
@@ -435,7 +435,7 @@ export default class StylesGuideline extends React.Component {
                                             Edit image button
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-l32 imgbtn edit">
+                                    <div className="imgbtn-ex-l32 imgbtn edit clickable">
                                         <div className="regular-icon right">
                                             <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </div>
@@ -443,7 +443,7 @@ export default class StylesGuideline extends React.Component {
                                             Edit image button
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-l33 imgbtn edit">
+                                    <div className="imgbtn-ex-l33 imgbtn edit clickable">
                                         <div className="small-icon right">
                                             <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </div>
@@ -476,7 +476,7 @@ export default class StylesGuideline extends React.Component {
                                         </div>
                                     </div>
                                     {/* ******************** ******************** ******************** */}
-                                    <div className="imgbtn-ex-a1 imgbtn edit">
+                                    <div className="imgbtn-ex-a1 imgbtn edit clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </div>
@@ -484,7 +484,7 @@ export default class StylesGuideline extends React.Component {
                                             edit
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-a2 imgbtn file">
+                                    <div className="imgbtn-ex-a2 imgbtn file clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -492,7 +492,7 @@ export default class StylesGuideline extends React.Component {
                                             file
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-a3 imgbtn list">
+                                    <div className="imgbtn-ex-a3 imgbtn list clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-list" aria-hidden="true"></i>
                                         </div>
@@ -500,7 +500,7 @@ export default class StylesGuideline extends React.Component {
                                             list
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-a4 imgbtn dele">
+                                    <div className="imgbtn-ex-a4 imgbtn dele clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-trash-o" aria-hidden="true"></i>
                                         </div>
@@ -508,7 +508,7 @@ export default class StylesGuideline extends React.Component {
                                             delete
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-a5 imgbtn addr">
+                                    <div className="imgbtn-ex-a5 imgbtn addr clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-address-card-o" aria-hidden="true"></i>
                                         </div>
@@ -516,7 +516,7 @@ export default class StylesGuideline extends React.Component {
                                             address
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-a6 imgbtn dshb-a">
+                                    <div className="imgbtn-ex-a6 imgbtn dshb-a clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-tachometer" aria-hidden="true"></i>
                                         </div>
@@ -525,7 +525,7 @@ export default class StylesGuideline extends React.Component {
                                         </div>
                                     </div>
                                     {/* ******************** ******************** ******************** */}
-                                    <div className="imgbtn-ex-b1 imgbtn dshb-b">
+                                    <div className="imgbtn-ex-b1 imgbtn dshb-b clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-id-card-o" aria-hidden="true"></i>
                                         </div>
@@ -533,7 +533,7 @@ export default class StylesGuideline extends React.Component {
                                             dashboard
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-b2 imgbtn set-a">
+                                    <div className="imgbtn-ex-b2 imgbtn set-a clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-cog" aria-hidden="true"></i>
                                         </div>
@@ -541,7 +541,7 @@ export default class StylesGuideline extends React.Component {
                                             setting1
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-b3 imgbtn set-b">
+                                    <div className="imgbtn-ex-b3 imgbtn set-b clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-cogs" aria-hidden="true"></i>
                                         </div>
@@ -549,7 +549,7 @@ export default class StylesGuideline extends React.Component {
                                             setting2
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-b4 imgbtn set-c">
+                                    <div className="imgbtn-ex-b4 imgbtn set-c clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-sliders" aria-hidden="true"></i>
                                         </div>
@@ -557,7 +557,7 @@ export default class StylesGuideline extends React.Component {
                                             setting3
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-b5 imgbtn hnor">
+                                    <div className="imgbtn-ex-b5 imgbtn hnor clickable">
                                         <div className="regular-icon left">
                                             <span className="fa-stack medal">
                                                 <i className="fa fa-bookmark fa-stack-1x medal-ribbon" aria-hidden="true"></i>
@@ -568,7 +568,7 @@ export default class StylesGuideline extends React.Component {
                                             honor
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-b6 imgbtn cald">
+                                    <div className="imgbtn-ex-b6 imgbtn cald clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-calendar" aria-hidden="true"></i>
                                         </div>
@@ -577,7 +577,7 @@ export default class StylesGuideline extends React.Component {
                                         </div>
                                     </div>
                                     {/* ******************** ******************** ******************** */}
-                                    <div className="imgbtn-ex-c1 imgbtn bell">
+                                    <div className="imgbtn-ex-c1 imgbtn bell clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-bell-o" aria-hidden="true"></i>
                                         </div>
@@ -585,7 +585,7 @@ export default class StylesGuideline extends React.Component {
                                             bell
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-c2 imgbtn user">
+                                    <div className="imgbtn-ex-c2 imgbtn user clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-user-circle-o" aria-hidden="true"></i>
                                         </div>
@@ -593,7 +593,7 @@ export default class StylesGuideline extends React.Component {
                                             user
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-c3 imgbtn warn">
+                                    <div className="imgbtn-ex-c3 imgbtn warn clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
                                         </div>
@@ -601,7 +601,7 @@ export default class StylesGuideline extends React.Component {
                                             warning
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-c4 imgbtn tack">
+                                    <div className="imgbtn-ex-c4 imgbtn tack clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-thumb-tack" aria-hidden="true"></i>
                                         </div>
@@ -609,7 +609,7 @@ export default class StylesGuideline extends React.Component {
                                             tack
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-c5 imgbtn tags">
+                                    <div className="imgbtn-ex-c5 imgbtn tags clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-tags" aria-hidden="true"></i>
                                         </div>
@@ -617,7 +617,7 @@ export default class StylesGuideline extends React.Component {
                                             tags
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-c6 imgbtn sort">
+                                    <div className="imgbtn-ex-c6 imgbtn sort clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-sort-alpha-asc" aria-hidden="true"></i>
                                         </div>
@@ -626,7 +626,7 @@ export default class StylesGuideline extends React.Component {
                                         </div>
                                     </div>
                                     {/* ******************** ******************** ******************** */}
-                                    <div className="imgbtn-ex-d1 imgbtn sign-in">
+                                    <div className="imgbtn-ex-d1 imgbtn sign-in clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-sign-in" aria-hidden="true"></i>
                                         </div>
@@ -634,7 +634,7 @@ export default class StylesGuideline extends React.Component {
                                             sign-in
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-d2 imgbtn sign-out">
+                                    <div className="imgbtn-ex-d2 imgbtn sign-out clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-sign-out" aria-hidden="true"></i>
                                         </div>
@@ -642,7 +642,7 @@ export default class StylesGuideline extends React.Component {
                                             sign-out
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-d3 imgbtn refh">
+                                    <div className="imgbtn-ex-d3 imgbtn refh clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-refresh" aria-hidden="true"></i>
                                         </div>
@@ -650,7 +650,7 @@ export default class StylesGuideline extends React.Component {
                                             refresh
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-d4 imgbtn pict">
+                                    <div className="imgbtn-ex-d4 imgbtn pict clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-picture-o" aria-hidden="true"></i>
                                         </div>
@@ -658,7 +658,7 @@ export default class StylesGuideline extends React.Component {
                                             picture
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-d5 imgbtn chrt">
+                                    <div className="imgbtn-ex-d5 imgbtn chrt clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-line-chart" aria-hidden="true"></i>
                                         </div>
@@ -666,7 +666,7 @@ export default class StylesGuideline extends React.Component {
                                             chart
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-d6 imgbtn bulb">
+                                    <div className="imgbtn-ex-d6 imgbtn bulb clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-lightbulb-o" aria-hidden="true"></i>
                                         </div>
@@ -675,7 +675,7 @@ export default class StylesGuideline extends React.Component {
                                         </div>
                                     </div>
                                     {/* ******************** ******************** ******************** */}
-                                    <div className="imgbtn-ex-e1 imgbtn key">
+                                    <div className="imgbtn-ex-e1 imgbtn key clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-key" aria-hidden="true"></i>
                                         </div>
@@ -683,7 +683,7 @@ export default class StylesGuideline extends React.Component {
                                             key
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-e3 imgbtn info">
+                                    <div className="imgbtn-ex-e3 imgbtn info clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-info-circle" aria-hidden="true"></i>
                                         </div>
@@ -691,7 +691,7 @@ export default class StylesGuideline extends React.Component {
                                             info
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-e2 imgbtn beat">
+                                    <div className="imgbtn-ex-e2 imgbtn beat clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-heartbeat" aria-hidden="true"></i>
                                         </div>
@@ -699,7 +699,7 @@ export default class StylesGuideline extends React.Component {
                                             heart-beat
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-e4 imgbtn hsty">
+                                    <div className="imgbtn-ex-e4 imgbtn hsty clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-history" aria-hidden="true"></i>
                                         </div>
@@ -707,7 +707,7 @@ export default class StylesGuideline extends React.Component {
                                             history
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-e5 imgbtn home">
+                                    <div className="imgbtn-ex-e5 imgbtn home clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-home" aria-hidden="true"></i>
                                         </div>
@@ -715,7 +715,7 @@ export default class StylesGuideline extends React.Component {
                                             home
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-e6 imgbtn flag">
+                                    <div className="imgbtn-ex-e6 imgbtn flag clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-flag" aria-hidden="true"></i>
                                         </div>
@@ -724,7 +724,7 @@ export default class StylesGuideline extends React.Component {
                                         </div>
                                     </div>
                                     {/* ******************** ******************** ******************** */}
-                                    <div className="imgbtn-ex-f1 imgbtn bolt">
+                                    <div className="imgbtn-ex-f1 imgbtn bolt clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-bolt" aria-hidden="true"></i>
                                         </div>
@@ -732,7 +732,7 @@ export default class StylesGuideline extends React.Component {
                                             bolt
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-f2 imgbtn mail">
+                                    <div className="imgbtn-ex-f2 imgbtn mail clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-envelope-o" aria-hidden="true"></i>
                                         </div>
@@ -740,7 +740,7 @@ export default class StylesGuideline extends React.Component {
                                             mail
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-f3 imgbtn lock">
+                                    <div className="imgbtn-ex-f3 imgbtn lock clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-lock" aria-hidden="true"></i>
                                         </div>
@@ -748,7 +748,7 @@ export default class StylesGuideline extends React.Component {
                                             lock
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-f4 imgbtn unlk">
+                                    <div className="imgbtn-ex-f4 imgbtn unlk clickable">
                                         <div className="regular-icon left">
                                             <i className="fa fa-unlock-alt" aria-hidden="true"></i>
                                         </div>
@@ -756,25 +756,112 @@ export default class StylesGuideline extends React.Component {
                                             unlock
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-f5 imgbtn top" title="back to top">
+                                    <div className="imgbtn-ex-f5 imgbtn top clickable" title="back to top">
                                         <div className="large-icon single">
                                             <i className="fa fa-chevron-up" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-f6 imgbtn top" title="back to top">
+                                    <div className="imgbtn-ex-f6 imgbtn top clickable" title="back to top">
                                         <div className="regular-icon single">
                                             <i className="fa fa-chevron-up" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    <div className="imgbtn-ex-f7 imgbtn top" title="back to top">
+                                    <div className="imgbtn-ex-f7 imgbtn top clickable" title="back to top">
                                         <div className="small-icon single">
                                             <i className="fa fa-chevron-up" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    {/* ******************** ******************** ******************** */}
+                                    <div className="imgbtn-ex-g1 imgbtn hnor clickable">
+                                        <div className="large-icon left">
+                                            <span className="fa-stack medal">
+                                                <i className="fa fa-bookmark fa-stack-1x medal-ribbon" aria-hidden="true"></i>
+                                                <i className="fa fa-certificate fa-stack-1x medal-star" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <div className="large-text left">
+                                            honor
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-g2 imgbtn hnor clickable">
+                                        <div className="regular-icon left">
+                                            <span className="fa-stack medal">
+                                                <i className="fa fa-bookmark fa-stack-1x medal-ribbon" aria-hidden="true"></i>
+                                                <i className="fa fa-certificate fa-stack-1x medal-star" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <div className="regular-text left">
+                                            honor
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-g3 imgbtn hnor clickable">
+                                        <div className="small-icon left">
+                                            <span className="fa-stack medal">
+                                                <i className="fa fa-bookmark fa-stack-1x medal-ribbon" aria-hidden="true"></i>
+                                                <i className="fa fa-certificate fa-stack-1x medal-star" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <div className="small-text left">
+                                            honor
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-g4 imgbtn hnor clickable" title="honor">
+                                        <div className="large-icon single">
+                                            <span className="fa-stack medal">
+                                                <i className="fa fa-bookmark fa-stack-1x medal-ribbon" aria-hidden="true"></i>
+                                                <i className="fa fa-certificate fa-stack-1x medal-star" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-g5 imgbtn hnor clickable" title="honor">
+                                        <div className="regular-icon single">
+                                            <span className="fa-stack medal">
+                                                <i className="fa fa-bookmark fa-stack-1x medal-ribbon" aria-hidden="true"></i>
+                                                <i className="fa fa-certificate fa-stack-1x medal-star" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="imgbtn-ex-g6 imgbtn hnor clickable" title="honor">
+                                        <div className="small-icon single">
+                                            <span className="fa-stack medal">
+                                                <i className="fa fa-bookmark fa-stack-1x medal-ribbon" aria-hidden="true"></i>
+                                                <i className="fa fa-certificate fa-stack-1x medal-star" aria-hidden="true"></i>
+                                            </span>
                                         </div>
                                     </div>
                                     {/* ******************** component [Image button] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-switch-button">
                                     <li>Switch button:</li>
+                                    {/* ******************** component [Switch button] <start> ******************** */}
+                                    <div className="swbtn-ex-a1 swbtn large on">
+                                        <div className="inner-button"></div>
+                                    </div>
+                                    <div className="swbtn-ex-a2 swbtn large off">
+                                        <div className="inner-button"></div>
+                                    </div>
+                                    <div className="swbtn-ex-a3 swbtn large on" disabled>
+                                        <div className="inner-button"></div>
+                                    </div>
+                                    <div className="swbtn-ex-b1 swbtn regular on">
+                                        <div className="inner-button"></div>
+                                    </div>
+                                    <div className="swbtn-ex-b2 swbtn regular off">
+                                        <div className="inner-button"></div>
+                                    </div>
+                                    <div className="swbtn-ex-b3 swbtn regular on" disabled>
+                                        <div className="inner-button"></div>
+                                    </div>
+                                    <div className="swbtn-ex-c1 swbtn small on">
+                                        <div className="inner-button"></div>
+                                    </div>
+                                    <div className="swbtn-ex-c2 swbtn small off">
+                                        <div className="inner-button"></div>
+                                    </div>
+                                    <div className="swbtn-ex-c3 swbtn small on" disabled>
+                                        <div className="inner-button"></div>
+                                    </div>
+                                    {/* ******************** component [Switch button] <end> ******************** */}
                                 </div>
                             </div>
                             <div className="title-level-04 regular-content title-selector-components">

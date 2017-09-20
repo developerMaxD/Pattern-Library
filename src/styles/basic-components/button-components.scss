@@ -1,10 +1,24 @@
 // -------------------- Base styles of buttons <start> --------------------
-@mixin base-button($backcolor, $hovercolor, $radius: 6px) {
+@mixin base-button($backcolor, $hovercolor, $radius: 6px, $shadowSet: outset) {
     outline: none;
     border: 0px solid transparent;
-    box-shadow: 2px 2px 5px $gray-level-2;
     text-align: center;
     padding: 2px 2px;
+    cursor: pointer;
+    border-radius: $radius;
+    background-color: $backcolor;
+    // ---------- shadow ----------
+    @if $shadowSet == outset {
+        box-shadow: 2px 2px 5px 0px $gray-level-2;
+        -moz-box-shadow: 2px 2px 5px 0px $gray-level-2;
+        -webkit-box-shadow: 2px 2px 5px 0px $gray-level-2;
+    } @else {
+        $shadowColor: darken($backcolor, 15%);
+        box-shadow: inset 2px 1px 3px 1px $shadowColor;
+        -moz-box-shadow: inset 2px 1px 3px 1px $shadowColor;
+        -webkit-box-shadow: inset 2px 1px 3px 1px $shadowColor;
+    }
+    // ---------- shadow ----------
     // ---------- unselectable ----------
     user-select: none;
     -moz-user-select: none;
@@ -12,13 +26,10 @@
     -webkit-user-select: none;
     -o-user-select: none;
     // ---------- unselectable ----------
-    cursor: pointer;
-    border-radius: $radius;
-    background-color: $backcolor;
     &:hover {
         background-color: $hovercolor;
     }
-    &:active {
+    &.clickable:active, .btn-active {
         background-color: lighten($hovercolor, 5%);
         box-shadow: 1px 1px 4px $gray-level-2;
         margin-left: 1px;
@@ -63,11 +74,6 @@
         position: relative;
         min-height: $singleSize;
         min-width: $singleSize;
-        // display: flex;
-        // -ms-flex-pack: center;
-        // align-items: center;
-        // -ms-flex-align: center;
-        // justify-content: center;
     }
     display: flex;
     -ms-flex-pack: center;
@@ -76,6 +82,23 @@
     justify-content: center;
     color: inherit;
     font-size: $size;
+}
+@mixin inner-button ($top, $side, $offset, $size) {
+    position: absolute;
+    top: $top;
+    #{$side}: $offset;
+    outline: none;
+    background-color: $whitesmoke;
+    border: 0px solid transparent;
+    height: $size;
+    line-height: $size;
+    width: $size;
+    border-radius: $size / 2;
+    // ---------- shadow ----------
+    box-shadow: 2px 1px 3px 0px darken($gray-level-2, 15%);
+    -moz-box-shadow: 2px 1px 3px 0px darken($gray-level-2, 15%);
+    -webkit-box-shadow: 2px 1px 3px 0px darken($gray-level-2, 15%);
+    // ---------- shadow ----------
 }
 // -------------------- Base styles of buttons <end> --------------------
 
@@ -160,7 +183,7 @@
         @include base-button($backcolor: $sky-base, $hovercolor: $sky-light);
         color: $whitesmoke;
     }
-    &.hnor { //[pebble]
+    &.hnor {
         @include base-button($backcolor: $violet-base, $hovercolor: $violet-light);
         color: $whitesmoke;
     }
@@ -263,16 +286,22 @@
     > .large-icon {
         &.left {
             @include icon($top: 8px, $side: left, $offset: 10px, $size: 1.8em);
+            > .medal {
+                @include medal($top: -17px, $size: 1.0em, $offset: 12px, $side: left, $sideOffset: -15px);
+            }
         }
         &.right {
             @include icon($top: 8px, $side: right, $offset: 10px, $size: 1.8em);
+            > .medal {
+                @include medal($top: -17px, $size: 1.0em, $offset: 12px, $side: left, $sideOffset: -15px);
+            }
         }
         &.single {
             @include icon($top: 8px, $side: left, $offset: 10px, $size: 1.8em, $singleSize: 40px);
+            > .medal {
+                @include medal($top: -8px, $size: 1.0em, $offset: 12px, $side: left, $sideOffset: -6px);
+            }
         }
-        // .medal {
-        //     @include medal($top: -11px, $size: 1.0em, $offset: 9px, $side: left, $sideOffset: -10px);
-        // }
     }
     > .regular-icon {
         &.left {
@@ -297,16 +326,22 @@
     > .small-icon {
         &.left {
             @include icon($top: 8px, $side: left, $offset: 8px, $size: 0.8em);
+            > .medal {
+                @include medal($top: -9px, $size: 1.0em, $offset: 7px, $side: left, $sideOffset: -6px);
+            }
         }
         &.right {
             @include icon($top: 8px, $side: right, $offset: 8px, $size: 0.8em);
+            > .medal {
+                @include medal($top: -9px, $size: 1.0em, $offset: 7px, $side: left, $sideOffset: -6px);
+            }
         }
         &.single {
             @include icon($top: 8px, $side: left, $offset: 8px, $size: 0.8em, $singleSize: 22px);
+            > .medal {
+                @include medal($top: -2px, $size: 1.0em, $offset: 7px, $side: left, $sideOffset: 0px);
+            }
         }
-        // .medal {
-        //     @include medal($top: -11px, $size: 1.0em, $offset: 9px, $side: left, $sideOffset: -10px);
-        // }
     }
     > .large-text {
         &.left {
@@ -336,4 +371,67 @@
 // -------------------- Styles of component 'Image button' <end> --------------------
 
 // -------------------- Styles of component 'Switch button' <start> --------------------
+.swbtn {
+    border: 1px solid $whitesmoke;
+    &.large.on {
+        @include base-button($backcolor: $green-base, $hovercolor: $green-base, $radius: 22px, $shadowSet: inset);
+        height: 40px;
+        line-height: 40px;
+        width: 60px;
+        color: transparent;
+        > .inner-button {
+            @include inner-button ($top: 3px, $side: right, $offset: 3px, $size: 38px);
+        }
+    }
+    &.large.off {
+        @include base-button($backcolor: $red-base, $hovercolor: $red-base, $radius: 22px, $shadowSet: inset);
+        height: 40px;
+        line-height: 40px;
+        width: 60px;
+        color: transparent;
+        > .inner-button {
+            @include inner-button ($top: 3px, $side: left, $offset: 3px, $size: 38px);
+        }
+    }
+    &.regular.on {
+        @include base-button($backcolor: $green-base, $hovercolor: $green-base, $radius: 18px, $shadowSet: inset);
+        height: 32px;
+        line-height: 32px;
+        width: 48px;
+        color: transparent;
+        > .inner-button {
+            @include inner-button ($top: 3px, $side: right, $offset: 3px, $size: 30px);
+        }
+    }
+    &.regular.off {
+        @include base-button($backcolor: $red-base, $hovercolor: $red-base, $radius: 18px, $shadowSet: inset);
+        height: 32px;
+        line-height: 32px;
+        width: 48px;
+        color: transparent;
+        > .inner-button {
+            @include inner-button ($top: 3px, $side: left, $offset: 3px, $size: 30px);
+        }
+    }
+    &.small.on {
+        @include base-button($backcolor: $green-base, $hovercolor: $green-base, $radius: 14px, $shadowSet: inset);
+        height: 24px;
+        line-height: 24px;
+        width: 36px;
+        color: transparent;
+        > .inner-button {
+            @include inner-button ($top: 3px, $side: right, $offset: 3px, $size: 22px);
+        }
+    }
+    &.small.off {
+        @include base-button($backcolor: $red-base, $hovercolor: $red-base, $radius: 14px, $shadowSet: inset);
+        height: 24px;
+        line-height: 24px;
+        width: 36px;
+        color: transparent;
+        > .inner-button {
+            @include inner-button ($top: 3px, $side: left, $offset: 3px, $size: 22px);
+        }
+    }
+}
 // -------------------- Styles of component 'Switch button' <end> --------------------
