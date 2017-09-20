@@ -90,7 +90,7 @@
     }
     > .search-button {
         // Include from pebble components
-        @include search-button($top: 9px, $color: $gray-level-4, $size: 0.9em, $side: right, $sideOffset: 10px);
+        @include single-button($top: 9px, $color: $gray-level-4, $size: 0.9em, $side: right, $sideOffset: 10px);
     }
 }
 .search-focus {
@@ -106,7 +106,7 @@
     }
     > .search-button {
         // Include from pebble components
-        @include search-button($top: 9px, $color: $gray-level-4, $size: 0.9em, $side: right, $sideOffset: 10px);
+        @include single-button($top: 9px, $color: $gray-level-4, $size: 0.9em, $side: right, $sideOffset: 10px);
     }
 }
 .search-disabled {
@@ -122,7 +122,7 @@
     }
     > .search-button {
         // Include from pebble components
-        @include search-button($top: 9px, $color: $gray-level-0, $size: 0.9em, $side: right, $sideOffset: 10px, $cursor: default);
+        @include single-button($top: 9px, $color: $gray-level-0, $size: 0.9em, $side: right, $sideOffset: 10px, $cursor: default);
     }
 }
 // -------------------- Styles of component 'Search Editor' <end> --------------------

@@ -1,4 +1,78 @@
 // -------------------- Styles of component 'Combo selector' <start> --------------------
+.cmbSltr-default {
+    @extend %border-base-normal;
+    min-height: 24px;
+    min-width: 50px;
+    > .content {
+        > .pleaseholder {
+            @include input-element($color: $gray-level-1);
+        }
+        > .input-default {
+            @include input-element($color: $fore-color)
+        }
+    }
+    > .close-button {
+        // Include from pebble components
+        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px);
+    }
+    > .list-button {
+        // Include from pebble components
+        @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 6px);
+    }
+}
+.cmbSltr-focus {
+    @extend %border-base-focus;
+    min-height: 24px;
+    min-width: 50px;
+    > .input-default {
+        @include input-element($color: $fore-color)
+    }
+    > .close-button {
+        // Include from pebble components
+        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px);
+    }
+    > .list-button {
+        // Include from pebble components
+        @include single-button($top: 6px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 6px);
+    }
+}
+.cmbSltr-error {
+    @extend %border-base-error;
+    min-height: 24px;
+    min-width: 50px;
+    > .content {
+        > .pleaseholder {
+            @include input-element($color: $red-base);
+        }
+        > .input-default {
+            @include input-element($color: $red-base)
+        }
+    }
+    > .close-button {
+        // Include from pebble components
+        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px);
+    }
+    > .list-button {
+        // Include from pebble components
+        @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 6px);
+    }
+}
+.cmbSltr-disabled {
+    @extend %border-base-disabled;
+    min-height: 24px;
+    min-width: 50px;
+    > .input-default {
+        @include input-element($color: $gray-level-0)
+    }
+    > .close-button {
+        // Include from pebble components
+        @include close-button($top: 0px, $color: $gray-level-0, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px, $cursor: default);
+    }
+    > .list-button {
+        // Include from pebble components
+        @include single-button($top: 7px, $color: $gray-level-0, $size: 1.2em, $side: right, $sideOffset: 6px, $cursor: default);
+    }
+}
 // -------------------- Styles of component 'Combo selector' <end> --------------------
 
 // -------------------- Styles of component 'Radio selector' <start> --------------------

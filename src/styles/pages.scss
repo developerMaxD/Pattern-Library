@@ -782,16 +782,44 @@
                 top: 1720px;
                 > .title-components-combo-selector {
                     top: 5px;
+                    > .cmbSltr-ex-a1 {    // normal
+                        position: absolute;
+                        height: 32px;
+                        width: 220px;
+                        top: 30px;
+                        left: 40px;
+                    }
+                    > .cmbSltr-ex-a2 {    // focus
+                        position: absolute;
+                        height: 32px;
+                        width: 220px;
+                        top: 30px;
+                        left: 300px;
+                    }
+                    > .cmbSltr-ex-b1 {    // error
+                        position: absolute;
+                        height: 32px;
+                        width: 220px;
+                        top: 85px;
+                        left: 40px;
+                    }
+                    > .cmbSltr-ex-c1 {    // disabled
+                        position: absolute;
+                        height: 32px;
+                        width: 220px;
+                        top: 140px;
+                        left: 40px;
+                    }
                 }
                 > .title-components-radio-selector {
-                    top: 105px;
+                    top: 195px;
                 }
                 > .title-components-checkbox-selector {
-                    top: 205px;
+                    top: 345px;
                 }
             }
             > .title-dialog-components {
-                top: 2100px;
+                top: 2300px;
                 > .title-components-standard-dialog {
                     top: 5px;
                 }
@@ -803,7 +831,7 @@
                 }
             }
             > .title-picker-components {
-                top: 2500px;
+                top: 2700px;
                 > .title-components-date-picker {
                     top: 5px;
                 }
@@ -812,7 +840,7 @@
                 }
             }
             > .title-subpage-components {
-                top: 2700px;
+                top: 2900px;
                 > .title-components-pagination {
                     top: 5px;
                 }

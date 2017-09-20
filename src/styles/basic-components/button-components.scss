@@ -95,9 +95,11 @@
     width: $size;
     border-radius: $size / 2;
     // ---------- shadow ----------
-    box-shadow: 2px 1px 3px 0px darken($gray-level-2, 15%);
-    -moz-box-shadow: 2px 1px 3px 0px darken($gray-level-2, 15%);
-    -webkit-box-shadow: 2px 1px 3px 0px darken($gray-level-2, 15%);
+    @if $side == left {
+        box-shadow: 2px 1px 3px 0px darken($whitesmoke, 20%);
+        -moz-box-shadow: 2px 1px 3px 0px darken($whitesmoke, 20%);
+        -webkit-box-shadow: 2px 1px 3px 0px darken($whitesmoke, 20%);
+    }
     // ---------- shadow ----------
 }
 // -------------------- Base styles of buttons <end> --------------------
@@ -374,63 +376,69 @@
 .swbtn {
     border: 1px solid $whitesmoke;
     &.large.on {
-        @include base-button($backcolor: $green-base, $hovercolor: $green-base, $radius: 22px, $shadowSet: inset);
-        height: 40px;
-        line-height: 40px;
-        width: 60px;
+        $baseSize: 36px;
+        @include base-button($backcolor: $green-base, $hovercolor: $green-base, $radius: $baseSize / 2 + 2, $shadowSet: inset);
+        height: $baseSize;
+        line-height: $baseSize;
+        width: $baseSize * 1.5;
         color: transparent;
         > .inner-button {
-            @include inner-button ($top: 3px, $side: right, $offset: 3px, $size: 38px);
+            @include inner-button ($top: 3px, $side: right, $offset: 3px, $size: $baseSize - 2);
         }
     }
     &.large.off {
-        @include base-button($backcolor: $red-base, $hovercolor: $red-base, $radius: 22px, $shadowSet: inset);
-        height: 40px;
-        line-height: 40px;
-        width: 60px;
+        $baseSize: 36px;
+        @include base-button($backcolor: $red-base, $hovercolor: $red-base, $radius: $baseSize / 2 + 2, $shadowSet: inset);
+        height: $baseSize;
+        line-height: $baseSize;
+        width: $baseSize * 1.5;
         color: transparent;
         > .inner-button {
-            @include inner-button ($top: 3px, $side: left, $offset: 3px, $size: 38px);
+            @include inner-button ($top: 3px, $side: left, $offset: 3px, $size: $baseSize - 2);
         }
     }
     &.regular.on {
-        @include base-button($backcolor: $green-base, $hovercolor: $green-base, $radius: 18px, $shadowSet: inset);
-        height: 32px;
-        line-height: 32px;
-        width: 48px;
+        $baseSize: 30px;
+        @include base-button($backcolor: $green-base, $hovercolor: $green-base, $radius: $baseSize / 2 + 2, $shadowSet: inset);
+        height: $baseSize;
+        line-height: $baseSize;
+        width: $baseSize * 1.5;
         color: transparent;
         > .inner-button {
-            @include inner-button ($top: 3px, $side: right, $offset: 3px, $size: 30px);
+            @include inner-button ($top: 3px, $side: right, $offset: 3px, $size: $baseSize - 2);
         }
     }
     &.regular.off {
-        @include base-button($backcolor: $red-base, $hovercolor: $red-base, $radius: 18px, $shadowSet: inset);
-        height: 32px;
-        line-height: 32px;
-        width: 48px;
+        $baseSize: 30px;
+        @include base-button($backcolor: $red-base, $hovercolor: $red-base, $radius: $baseSize / 2 + 2, $shadowSet: inset);
+        height: $baseSize;
+        line-height: $baseSize;
+        width: $baseSize * 1.5;
         color: transparent;
         > .inner-button {
-            @include inner-button ($top: 3px, $side: left, $offset: 3px, $size: 30px);
+            @include inner-button ($top: 3px, $side: left, $offset: 3px, $size: $baseSize - 2);
         }
     }
     &.small.on {
-        @include base-button($backcolor: $green-base, $hovercolor: $green-base, $radius: 14px, $shadowSet: inset);
-        height: 24px;
-        line-height: 24px;
-        width: 36px;
+        $baseSize: 22px;
+        @include base-button($backcolor: $green-base, $hovercolor: $green-base, $radius: $baseSize / 2 + 2, $shadowSet: inset);
+        height: $baseSize;
+        line-height: $baseSize;
+        width: $baseSize * 1.5;
         color: transparent;
         > .inner-button {
-            @include inner-button ($top: 3px, $side: right, $offset: 3px, $size: 22px);
+            @include inner-button ($top: 3px, $side: right, $offset: 3px, $size: $baseSize - 2);
         }
     }
     &.small.off {
-        @include base-button($backcolor: $red-base, $hovercolor: $red-base, $radius: 14px, $shadowSet: inset);
-        height: 24px;
-        line-height: 24px;
-        width: 36px;
+        $baseSize: 22px;
+        @include base-button($backcolor: $red-base, $hovercolor: $red-base, $radius: $baseSize / 2 + 2, $shadowSet: inset);
+        height: $baseSize;
+        line-height: $baseSize;
+        width: $baseSize * 1.5;
         color: transparent;
         > .inner-button {
-            @include inner-button ($top: 3px, $side: left, $offset: 3px, $size: 22px);
+            @include inner-button ($top: 3px, $side: left, $offset: 3px, $size: $baseSize - 2);
         }
     }
 }
