@@ -1,15 +1,3 @@
-// -------------------- Base styles of input element <start> --------------------
-@mixin input-element($color: $fore-color) {
-    border-style: none;
-    outline: none;
-    color: $color;
-    background-color: $back-color;
-    margin: 3px 8px;
-    min-height: 18px;
-    min-height: 24px;
-}
-// -------------------- Base styles of input element <end> --------------------
-
 // -------------------- Base styles of rating element <start> --------------------
 @mixin rating-item($color, $size, $offset, $cursor: pointer) {
     position: relative;
@@ -27,6 +15,7 @@
 .edt-default {
     @extend %border-base-normal;
     min-height: 24px;
+    max-height: 30px;
     min-width: 40px;
     background-color: $back-color;
     > .input-default {
@@ -40,6 +29,7 @@
 .edt-focus {
     @extend %border-base-focus;
     min-height: 24px;
+    max-height: 30px;
     min-width: 40px;
     > .input-default {
         @include input-element($color: $fore-color)
@@ -52,6 +42,7 @@
 .edt-error {
     @extend %border-base-error;
     min-height: 24px;
+    max-height: 30px;
     min-width: 40px;
     > .input-default {
         @include input-element($color: $red-base)
@@ -64,6 +55,7 @@
 .edt-disabled {
     @extend %border-base-disabled;
     min-height: 24px;
+    max-height: 30px;
     min-width: 40px;
     background-color: $back-color;
     > .input-default {
@@ -80,6 +72,7 @@
 .search-default {
     @extend %border-base-normal;
     min-height: 24px;
+    max-height: 30px;
     min-width: 56px;
     > .input-default {
         @include input-element($color: $fore-color)
@@ -96,6 +89,7 @@
 .search-focus {
     @extend %border-base-focus;
     min-height: 24px;
+    max-height: 30px;
     min-width: 56px;
     > .input-default {
         @include input-element($color: $fore-color)
@@ -112,6 +106,7 @@
 .search-disabled {
     @extend %border-base-disabled;
     min-height: 24px;
+    max-height: 30px;
     min-width: 56px;
     > .input-default {
         @include input-element($color: $gray-level-0)

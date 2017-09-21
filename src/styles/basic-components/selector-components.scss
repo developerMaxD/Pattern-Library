@@ -1,19 +1,53 @@
+// -------------------- Styles of element 'selector content' <start> --------------------
+%selector-content {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 8px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-style: none;
+    outline: none;
+    background-color: transparent;
+}
+// -------------------- Styles of element 'selector content' <end> --------------------
+
 // -------------------- Styles of component 'Combo selector' <start> --------------------
 .cmbSltr-default {
     @extend %border-base-normal;
     min-height: 24px;
+    max-height: 30px;
     min-width: 50px;
+    > .placeholder {
+        @include placeholder($height: 30px, $color: $gray-level-1);
+    }
     > .content {
-        > .pleaseholder {
-            @include input-element($color: $gray-level-1);
+        @extend %selector-content;
+        white-space: nowrap;
+        > .single {
+            @extend %border-base-none;
+            display: inline;
         }
-        > .input-default {
-            @include input-element($color: $fore-color)
+        > .item {
+            @extend %border-base-normal;
+            display: inline;
+            padding: 1px 4px;
+            margin-left: 4px;
+            &:first-child {
+                margin-left: 0px;
+            }
+        }
+        > .searcher {
+            @include input-element($color: $fore-color);
+            position: relative;
+            top: -1px;
+            display: inline;
+            width: 100px;
         }
     }
     > .close-button {
         // Include from pebble components
-        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px);
+        @include close-button($top: 1px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px);
     }
     > .list-button {
         // Include from pebble components
@@ -23,13 +57,21 @@
 .cmbSltr-focus {
     @extend %border-base-focus;
     min-height: 24px;
+    max-height: 30px;
     min-width: 50px;
-    > .input-default {
-        @include input-element($color: $fore-color)
+    > .placeholder {
+        @include placeholder($height: 30px, $color: transparent);
+    }
+    > .content {
+        @extend %selector-content;
+        > .searcher {
+            @include input-element($color: $fore-color);
+            position: relative;
+        }
     }
     > .close-button {
         // Include from pebble components
-        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px);
+        @include close-button($top: 1px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px);
     }
     > .list-button {
         // Include from pebble components
@@ -39,18 +81,21 @@
 .cmbSltr-error {
     @extend %border-base-error;
     min-height: 24px;
+    max-height: 30px;
     min-width: 50px;
+    > .placeholder {
+        @include placeholder($height: 30px, $color: lighten($red-base, 25%) );
+    }
     > .content {
-        > .pleaseholder {
-            @include input-element($color: $red-base);
-        }
-        > .input-default {
-            @include input-element($color: $red-base)
+        @extend %selector-content;
+        > .searcher {
+            @include input-element($color: $fore-color);
+            position: relative;
         }
     }
     > .close-button {
         // Include from pebble components
-        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px);
+        @include close-button($top: 1px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px);
     }
     > .list-button {
         // Include from pebble components
@@ -60,13 +105,21 @@
 .cmbSltr-disabled {
     @extend %border-base-disabled;
     min-height: 24px;
+    max-height: 30px;
     min-width: 50px;
-    > .input-default {
-        @include input-element($color: $gray-level-0)
+    > .placeholder {
+        @include placeholder($height: 30px, $color: $gray-level-0);
+    }
+    > .content {
+        @extend %selector-content;
+        > .searcher {
+            @include input-element($color: $fore-color);
+            position: relative;
+        }
     }
     > .close-button {
         // Include from pebble components
-        @include close-button($top: 0px, $color: $gray-level-0, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px, $cursor: default);
+        @include close-button($top: 1px, $color: $gray-level-0, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px, $cursor: default);
     }
     > .list-button {
         // Include from pebble components

@@ -789,12 +789,19 @@
                         top: 30px;
                         left: 40px;
                     }
-                    > .cmbSltr-ex-a2 {    // focus
+                    > .cmbSltr-ex-a2 {    // single-selected
                         position: absolute;
                         height: 32px;
                         width: 220px;
                         top: 30px;
                         left: 300px;
+                    }
+                    > .cmbSltr-ex-a3 {    // focus
+                        position: absolute;
+                        height: 32px;
+                        width: 220px;
+                        top: 30px;
+                        left: 560px;
                     }
                     > .cmbSltr-ex-b1 {    // error
                         position: absolute;
@@ -802,6 +809,13 @@
                         width: 220px;
                         top: 85px;
                         left: 40px;
+                    }
+                    > .cmbSltr-ex-b2 {    // multi-selected
+                        position: absolute;
+                        height: 32px;
+                        width: 220px;
+                        top: 85px;
+                        left: 300px;
                     }
                     > .cmbSltr-ex-c1 {    // disabled
                         position: absolute;

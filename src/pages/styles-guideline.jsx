@@ -293,7 +293,7 @@ export default class StylesGuideline extends React.Component {
                                         <i className="fa fa-search search-button" aria-hidden="true"></i>
                                     </div>
                                     <div className="search-editor-example-disabled search-disabled regular-content ">
-                                        <input type="text" value="normal search editor" className="input-default" disabled/>
+                                        <input type="text" value="disabled search editor" className="input-default" disabled/>
                                         <span className="fa-stack close-button">
                                             <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
                                             <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
@@ -869,43 +869,93 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-combo-selector">
                                     <li>Combo selector:</li>
                                     {/* ******************** component [Combo selector] <end> ******************** */}
-                                    <div className="cmbSltr-ex-a1 cmbSltr-default regular-content ">
-                                        <div className="content">
-                                            {/* <input type="text" value="" className="input-default"/> */}
-                                            <input type="text" value="Please select name." className="pleaseholder"/>
+                                    <div className="cmbSltr-ex-a1 regular-content">
+                                        <div ref="box" className="cmbSltr-default">
+                                            <span className="placeholder">Please select name.</span>
+                                            <div className="content">
+                                                <input type="text" className="searcher"/>
+                                            </div>
+                                            <span className="fa-stack close-button">
+                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                            </span>
+                                            <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
                                         </div>
-                                        <span className="fa-stack close-button">
-                                            <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
-                                            <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
-                                        </span>
-                                        <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
                                     </div>
-                                    <div className="cmbSltr-ex-a2 cmbSltr-focus regular-content ">
-                                        <input type="text" value="" className="input-default"/>
-                                        <span className="fa-stack close-button">
-                                            <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
-                                            <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
-                                        </span>
-                                        <i className="fa fa-angle-up list-button" aria-hidden="true"></i>
-                                    </div>
-                                    <div className="cmbSltr-ex-b1 cmbSltr-error regular-content ">
-                                        <div className="content">
-                                            {/* <input type="text" value="" className="input-default"/> */}
-                                            <input type="text" value="Please select name." className="pleaseholder"/>
+                                    {/* ########## ########## ########## WORKING ON IT ########## ########## ########## */}
+                                    <div className="cmbSltr-ex-a2 regular-content">
+                                        <div ref="box" className="cmbSltr-default">
+                                            {/* <span className="placeholder">Please select name.</span> */}
+                                            <div className="content">
+                                                <div className="single">Jacob</div>
+                                                <input type="text" className="searcher"/>
+                                            </div>
+                                            <span className="fa-stack close-button">
+                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                            </span>
+                                            <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
                                         </div>
-                                        <span className="fa-stack close-button">
-                                            <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
-                                            <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
-                                        </span>
-                                        <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
                                     </div>
-                                    <div className="cmbSltr-ex-c1 cmbSltr-disabled regular-content ">
-                                        <input type="text" value="" className="input-default" disabled/>
-                                        <span className="fa-stack close-button">
-                                            <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
-                                            <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
-                                        </span>
-                                        <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
+                                    {/* ########## ########## ########## WORKING ON IT ########## ########## ########## */}
+                                    {/* ########## ########## ########## WORKING ON IT ########## ########## ########## */}
+                                    <div className="cmbSltr-ex-a3 regular-content">
+                                        <div ref="box" className="cmbSltr-focus">
+                                            <span className="placeholder">Please select name.</span>
+                                            <div className="content">
+                                                <input type="text" className="searcher"/>
+                                            </div>
+                                            <span className="fa-stack close-button">
+                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                            </span>
+                                            <i className="fa fa-angle-up list-button" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    {/* ########## ########## ########## WORKING ON IT ########## ########## ########## */}
+                                    <div className="cmbSltr-ex-b1 regular-content">
+                                        <div ref="box" className="cmbSltr-error">
+                                            <span className="placeholder">Please select name.</span>
+                                            <div className="content">
+                                                <input type="text" className="searcher"/>
+                                            </div>
+                                            <span className="fa-stack close-button">
+                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                            </span>
+                                            <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    {/* ########## ########## ########## WORKING ON IT ########## ########## ########## */}
+                                    <div className="cmbSltr-ex-b2 regular-content">
+                                        <div ref="box" className="cmbSltr-default">
+                                            {/* <span className="placeholder">Please select name.</span> */}
+                                            <div className="content">
+                                                <div className="item">Jacob</div>
+                                                <div className="item">Ryan</div>
+                                                <div className="item">Caleb</div>
+                                                <input type="text" className="searcher"/>
+                                            </div>
+                                            <span className="fa-stack close-button">
+                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                            </span>
+                                            <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    {/* ########## ########## ########## WORKING ON IT ########## ########## ########## */}
+                                    <div className="cmbSltr-ex-c1 regular-content">
+                                        <div ref="box" className="cmbSltr-disabled">
+                                            <span className="placeholder">Please select name.</span>
+                                            <div className="content">
+                                                <input type="text" className="searcher" disabled/>
+                                            </div>
+                                            <span className="fa-stack close-button">
+                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                            </span>
+                                            <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
+                                        </div>
                                     </div>
                                     {/* ******************** component [Combo selector] <end> ******************** */}
                                 </div>
