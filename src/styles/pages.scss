@@ -262,6 +262,7 @@
             height: 50px;
             line-height: 50px;
             width: 875px;
+            cursor: pointer;
             &:hover {
                 background-color: $orange-base;
             }
@@ -824,9 +825,25 @@
                         top: 140px;
                         left: 40px;
                     }
+                    > .cmbSltr-ex-c2 {    // disabled
+                        position: absolute;
+                        height: 32px;
+                        width: 220px;
+                        top: 140px;
+                        left: 300px;
+                        // ------------------ Temp for sync component ------------------
+                        > div .box-setting {
+                            left: 12px;
+                            width: 150px;
+                        }
+                        // ------------------ Temp for sync component ------------------
+                    }
                 }
                 > .title-components-radio-selector {
                     top: 195px;
+                    > .rdoSltr-ex-a1 {
+                        //
+                    }
                 }
                 > .title-components-checkbox-selector {
                     top: 345px;

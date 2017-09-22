@@ -243,29 +243,29 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-editor">
                                     <li>Editor:</li>
                                     {/* ******************** component [Editor] <start> ******************** */}
-                                    <div className="editor-example-normal edt-default regular-content ">
-                                        <input type="text" value="normal editor" className="input-default" />
+                                    <div className="editor-example-normal editor default regular-content ">
+                                        <input type="text" value="normal editor" className="input" />
                                         <span className="fa-stack close-button">
                                             <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
                                             <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <div className="editor-example-focus edt-focus regular-content ">
-                                        <input type="text" value="on focus editor" className="input-default"/>
+                                    <div className="editor-example-focus editor focus regular-content ">
+                                        <input type="text" value="on focus editor" className="input"/>
                                         <span className="fa-stack close-button">
                                             <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
                                             <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <div className="editor-example-error edt-error regular-content ">
-                                        <input type="text" value="on error editor" className="input-default"/>
+                                    <div className="editor-example-error editor error regular-content ">
+                                        <input type="text" value="on error editor" className="input"/>
                                         <span className="fa-stack close-button">
                                             <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
                                             <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <div className="editor-example-disabled edt-disabled regular-content ">
-                                        <input type="text" value="disabled editor" className="input-default" disabled />
+                                    <div className="editor-example-disabled editor disabled regular-content ">
+                                        <input type="text" value="disabled editor" className="input" disabled />
                                         <span className="fa-stack close-button">
                                             <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
                                             <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
@@ -276,24 +276,24 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-search-editor">
                                     <li>Search Editor:</li>
                                     {/* ******************** component [Search Editor] <start> ******************** */}
-                                    <div className="search-editor-example-normal search-default regular-content ">
-                                        <input type="text" value="normal search editor" className="input-default"/>
+                                    <div className="search-editor-example-normal search-editor default regular-content ">
+                                        <input type="text" value="normal search editor" className="input"/>
                                         <span className="fa-stack close-button">
                                             <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
                                             <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
                                         </span>
                                         <i className="fa fa-search search-button" aria-hidden="true"></i>
                                     </div>
-                                    <div className="search-editor-example-focus search-focus regular-content ">
-                                        <input type="text" value="on focus search editor" className="input-default"/>
+                                    <div className="search-editor-example-focus search-editor focus regular-content ">
+                                        <input type="text" value="on focus search editor" className="input"/>
                                         <span className="fa-stack close-button">
                                             <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
                                             <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
                                         </span>
                                         <i className="fa fa-search search-button" aria-hidden="true"></i>
                                     </div>
-                                    <div className="search-editor-example-disabled search-disabled regular-content ">
-                                        <input type="text" value="disabled search editor" className="input-default" disabled/>
+                                    <div className="search-editor-example-disabled search-editor disabled regular-content ">
+                                        <input type="text" value="disabled search editor" className="input" disabled/>
                                         <span className="fa-stack close-button">
                                             <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
                                             <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
@@ -305,21 +305,21 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-rating-editor">
                                     <li>Rating Editor:</li>
                                     {/* ******************** component [Rating Editor] <start> ******************** */}
-                                    <div className="rating-editor-star-empty rating-default">
+                                    <div className="rating-editor-star-empty rating-editor default">
                                         <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
                                         <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
                                         <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
                                         <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
                                         <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
                                     </div>
-                                    <div className="rating-editor-star-half rating-readonly">
+                                    <div className="rating-editor-star-half rating-editor readonly">
                                         <i className="fa fa-star rating-item" aria-hidden="true"></i>
                                         <i className="fa fa-star rating-item" aria-hidden="true"></i>
                                         <i className="fa fa-star rating-item" aria-hidden="true"></i>
                                         <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
                                         <i className="fa fa-star-o rating-item" aria-hidden="true"></i>
                                     </div>
-                                    <div className="rating-editor-heart-full rating-red-heart">
+                                    <div className="rating-editor-heart-full rating-editor heart">
                                         <i className="fa fa-heart rating-item" aria-hidden="true"></i>
                                         <i className="fa fa-heart rating-item" aria-hidden="true"></i>
                                         <i className="fa fa-heart-o rating-item" aria-hidden="true"></i>
@@ -870,7 +870,7 @@ export default class StylesGuideline extends React.Component {
                                     <li>Combo selector:</li>
                                     {/* ******************** component [Combo selector] <end> ******************** */}
                                     <div className="cmbSltr-ex-a1 regular-content">
-                                        <div ref="box" className="cmbSltr-default">
+                                        <div ref="box" className="combo-box default">
                                             <span className="placeholder">Please select name.</span>
                                             <div className="content">
                                                 <input type="text" className="searcher"/>
@@ -882,9 +882,8 @@ export default class StylesGuideline extends React.Component {
                                             <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    {/* ########## ########## ########## WORKING ON IT ########## ########## ########## */}
                                     <div className="cmbSltr-ex-a2 regular-content">
-                                        <div ref="box" className="cmbSltr-default">
+                                        <div ref="box" className="combo-box default">
                                             {/* <span className="placeholder">Please select name.</span> */}
                                             <div className="content">
                                                 <div className="single">Jacob</div>
@@ -897,10 +896,8 @@ export default class StylesGuideline extends React.Component {
                                             <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    {/* ########## ########## ########## WORKING ON IT ########## ########## ########## */}
-                                    {/* ########## ########## ########## WORKING ON IT ########## ########## ########## */}
                                     <div className="cmbSltr-ex-a3 regular-content">
-                                        <div ref="box" className="cmbSltr-focus">
+                                        <div ref="box" className="combo-box focus">
                                             <span className="placeholder">Please select name.</span>
                                             <div className="content">
                                                 <input type="text" className="searcher"/>
@@ -911,10 +908,20 @@ export default class StylesGuideline extends React.Component {
                                             </span>
                                             <i className="fa fa-angle-up list-button" aria-hidden="true"></i>
                                         </div>
+                                        <div className="combo-list">
+                                            <div className="options">
+                                                <div className="option">Christopher</div>
+                                                <div className="option">Joshua</div>
+                                                <div className="option">Alexander</div>
+                                                <div className="option">Francisco</div>
+                                                <div className="option">Nicholas</div>
+                                                <div className="option">Caleb</div>
+                                                <div className="option">Matthew</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    {/* ########## ########## ########## WORKING ON IT ########## ########## ########## */}
                                     <div className="cmbSltr-ex-b1 regular-content">
-                                        <div ref="box" className="cmbSltr-error">
+                                        <div ref="box" className="combo-box error">
                                             <span className="placeholder">Please select name.</span>
                                             <div className="content">
                                                 <input type="text" className="searcher"/>
@@ -926,14 +933,24 @@ export default class StylesGuideline extends React.Component {
                                             <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    {/* ########## ########## ########## WORKING ON IT ########## ########## ########## */}
                                     <div className="cmbSltr-ex-b2 regular-content">
-                                        <div ref="box" className="cmbSltr-default">
+                                        <div ref="box" className="combo-box default">
                                             {/* <span className="placeholder">Please select name.</span> */}
                                             <div className="content">
-                                                <div className="item">Jacob</div>
-                                                <div className="item">Ryan</div>
-                                                <div className="item">Caleb</div>
+                                                <div className="multi anim-trans-backcolor">
+                                                    <span className="fa-stack remove">
+                                                        <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                        <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                                    </span>
+                                                    Jacob
+                                                </div>
+                                                <div className="multi anim-trans-backcolor">
+                                                    <span className="fa-stack remove">
+                                                        <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                        <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                                    </span>
+                                                    Caleb
+                                                </div>
                                                 <input type="text" className="searcher"/>
                                             </div>
                                             <span className="fa-stack close-button">
@@ -943,13 +960,48 @@ export default class StylesGuideline extends React.Component {
                                             <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    {/* ########## ########## ########## WORKING ON IT ########## ########## ########## */}
                                     <div className="cmbSltr-ex-c1 regular-content">
-                                        <div ref="box" className="cmbSltr-disabled">
+                                        <div ref="box" className="combo-box disabled">
                                             <span className="placeholder">Please select name.</span>
                                             <div className="content">
                                                 <input type="text" className="searcher" disabled/>
                                             </div>
+                                            <span className="fa-stack close-button">
+                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                            </span>
+                                            <i className="fa fa-angle-down list-button" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div className="cmbSltr-ex-c2 regular-content">
+                                        <div ref="box" className="combo-box default">
+                                            {/* <span className="placeholder">Please select name.</span> */}
+                                            <i className="fa fa-angle-left left-button" aria-hidden="true"></i>
+                                            <div className="content box-setting">      {/* <-- temp for sync component */}
+                                                <div className="multi anim-trans-backcolor">
+                                                    <span className="fa-stack remove">
+                                                        <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                        <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                                    </span>
+                                                    Jacob
+                                                </div>
+                                                <div className="multi anim-trans-backcolor">
+                                                    <span className="fa-stack remove">
+                                                        <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                        <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                                    </span>
+                                                    Caleb
+                                                </div>
+                                                <div className="multi anim-trans-backcolor">
+                                                    <span className="fa-stack remove">
+                                                        <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                        <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                                    </span>
+                                                    Ryan
+                                                </div>
+                                                <input type="text" className="searcher"/>
+                                            </div>
+                                            <i className="fa fa-angle-right right-button" aria-hidden="true"></i>
                                             <span className="fa-stack close-button">
                                                 <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
                                                 <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>

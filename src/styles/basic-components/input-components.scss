@@ -12,135 +12,141 @@
 // -------------------- Base styles of rating element <end> --------------------
 
 // -------------------- Styles of component 'Editor' <start> --------------------
-.edt-default {
-    @extend %border-base-normal;
-    min-height: 24px;
-    max-height: 30px;
-    min-width: 40px;
-    background-color: $back-color;
-    > .input-default {
-        @include input-element($color: $fore-color)
+.editor {
+    &.default {
+        @extend %border-base-normal;
+        min-height: 24px;
+        max-height: 30px;
+        min-width: 40px;
+        background-color: $back-color;
+        > .input {
+            @include input-element($color: $fore-color)
+        }
+        > .close-button {
+            // Include from pebble components
+            @include close-button($top: 6px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 10px);
+        }
     }
-    > .close-button {
-        // Include from pebble components
-        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 5px);
+    &.focus {
+        @extend %border-base-focus;
+        min-height: 24px;
+        max-height: 30px;
+        min-width: 40px;
+        > .input {
+            @include input-element($color: $fore-color)
+        }
+        > .close-button {
+            // Include from pebble components
+            @include close-button($top: 6px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 10px);
+        }
     }
-}
-.edt-focus {
-    @extend %border-base-focus;
-    min-height: 24px;
-    max-height: 30px;
-    min-width: 40px;
-    > .input-default {
-        @include input-element($color: $fore-color)
+    &.error {
+        @extend %border-base-error;
+        min-height: 24px;
+        max-height: 30px;
+        min-width: 40px;
+        > .input {
+            @include input-element($color: $red-base)
+        }
+        > .close-button {
+            // Include from pebble components
+            @include close-button($top: 6px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 10px);
+        }
     }
-    > .close-button {
-        // Include from pebble components
-        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 5px);
-    }
-}
-.edt-error {
-    @extend %border-base-error;
-    min-height: 24px;
-    max-height: 30px;
-    min-width: 40px;
-    > .input-default {
-        @include input-element($color: $red-base)
-    }
-    > .close-button {
-        // Include from pebble components
-        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 5px);
-    }
-}
-.edt-disabled {
-    @extend %border-base-disabled;
-    min-height: 24px;
-    max-height: 30px;
-    min-width: 40px;
-    background-color: $back-color;
-    > .input-default {
-        @include input-element($color: $gray-level-0)
-    }
-    > .close-button {
-        // Include from pebble components
-        @include close-button($top: 0px, $color: $gray-level-0, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 5px, $cursor: default);
+    &.disabled {
+        @extend %border-base-disabled;
+        min-height: 24px;
+        max-height: 30px;
+        min-width: 40px;
+        background-color: $back-color;
+        > .input {
+            @include input-element($color: $disabled-color)
+        }
+        > .close-button {
+            // Include from pebble components
+            @include close-button($top: 6px, $color: $disabled-color, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 10px, $cursor: default);
+        }
     }
 }
 // -------------------- Styles of component 'Editor' <end> --------------------
 
 // -------------------- Styles of component 'Search Editor' <start> --------------------
-.search-default {
-    @extend %border-base-normal;
-    min-height: 24px;
-    max-height: 30px;
-    min-width: 56px;
-    > .input-default {
-        @include input-element($color: $fore-color)
+.search-editor {
+    &.default {
+        @extend %border-base-normal;
+        min-height: 24px;
+        max-height: 30px;
+        min-width: 56px;
+        > .input {
+            @include input-element($color: $fore-color)
+        }
+        > .close-button {
+            // Include from pebble components
+            @include close-button($top: 6px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 26px);
+        }
+        > .search-button {
+            // Include from pebble components
+            @include single-button($top: 9px, $color: $gray-level-4, $size: 0.9em, $side: right, $sideOffset: 8px);
+        }
     }
-    > .close-button {
-        // Include from pebble components
-        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 22px);
+    &.focus {
+        @extend %border-base-focus;
+        min-height: 24px;
+        max-height: 30px;
+        min-width: 56px;
+        > .input {
+            @include input-element($color: $fore-color)
+        }
+        > .close-button {
+            // Include from pebble components
+            @include close-button($top: 6px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 26px);
+        }
+        > .search-button {
+            // Include from pebble components
+            @include single-button($top: 9px, $color: $gray-level-4, $size: 0.9em, $side: right, $sideOffset: 8px);
+        }
     }
-    > .search-button {
-        // Include from pebble components
-        @include single-button($top: 9px, $color: $gray-level-4, $size: 0.9em, $side: right, $sideOffset: 10px);
-    }
-}
-.search-focus {
-    @extend %border-base-focus;
-    min-height: 24px;
-    max-height: 30px;
-    min-width: 56px;
-    > .input-default {
-        @include input-element($color: $fore-color)
-    }
-    > .close-button {
-        // Include from pebble components
-        @include close-button($top: 0px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 22px);
-    }
-    > .search-button {
-        // Include from pebble components
-        @include single-button($top: 9px, $color: $gray-level-4, $size: 0.9em, $side: right, $sideOffset: 10px);
-    }
-}
-.search-disabled {
-    @extend %border-base-disabled;
-    min-height: 24px;
-    max-height: 30px;
-    min-width: 56px;
-    > .input-default {
-        @include input-element($color: $gray-level-0)
-    }
-    > .close-button {
-        // Include from pebble components
-        @include close-button($top: 0px, $color: $gray-level-0, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 22px, $cursor: default);
-    }
-    > .search-button {
-        // Include from pebble components
-        @include single-button($top: 9px, $color: $gray-level-0, $size: 0.9em, $side: right, $sideOffset: 10px, $cursor: default);
+    &.disabled {
+        @extend %border-base-disabled;
+        min-height: 24px;
+        max-height: 30px;
+        min-width: 56px;
+        > .input {
+            @include input-element($color: $disabled-color)
+        }
+        > .close-button {
+            // Include from pebble components
+            @include close-button($top: 6px, $color: $disabled-color, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 26px, $cursor: default);
+        }
+        > .search-button {
+            // Include from pebble components
+            @include single-button($top: 9px, $color: $disabled-color, $size: 0.9em, $side: right, $sideOffset: 8px, $cursor: default);
+        }
     }
 }
 // -------------------- Styles of component 'Search Editor' <end> --------------------
 
 // -------------------- Styles of component 'Rating Editor' <start> --------------------
-.rating-default {
-    > .rating-item {
-        @include rating-item($color: $orange-base, $size: 1.6em, $offset: 2px, $cursor: pointer);
+.rating-editor {
+    &.default {
+        > .rating-item {
+            @include rating-item($color: $orange-base, $size: 1.6em, $offset: 2px, $cursor: pointer);
+        }
     }
-}
-.rating-readonly {
-    > .rating-item {
-        @include rating-item($color: $orange-base, $size: 1.6em, $offset: 2px, $cursor: default);
+    &.readonly {
+        > .rating-item {
+            @include rating-item($color: $orange-base, $size: 1.6em, $offset: 2px, $cursor: default);
+        }
     }
-}
-.rating-red-heart {
-    > .rating-item {
-        @include rating-item($color: $red-base, $size: 1.4em, $offset: 2px, $cursor: pointer);
+    &.heart {
+        > .rating-item {
+            @include rating-item($color: $red-base, $size: 1.4em, $offset: 2px, $cursor: pointer);
+        }
     }
-}
-.rating-heart-readonly {
-    > .rating-item {
-        @include rating-item($color: $red-base, $size: 1.4em, $offset: 2px, $cursor: default);
+    &.heart-readonly {
+        > .rating-item {
+            @include rating-item($color: $red-base, $size: 1.4em, $offset: 2px, $cursor: default);
+        }
     }
 }
 // -------------------- Styles of component 'Rating Editor' <end> --------------------

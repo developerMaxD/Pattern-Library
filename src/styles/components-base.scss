@@ -4,6 +4,7 @@ $fa-font-path: "../node_modules/font-awesome/fonts";
 // -------------------- Components default values <start> --------------------
 $fore-color: $dimgray !default;
 $back-color: transparent !default;
+$disabled-color: $gray-level-0 !default;
 // -------------------- Components default values <end> --------------------
 
 // -------------------- Components default styles: border <start> --------------------
@@ -33,7 +34,7 @@ $back-color: transparent !default;
 }
 %border-base-disabled {
     outline: none;
-    border: 1px solid $gray-level-0;
+    border: 1px solid $disabled-color;
     border-radius: 4px;
     box-shadow: 0 0 0px transparent;
 }

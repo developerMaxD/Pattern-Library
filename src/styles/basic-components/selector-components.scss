@@ -13,122 +13,313 @@
 // -------------------- Styles of element 'selector content' <end> --------------------
 
 // -------------------- Styles of component 'Combo selector' <start> --------------------
-.cmbSltr-default {
-    @extend %border-base-normal;
-    min-height: 24px;
-    max-height: 30px;
-    min-width: 50px;
-    > .placeholder {
-        @include placeholder($height: 30px, $color: $gray-level-1);
-    }
-    > .content {
-        @extend %selector-content;
-        white-space: nowrap;
-        > .single {
-            @extend %border-base-none;
-            display: inline;
+.combo-box {
+    &.default {
+        @extend %border-base-normal;
+        min-height: 24px;
+        max-height: 30px;
+        min-width: 50px;
+        > .placeholder {
+            @include placeholder($height: 30px, $color: $gray-level-1);
         }
-        > .item {
-            @extend %border-base-normal;
-            display: inline;
-            padding: 1px 4px;
-            margin-left: 4px;
-            &:first-child {
-                margin-left: 0px;
+        > .left-button {
+            // Include from pebble components
+            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: left, $sideOffset: 7px);
+        }
+        > .content {
+            @extend %selector-content;
+            white-space: nowrap;
+            > .single {
+                @extend %border-base-none;
+                display: inline;
+            }
+            > .multi {
+                @extend %border-base-normal;
+                position: relative;
+                display: inline;
+                border-style: dashed;
+                padding: 1px 4px;
+                padding-left: 18px;
+                margin-left: 4px;
+                font-size: 13.5px;
+                &:first-child {
+                    margin-left: 0px;
+                }
+                &:hover {
+                    color: $whitesmoke;
+                    background-color: $gray-level-5;
+                    border-color: $gray-level-5;
+                }
+                > .remove {
+                    // Include from pebble components
+                    @include close-button($top: 2px, $color: $gray-level-2, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
+                    &:hover {
+                        @include close-button($top: 2px, $color: $whitesmoke, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
+                    }
+                }
+            }
+            > .searcher {
+                @include input-element($color: $fore-color);
+                position: relative;
+                top: -1px;
+                display: inline;
+                width: 100px;
             }
         }
-        > .searcher {
-            @include input-element($color: $fore-color);
-            position: relative;
-            top: -1px;
-            display: inline;
-            width: 100px;
+        > .right-button {
+            // Include from pebble components
+            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 38px);
+        }
+        > .close-button {
+            // Include from pebble components
+            @include close-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 24px);
+        }
+        > .list-button {
+            // Include from pebble components
+            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 8px);
         }
     }
-    > .close-button {
-        // Include from pebble components
-        @include close-button($top: 1px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px);
+    &.focus {
+        @extend %border-base-focus;
+        min-height: 24px;
+        max-height: 30px;
+        min-width: 50px;
+        > .placeholder {
+            @include placeholder($height: 30px, $color: transparent);
+        }
+        > .left-button {
+            // Include from pebble components
+            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: left, $sideOffset: 7px);
+        }
+        > .content {
+            @extend %selector-content;
+            white-space: nowrap;
+            > .single {
+                @extend %border-base-none;
+                display: inline;
+            }
+            > .multi {
+                @extend %border-base-normal;
+                position: relative;
+                display: inline;
+                border-style: dashed;
+                padding: 1px 4px;
+                padding-left: 18px;
+                margin-left: 4px;
+                font-size: 13.5px;
+                &:first-child {
+                    margin-left: 0px;
+                }
+                &:hover {
+                    color: $gray-level-0;
+                    background-color: $gray-level-5;
+                    border-color: $gray-level-5;
+                }
+                > .remove {
+                    // Include from pebble components
+                    @include close-button($top: 2px, $color: $gray-level-2, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
+                    &:hover {
+                        @include close-button($top: 2px, $color: $whitesmoke, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
+                    }
+                }
+            }
+            > .searcher {
+                @include input-element($color: $fore-color);
+                position: relative;
+                top: -1px;
+                display: inline;
+                width: 100px;
+            }
+        }
+        > .right-button {
+            // Include from pebble components
+            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 38px);
+        }
+        > .close-button {
+            // Include from pebble components
+            @include close-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 24px);
+        }
+        > .list-button {
+            // Include from pebble components
+            @include single-button($top: 6px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 8px);
+        }
     }
-    > .list-button {
-        // Include from pebble components
-        @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 6px);
+    &.error {
+        @extend %border-base-error;
+        min-height: 24px;
+        max-height: 30px;
+        min-width: 50px;
+        > .placeholder {
+            @include placeholder($height: 30px, $color: lighten($red-base, 25%) );
+        }
+        > .left-button {
+            // Include from pebble components
+            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: left, $sideOffset: 7px);
+        }
+        > .content {
+            @extend %selector-content;
+            white-space: nowrap;
+            > .single {
+                @extend %border-base-none;
+                display: inline;
+            }
+            > .multi {
+                @extend %border-base-normal;
+                position: relative;
+                display: inline;
+                border-style: dashed;
+                padding: 1px 4px;
+                padding-left: 18px;
+                margin-left: 4px;
+                font-size: 13.5px;
+                &:first-child {
+                    margin-left: 0px;
+                }
+                &:hover {
+                    color: $gray-level-0;
+                    background-color: $gray-level-5;
+                    border-color: $gray-level-5;
+                }
+                > .remove {
+                    // Include from pebble components
+                    @include close-button($top: 2px, $color: $gray-level-2, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
+                    &:hover {
+                        @include close-button($top: 2px, $color: $whitesmoke, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
+                    }
+                }
+            }
+            > .searcher {
+                @include input-element($color: $fore-color);
+                position: relative;
+                top: -1px;
+                display: inline;
+                width: 100px;
+            }
+        }
+        > .right-button {
+            // Include from pebble components
+            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 38px);
+        }
+        > .close-button {
+            // Include from pebble components
+            @include close-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 24px);
+        }
+        > .list-button {
+            // Include from pebble components
+            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 8px);
+        }
+    }
+    &.disabled {
+        @extend %border-base-disabled;
+        min-height: 24px;
+        max-height: 30px;
+        min-width: 50px;
+        > .placeholder {
+            @include placeholder($height: 30px, $color: $disabled-color);
+        }
+        > .left-button {
+            // Include from pebble components
+            @include single-button($top: 7px, $color: $disabled-color, $size: 1.2em, $side: left, $sideOffset: 7px, $cursor: default);
+        }
+        > .content {
+            @extend %selector-content;
+            white-space: nowrap;
+            > .single {
+                @extend %border-base-none;
+                color: $disabled-color;
+                display: inline;
+            }
+            > .multi {
+                @extend %border-base-normal;
+                position: relative;
+                display: inline;
+                border-style: dashed;
+                border-color: $disabled-color;
+                padding: 1px 4px;
+                padding-left: 18px;
+                margin-left: 4px;
+                color: $disabled-color;
+                font-size: 13.5px;
+                &:first-child {
+                    margin-left: 0px;
+                }
+                > .remove {
+                    // Include from pebble components
+                    @include close-button($top: 2px, $color: $disabled-color, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px, $cursor: default);
+                }
+            }
+            > .searcher {
+                @include input-element($color: $fore-color);
+                position: relative;
+                top: -1px;
+                display: inline;
+                width: 100px;
+            }
+        }
+        > .right-button {
+            // Include from pebble components
+            @include single-button($top: 7px, $color: $disabled-color, $size: 1.2em, $side: right, $sideOffset: 38px, $cursor: default);
+        }
+        > .close-button {
+            // Include from pebble components
+            @include close-button($top: 7px, $color: $disabled-color, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 24px, $cursor: default);
+        }
+        > .list-button {
+            // Include from pebble components
+            @include single-button($top: 7px, $color: $disabled-color, $size: 1.2em, $side: right, $sideOffset: 8px, $cursor: default);
+        }
     }
 }
-.cmbSltr-focus {
+.combo-list {
     @extend %border-base-focus;
-    min-height: 24px;
-    max-height: 30px;
+    position: relative;
+    min-height: 50px;
+    max-height: 120px;
     min-width: 50px;
-    > .placeholder {
-        @include placeholder($height: 30px, $color: transparent);
-    }
-    > .content {
-        @extend %selector-content;
-        > .searcher {
-            @include input-element($color: $fore-color);
-            position: relative;
+    top: 3px;
+    overflow: hidden;
+    > .options {
+        position: relative;
+        min-height: 48px;
+        max-height: 116px;
+        min-width: 48px;
+        margin: 2px 2px 4px 2px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        > .option {
+            left: 0px;
+            height: 24px;
+            line-height: 26px;
+            padding-left: 10px;
+            padding-right: 5px;
+            text-align: left;
+            font-size: 12px;
+            cursor: pointer;
+            &:hover {
+                background-color: lighten($sky-base, 50%);
+            }
         }
-    }
-    > .close-button {
-        // Include from pebble components
-        @include close-button($top: 1px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px);
-    }
-    > .list-button {
-        // Include from pebble components
-        @include single-button($top: 6px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 6px);
-    }
-}
-.cmbSltr-error {
-    @extend %border-base-error;
-    min-height: 24px;
-    max-height: 30px;
-    min-width: 50px;
-    > .placeholder {
-        @include placeholder($height: 30px, $color: lighten($red-base, 25%) );
-    }
-    > .content {
-        @extend %selector-content;
-        > .searcher {
-            @include input-element($color: $fore-color);
-            position: relative;
-        }
-    }
-    > .close-button {
-        // Include from pebble components
-        @include close-button($top: 1px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px);
-    }
-    > .list-button {
-        // Include from pebble components
-        @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 6px);
-    }
-}
-.cmbSltr-disabled {
-    @extend %border-base-disabled;
-    min-height: 24px;
-    max-height: 30px;
-    min-width: 50px;
-    > .placeholder {
-        @include placeholder($height: 30px, $color: $gray-level-0);
-    }
-    > .content {
-        @extend %selector-content;
-        > .searcher {
-            @include input-element($color: $fore-color);
-            position: relative;
-        }
-    }
-    > .close-button {
-        // Include from pebble components
-        @include close-button($top: 1px, $color: $gray-level-0, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 15px, $cursor: default);
-    }
-    > .list-button {
-        // Include from pebble components
-        @include single-button($top: 7px, $color: $gray-level-0, $size: 1.2em, $side: right, $sideOffset: 6px, $cursor: default);
     }
 }
 // -------------------- Styles of component 'Combo selector' <end> --------------------
 
 // -------------------- Styles of component 'Radio selector' <start> --------------------
+.radio-box {
+    &.default {
+        //
+    }
+    &.disabled {
+        //
+    }
+}
+.radio-cards {
+    &.default {
+        //
+    }
+    &.disabled {
+        //
+    }
+}
 // -------------------- Styles of component 'Radio selector' <end> --------------------
 
 // -------------------- Styles of component 'Check box selector' <start> --------------------
