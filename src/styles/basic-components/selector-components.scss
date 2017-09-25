@@ -13,261 +13,129 @@
 // -------------------- Styles of element 'selector content' <end> --------------------
 
 // -------------------- Styles of component 'Combo selector' <start> --------------------
-.combo-box {
-    &.default {
+@mixin combo-box($status: "default") {
+    $placeholderColor: transparent;
+    $topOfListButton: 7px;
+    $foreColor: $gray-level-4;
+    $itemForeColor: $gray-level-2;
+    $statusCursor: pointer;
+    // ******************** Styles by status ********************
+    @if $status == "default" {
         @extend %border-base-normal;
-        min-height: 24px;
-        max-height: 30px;
-        min-width: 50px;
-        > .placeholder {
-            @include placeholder($height: 30px, $color: $gray-level-1);
-        }
-        > .left-button {
-            // Include from pebble components
-            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: left, $sideOffset: 7px);
-        }
-        > .content {
-            @extend %selector-content;
-            white-space: nowrap;
-            > .single {
-                @extend %border-base-none;
-                display: inline;
+        $placeholderColor: $gray-level-1;
+        $topOfListButton: 7px;
+        $foreColor: $gray-level-4;
+        $itemForeColor: $gray-level-2;
+        $statusCursor: pointer;
+    } @else if $status == "focus" {
+        @extend %border-base-focus;
+        $placeholderColor: transparent;
+        $topOfListButton: 6px;
+        $foreColor: $gray-level-4;
+        $itemForeColor: $gray-level-2;
+        $statusCursor: pointer;
+    } @else if $status == "error" {
+        @extend %border-base-error;
+        $placeholderColor: lighten($red-base, 25%);
+        $topOfListButton: 7px;
+        $foreColor: $gray-level-4;
+        $itemForeColor: $gray-level-2;
+        $statusCursor: pointer;
+    } @else {
+        @extend %border-base-disabled;
+        $placeholderColor: $disabled-color;
+        $topOfListButton: 7px;
+        $foreColor: $disabled-color;
+        $itemForeColor: $disabled-color;
+        $statusCursor: default;
+    }
+    // ******************** Styles by status ********************
+    min-height: 24px;
+    max-height: 30px;
+    min-width: 50px;
+    > .placeholder {
+        @include placeholder($height: 30px, $color: $placeholderColor);
+    }
+    > .left-button {
+        // Include from pebble components
+        @include single-button($top: 7px, $color: $foreColor, $size: 1.2em, $side: left, $sideOffset: 7px, $cursor: $statusCursor);
+    }
+    > .content {
+        @extend %selector-content;
+        white-space: nowrap;
+        > .single {
+            @extend %border-base-none;
+            display: inline;
+            @if $status == "disabled" {
+                color: $disabled-color;
             }
-            > .multi {
-                @extend %border-base-normal;
-                position: relative;
-                display: inline;
-                border-style: dashed;
-                padding: 1px 4px;
-                padding-left: 18px;
-                margin-left: 4px;
-                font-size: 13.5px;
-                &:first-child {
-                    margin-left: 0px;
-                }
+        }
+        > .multi {
+            @extend %border-base-normal;
+            position: relative;
+            display: inline;
+            @if $status == "disabled" {
+                border-color: $disabled-color;
+                color: $disabled-color;
+            }
+            border-style: dashed;
+            padding: 1px 4px 1px 18px;
+            margin-left: 4px;
+            font-size: 13.5px;
+            cursor: $statusCursor;
+            &:first-child {
+                margin-left: 0px;
+            }
+            @if $status != "disabled" {
                 &:hover {
                     color: $whitesmoke;
                     background-color: $gray-level-5;
                     border-color: $gray-level-5;
                 }
-                > .remove {
-                    // Include from pebble components
-                    @include close-button($top: 2px, $color: $gray-level-2, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
+            }
+            > .remove {
+                // Include from pebble components
+                @include close-button($top: 2px, $color: $itemForeColor, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px, $cursor: $statusCursor);
+                @if $status != "disabled" {
                     &:hover {
                         @include close-button($top: 2px, $color: $whitesmoke, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
                     }
                 }
             }
-            > .searcher {
-                @include input-element($color: $fore-color);
-                position: relative;
-                top: -1px;
-                display: inline;
-                width: 100px;
-            }
         }
-        > .right-button {
-            // Include from pebble components
-            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 38px);
+        > .searcher {
+            @include input-element($color: $fore-color);
+            position: relative;
+            top: -1px;
+            display: inline;
+            width: 100px;
         }
-        > .close-button {
-            // Include from pebble components
-            @include close-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 24px);
-        }
-        > .list-button {
-            // Include from pebble components
-            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 8px);
-        }
+    }
+    > .right-button {
+        // Include from pebble components
+        @include single-button($top: 7px, $color: $foreColor, $size: 1.2em, $side: right, $sideOffset: 38px, $cursor: $statusCursor);
+    }
+    > .close-button {
+        // Include from pebble components
+        @include close-button($top: 7px, $color: $foreColor, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 24px, $cursor: $statusCursor);
+    }
+    > .list-button {
+        // Include from pebble components
+        @include single-button($top: $topOfListButton, $color: $foreColor, $size: 1.2em, $side: right, $sideOffset: 8px, $cursor: $statusCursor);
+    }
+}
+.combo-box {
+    &.default {
+        @include combo-box($status: "default");
     }
     &.focus {
-        @extend %border-base-focus;
-        min-height: 24px;
-        max-height: 30px;
-        min-width: 50px;
-        > .placeholder {
-            @include placeholder($height: 30px, $color: transparent);
-        }
-        > .left-button {
-            // Include from pebble components
-            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: left, $sideOffset: 7px);
-        }
-        > .content {
-            @extend %selector-content;
-            white-space: nowrap;
-            > .single {
-                @extend %border-base-none;
-                display: inline;
-            }
-            > .multi {
-                @extend %border-base-normal;
-                position: relative;
-                display: inline;
-                border-style: dashed;
-                padding: 1px 4px;
-                padding-left: 18px;
-                margin-left: 4px;
-                font-size: 13.5px;
-                &:first-child {
-                    margin-left: 0px;
-                }
-                &:hover {
-                    color: $gray-level-0;
-                    background-color: $gray-level-5;
-                    border-color: $gray-level-5;
-                }
-                > .remove {
-                    // Include from pebble components
-                    @include close-button($top: 2px, $color: $gray-level-2, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
-                    &:hover {
-                        @include close-button($top: 2px, $color: $whitesmoke, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
-                    }
-                }
-            }
-            > .searcher {
-                @include input-element($color: $fore-color);
-                position: relative;
-                top: -1px;
-                display: inline;
-                width: 100px;
-            }
-        }
-        > .right-button {
-            // Include from pebble components
-            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 38px);
-        }
-        > .close-button {
-            // Include from pebble components
-            @include close-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 24px);
-        }
-        > .list-button {
-            // Include from pebble components
-            @include single-button($top: 6px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 8px);
-        }
+        @include combo-box($status: "focus");
     }
     &.error {
-        @extend %border-base-error;
-        min-height: 24px;
-        max-height: 30px;
-        min-width: 50px;
-        > .placeholder {
-            @include placeholder($height: 30px, $color: lighten($red-base, 25%) );
-        }
-        > .left-button {
-            // Include from pebble components
-            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: left, $sideOffset: 7px);
-        }
-        > .content {
-            @extend %selector-content;
-            white-space: nowrap;
-            > .single {
-                @extend %border-base-none;
-                display: inline;
-            }
-            > .multi {
-                @extend %border-base-normal;
-                position: relative;
-                display: inline;
-                border-style: dashed;
-                padding: 1px 4px;
-                padding-left: 18px;
-                margin-left: 4px;
-                font-size: 13.5px;
-                &:first-child {
-                    margin-left: 0px;
-                }
-                &:hover {
-                    color: $gray-level-0;
-                    background-color: $gray-level-5;
-                    border-color: $gray-level-5;
-                }
-                > .remove {
-                    // Include from pebble components
-                    @include close-button($top: 2px, $color: $gray-level-2, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
-                    &:hover {
-                        @include close-button($top: 2px, $color: $whitesmoke, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
-                    }
-                }
-            }
-            > .searcher {
-                @include input-element($color: $fore-color);
-                position: relative;
-                top: -1px;
-                display: inline;
-                width: 100px;
-            }
-        }
-        > .right-button {
-            // Include from pebble components
-            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 38px);
-        }
-        > .close-button {
-            // Include from pebble components
-            @include close-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 24px);
-        }
-        > .list-button {
-            // Include from pebble components
-            @include single-button($top: 7px, $color: $gray-level-4, $size: 1.2em, $side: right, $sideOffset: 8px);
-        }
+        @include combo-box($status: "error");
     }
     &.disabled {
-        @extend %border-base-disabled;
-        min-height: 24px;
-        max-height: 30px;
-        min-width: 50px;
-        > .placeholder {
-            @include placeholder($height: 30px, $color: $disabled-color);
-        }
-        > .left-button {
-            // Include from pebble components
-            @include single-button($top: 7px, $color: $disabled-color, $size: 1.2em, $side: left, $sideOffset: 7px, $cursor: default);
-        }
-        > .content {
-            @extend %selector-content;
-            white-space: nowrap;
-            > .single {
-                @extend %border-base-none;
-                color: $disabled-color;
-                display: inline;
-            }
-            > .multi {
-                @extend %border-base-normal;
-                position: relative;
-                display: inline;
-                border-style: dashed;
-                border-color: $disabled-color;
-                padding: 1px 4px;
-                padding-left: 18px;
-                margin-left: 4px;
-                color: $disabled-color;
-                font-size: 13.5px;
-                &:first-child {
-                    margin-left: 0px;
-                }
-                > .remove {
-                    // Include from pebble components
-                    @include close-button($top: 2px, $color: $disabled-color, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px, $cursor: default);
-                }
-            }
-            > .searcher {
-                @include input-element($color: $fore-color);
-                position: relative;
-                top: -1px;
-                display: inline;
-                width: 100px;
-            }
-        }
-        > .right-button {
-            // Include from pebble components
-            @include single-button($top: 7px, $color: $disabled-color, $size: 1.2em, $side: right, $sideOffset: 38px, $cursor: default);
-        }
-        > .close-button {
-            // Include from pebble components
-            @include close-button($top: 7px, $color: $disabled-color, $size: 1.2em, $offset: 4px, $side: right, $sideOffset: 24px, $cursor: default);
-        }
-        > .list-button {
-            // Include from pebble components
-            @include single-button($top: 7px, $color: $disabled-color, $size: 1.2em, $side: right, $sideOffset: 8px, $cursor: default);
-        }
+        @include combo-box($status: "disabled");
     }
 }
 .combo-list {
@@ -306,18 +174,45 @@
 // -------------------- Styles of component 'Radio selector' <start> --------------------
 .radio-box {
     &.default {
-        //
+        > .content {
+            > .button {
+                @extend %border-base-none;
+                position: relative;
+                display: inline;
+                padding: 1px 4px 1px 22px;
+                margin-left: 4px;
+                cursor: pointer;
+                &:first-child {
+                    margin-left: 0px;
+                }
+                &:hover {
+                    text-shadow: 2px 2px 8px $green-base;
+                }
+                > .checker {
+                    // Include from pebble components
+                    @include single-button($top: 5px, $color: $gray-level-4, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
+                    &:hover {
+                        @include single-button($top: 5px, $color: $green-light, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
+                    }
+                    &.checked {
+                        @include single-button($top: 5px, $color: $green-base, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
+                    }
+                }
+            }
+            > .card {
+                //
+            }
+        }
     }
     &.disabled {
-        //
-    }
-}
-.radio-cards {
-    &.default {
-        //
-    }
-    &.disabled {
-        //
+        > .content {
+            > .button {
+                //
+            }
+            > .card {
+                //
+            }
+        }
     }
 }
 // -------------------- Styles of component 'Radio selector' <end> --------------------

@@ -1013,6 +1013,37 @@ export default class StylesGuideline extends React.Component {
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-radio-selector">
                                     <li>Radio selector:</li>
+                                    {/* ******************** component [radio selector] <start> ******************** */}
+                                    <div className="rdoSltr-ex-a1 regular-content">
+                                        <div ref="box" className="radio-box default">
+                                            {/* <i className="fa fa-angle-left left-button" aria-hidden="true"></i> */}
+                                            <div className="content">
+                                                <div className="button">
+                                                    <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                    Jacob
+                                                </div>
+                                                <div className="button">
+                                                    <i className="fa fa-dot-circle-o checker checked" aria-hidden="true"></i>
+                                                    Ryan
+                                                </div>
+                                                <div className="button">
+                                                    <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                    Caleb
+                                                </div>
+                                            </div>
+                                            {/* <i className="fa fa-angle-right right-button" aria-hidden="true"></i> */}
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                    {/* ############################################################################### */}
+                                    <div>
+                                        {/* radio cards */}
+                                    </div>
+                                    {/* ******************** component [radio selector] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-checkbox-selector">
                                     <li>Check box selector:</li>

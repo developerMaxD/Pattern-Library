@@ -842,7 +842,32 @@
                 > .title-components-radio-selector {
                     top: 195px;
                     > .rdoSltr-ex-a1 {
-                        //
+                        position: absolute;
+                        top: 30px;
+                        left: 40px;
+                        height: 60px;
+                        width: 120px;
+                    }
+                    > .rdoSltr-ex-a2 {
+                        position: absolute;
+                        top: 30px;
+                        left: 200px;
+                        height: 60px;
+                        width: 120px;
+                    }
+                    > .rdoSltr-ex-b1 {
+                        position: absolute;
+                        top: 120px;
+                        left: 40px;
+                        height: 120px;
+                        width: 220px;
+                    }
+                    > .rdoSltr-ex-c1 {
+                        position: absolute;
+                        top: 260px;
+                        left: 40px;
+                        height: 100px;
+                        width: 220px;
                     }
                 }
                 > .title-components-checkbox-selector {
