@@ -845,37 +845,73 @@
                         position: absolute;
                         top: 30px;
                         left: 40px;
-                        height: 60px;
-                        width: 120px;
+                        // height: 100px;
+                        // width: 370px;
+                        max-height: 100px;
+                        max-width: 370px;
                     }
                     > .rdoSltr-ex-a2 {
                         position: absolute;
                         top: 30px;
-                        left: 200px;
-                        height: 60px;
-                        width: 120px;
+                        left: 430px;
+                        // height: 100px;
+                        // width: 370px;
+                        max-height: 100px;
+                        max-width: 370px;
                     }
                     > .rdoSltr-ex-b1 {
                         position: absolute;
-                        top: 120px;
+                        top: 150px;
                         left: 40px;
-                        height: 120px;
-                        width: 220px;
+                        // height: 120px;
+                        // width: 220px;
                     }
                     > .rdoSltr-ex-c1 {
                         position: absolute;
-                        top: 260px;
+                        top: 410px;
                         left: 40px;
-                        height: 100px;
-                        width: 220px;
+                        // height: 100px;
+                        // width: 220px;
                     }
                 }
                 > .title-components-checkbox-selector {
-                    top: 345px;
+                    top: 850px;
+                    > .chkSltr-ex-a1 {
+                        position: absolute;
+                        top: 30px;
+                        left: 40px;
+                        // height: 100px;
+                        // width: 370px;
+                        max-height: 100px;
+                        max-width: 370px;
+                    }
+                    > .chkSltr-ex-a2 {
+                        position: absolute;
+                        top: 30px;
+                        left: 430px;
+                        // height: 100px;
+                        // width: 370px;
+                        max-height: 100px;
+                        max-width: 370px;
+                    }
+                    > .chkSltr-ex-b1 {
+                        position: absolute;
+                        top: 150px;
+                        left: 40px;
+                        // height: 120px;
+                        // width: 220px;
+                    }
+                    > .chkSltr-ex-c1 {
+                        position: absolute;
+                        top: 410px;
+                        left: 40px;
+                        // height: 100px;
+                        // width: 220px;
+                    }
                 }
             }
             > .title-dialog-components {
-                top: 2300px;
+                top: 3270px;
                 > .title-components-standard-dialog {
                     top: 5px;
                 }
@@ -887,7 +923,7 @@
                 }
             }
             > .title-picker-components {
-                top: 2700px;
+                top: 3670px;
                 > .title-components-date-picker {
                     top: 5px;
                 }
@@ -896,7 +932,7 @@
                 }
             }
             > .title-subpage-components {
-                top: 2900px;
+                top: 3870px;
                 > .title-components-pagination {
                     top: 5px;
                 }

@@ -79,18 +79,19 @@
                 color: $disabled-color;
             }
             border-style: dashed;
+            border-color: $gray-level-3;
             padding: 1px 4px 1px 18px;
-            margin-left: 4px;
+            margin-left: 6px;
             font-size: 13.5px;
             cursor: $statusCursor;
             &:first-child {
-                margin-left: 0px;
+                margin-left: 3px;
             }
             @if $status != "disabled" {
                 &:hover {
-                    color: $whitesmoke;
-                    background-color: $gray-level-5;
-                    border-color: $gray-level-5;
+                    background-color: lighten($sky-base, 50%);
+                    border: 1px solid $sky-base;
+                    box-shadow: 0 0 6px $aqua-base;
                 }
             }
             > .remove {
@@ -98,7 +99,7 @@
                 @include close-button($top: 2px, $color: $itemForeColor, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px, $cursor: $statusCursor);
                 @if $status != "disabled" {
                     &:hover {
-                        @include close-button($top: 2px, $color: $whitesmoke, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
+                        @include close-button($top: 2px, $color: $sky-base, $size: 1.0em, $offset: 3px, $side: left, $sideOffset: 1px);
                     }
                 }
             }
@@ -142,14 +143,14 @@
     @extend %border-base-focus;
     position: relative;
     min-height: 50px;
-    max-height: 120px;
+    max-height: 134px;
     min-width: 50px;
     top: 3px;
     overflow: hidden;
     > .options {
         position: relative;
         min-height: 48px;
-        max-height: 116px;
+        max-height: 130px;
         min-width: 48px;
         margin: 2px 2px 4px 2px;
         overflow-x: hidden;
@@ -160,62 +161,153 @@
             line-height: 26px;
             padding-left: 10px;
             padding-right: 5px;
+            border: 1px solid transparent;
             text-align: left;
             font-size: 12px;
             cursor: pointer;
             &:hover {
                 background-color: lighten($sky-base, 50%);
+                border: 1px solid $sky-base;
+                border-radius: 4px;
+                box-shadow: 0 0 6px $aqua-base;
             }
         }
     }
 }
 // -------------------- Styles of component 'Combo selector' <end> --------------------
 
-// -------------------- Styles of component 'Radio selector' <start> --------------------
-.radio-box {
-    &.default {
-        > .content {
-            > .button {
+// -------------------- Common styles of component 'Radio selector' and 'Checkbox selector' <start> --------------------
+@mixin box-item($facade: "button", $status: "default") {
+    @if $facade == "button" {
+        > .button {
+            @if $status == "default" {
                 @extend %border-base-none;
-                position: relative;
-                display: inline;
-                padding: 1px 4px 1px 22px;
-                margin-left: 4px;
                 cursor: pointer;
-                &:first-child {
-                    margin-left: 0px;
-                }
+            } @else {
+                @extend %border-base-disabled;
+                color: $disabled-color;
+                cursor: default;
+            }
+            position: relative;
+            display: inline;
+            padding: 1px 4px 3px 22px;
+            border: 1px solid transparent;
+            @if $status == "default" {
                 &:hover {
-                    text-shadow: 2px 2px 8px $green-base;
+                    background-color: lighten($sky-base, 50%);
+                    border: 1px solid $sky-base;
+                    box-shadow: 0 0 6px $aqua-base;
                 }
-                > .checker {
+            }
+            > .checker {
+                @if $status == "default" {
                     // Include from pebble components
-                    @include single-button($top: 5px, $color: $gray-level-4, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
+                    @include single-button($top: 4px, $color: $gray-level-2, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
                     &:hover {
-                        @include single-button($top: 5px, $color: $green-light, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
+                        @include single-button($top: 4px, $color: $sky-base, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
                     }
                     &.checked {
-                        @include single-button($top: 5px, $color: $green-base, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
+                        @include single-button($top: 4px, $color: $green-base, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
+                    }
+                } @else {
+                    // Include from pebble components
+                    @include single-button($top: 4px, $color: $disabled-color, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: default);
+                    &.checked {
+                        @include single-button($top: 4px, $color: $disabled-color, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: default);
                     }
                 }
             }
-            > .card {
-                //
+        }
+    } @else if $facade == "card" {
+        @if $status == "default" {
+            @extend %border-base-normal;
+            cursor: pointer;
+        } @else {
+            @extend %border-base-disabled;
+            color: $disabled-color;
+            cursor: default;
+        }
+        position: relative;
+        height: 50px;
+        line-height: 50px;
+        margin: 6px;
+        border-radius: 1px;
+        padding: 6px;
+        text-align: center;
+        &.checked {
+            background: transparent;
+            @if $status == "default" {
+                border: 2px solid $green-base;
+                background: linear-gradient(-135deg, $green-base 15px, transparent 0);
+                > .checker {
+                    // Include from pebble components
+                    @include single-button($top: 1px, $color: $whitesmoke, $size: 0.7em, $side: right, $sideOffset: 1px, $cursor: pointer);
+                }
+            } @else {
+                border: 2px solid $disabled-color;
+                background: linear-gradient(-135deg, $disabled-color 15px, transparent 0);
+                > .checker {
+                    // Include from pebble components
+                    @include single-button($top: 1px, $color: $whitesmoke, $size: 0.7em, $side: right, $sideOffset: 1px, $cursor: default);
+                }
             }
         }
-    }
-    &.disabled {
-        > .content {
-            > .button {
-                //
-            }
-            > .card {
-                //
+        &.unchecked {
+            @if $status == "default" {
+                border: 2px solid $gray-level-5;
+                &:hover {
+                    background-color: lighten($sky-base, 50%);
+                    border: 2px solid $sky-base;
+                    box-shadow: 0 0 6px $aqua-base;
+                }
+            } @else {
+                border: 2px solid $disabled-color;
             }
         }
     }
 }
+@mixin box-selector() {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    > .content {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        margin: 2px auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 3px;
+        > .button-grid {
+            height: 30px;
+            line-height: 30px;
+            &.default {
+                @include box-item($facade: "button", $status: "default");
+            }
+            &.disabled {
+                @include box-item($facade: "button", $status: "disabled");
+            }
+        }
+        > .card {
+            &.default {
+                @include box-item($facade: "card", $status: "default");
+            }
+            &.disabled {
+                @include box-item($facade: "card", $status: "disabled");
+            }
+        }
+    }
+}
+// -------------------- Common styles of component 'Radio selector' and 'Checkbox selector' <end> --------------------
+
+// -------------------- Styles of component 'Radio selector' <start> --------------------
+.radio-box {
+    @include box-selector();
+}
 // -------------------- Styles of component 'Radio selector' <end> --------------------
 
 // -------------------- Styles of component 'Check box selector' <start> --------------------
+.check-box {
+    @include box-selector();
+}
 // -------------------- Styles of component 'Check box selector' <end> --------------------

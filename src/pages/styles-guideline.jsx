@@ -910,13 +910,13 @@ export default class StylesGuideline extends React.Component {
                                         </div>
                                         <div className="combo-list">
                                             <div className="options">
-                                                <div className="option">Christopher</div>
-                                                <div className="option">Joshua</div>
-                                                <div className="option">Alexander</div>
-                                                <div className="option">Francisco</div>
-                                                <div className="option">Nicholas</div>
-                                                <div className="option">Caleb</div>
-                                                <div className="option">Matthew</div>
+                                                <div className="option anim-trans-backcolor">Christopher</div>
+                                                <div className="option anim-trans-backcolor">Joshua</div>
+                                                <div className="option anim-trans-backcolor">Alexander</div>
+                                                <div className="option anim-trans-backcolor">Francisco</div>
+                                                <div className="option anim-trans-backcolor">Nicholas</div>
+                                                <div className="option anim-trans-backcolor">Caleb</div>
+                                                <div className="option anim-trans-backcolor">Matthew</div>
                                             </div>
                                         </div>
                                     </div>
@@ -1015,38 +1015,464 @@ export default class StylesGuideline extends React.Component {
                                     <li>Radio selector:</li>
                                     {/* ******************** component [radio selector] <start> ******************** */}
                                     <div className="rdoSltr-ex-a1 regular-content">
-                                        <div ref="box" className="radio-box default">
-                                            {/* <i className="fa fa-angle-left left-button" aria-hidden="true"></i> */}
+                                        <div ref="box" className="radio-box">
                                             <div className="content">
-                                                <div className="button">
-                                                    <i className="fa fa-circle-o checker" aria-hidden="true"></i>
-                                                    Jacob
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Jacob
+                                                    </div>
                                                 </div>
-                                                <div className="button">
-                                                    <i className="fa fa-dot-circle-o checker checked" aria-hidden="true"></i>
-                                                    Ryan
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-dot-circle-o checker checked" aria-hidden="true"></i>
+                                                        Joshua
+                                                    </div>
                                                 </div>
-                                                <div className="button">
-                                                    <i className="fa fa-circle-o checker" aria-hidden="true"></i>
-                                                    Caleb
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Matthew
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Christopher
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Alexander
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Ryan
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Nicholas
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Caleb
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Francisco
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Ethan
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        James
+                                                    </div>
                                                 </div>
                                             </div>
-                                            {/* <i className="fa fa-angle-right right-button" aria-hidden="true"></i> */}
                                         </div>
                                     </div>
-
-
-
-
-
-                                    {/* ############################################################################### */}
-                                    <div>
-                                        {/* radio cards */}
+                                    <div className="rdoSltr-ex-a2 regular-content">
+                                        <div ref="box" className="radio-box">
+                                            <div className="content">
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Jacob
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-dot-circle-o checker checked" aria-hidden="true"></i>
+                                                        Joshua
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Matthew
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Christopher
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Alexander
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Ryan
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Nicholas
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Caleb
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Francisco
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        Ethan
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                        James
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="rdoSltr-ex-b1 regular-content">
+                                        <div ref="box" className="radio-box">
+                                            <div className="content">
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Jacob
+                                                </div>
+                                                <div className="card default checked anim-trans-backcolor">
+                                                    {/* <i className="fa fa-check checker" aria-hidden="true"></i> */}
+                                                    <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                    Joshua
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Matthew
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Christopher
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Alexander
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Ryan
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Nicholas
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Caleb
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Francisco
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Ethan
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    James
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="rdoSltr-ex-c1 regular-content">
+                                        <div ref="box" className="radio-box">
+                                            <div className="content">
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Jacob
+                                                </div>
+                                                <div className="card disabled checked anim-trans-backcolor">
+                                                    <i className="fa fa-circle-o checker" aria-hidden="true"></i>
+                                                    Joshua
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Matthew
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Christopher
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Alexander
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Ryan
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Nicholas
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Caleb
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Francisco
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Ethan
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    James
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     {/* ******************** component [radio selector] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-checkbox-selector">
                                     <li>Check box selector:</li>
+                                    {/* ******************** component [checkbox selector] <start> ******************** */}
+                                    <div className="chkSltr-ex-a1 regular-content">
+                                        <div ref="box" className="check-box">
+                                            <div className="content">
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Jacob
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-check-circle checker checked" aria-hidden="true"></i>
+                                                        Joshua
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Matthew
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-check-circle checker checked" aria-hidden="true"></i>
+                                                        Christopher
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-check-circle checker checked" aria-hidden="true"></i>
+                                                        Alexander
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Ryan
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Nicholas
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Caleb
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Francisco
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Ethan
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid default">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        James
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="chkSltr-ex-a2 regular-content">
+                                        <div ref="box" className="check-box">
+                                            <div className="content">
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Jacob
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-check-circle checker checked" aria-hidden="true"></i>
+                                                        Joshua
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Matthew
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-check-circle checker checked" aria-hidden="true"></i>
+                                                        Christopher
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-check-circle checker checked" aria-hidden="true"></i>
+                                                        Alexander
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Ryan
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Nicholas
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Caleb
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Francisco
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        Ethan
+                                                    </div>
+                                                </div>
+                                                <div className="button-grid disabled">
+                                                    <div className="button anim-trans-backcolor">
+                                                        <i className="fa fa-circle checker" aria-hidden="true"></i>
+                                                        James
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="chkSltr-ex-b1 regular-content">
+                                        <div ref="box" className="check-box">
+                                            <div className="content">
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Jacob
+                                                </div>
+                                                <div className="card default checked anim-trans-backcolor">
+                                                    <i className="fa fa-check checker" aria-hidden="true"></i>
+                                                    Joshua
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Matthew
+                                                </div>
+                                                <div className="card default checked anim-trans-backcolor">
+                                                    <i className="fa fa-check checker" aria-hidden="true"></i>
+                                                    Christopher
+                                                </div>
+                                                <div className="card default checked anim-trans-backcolor">
+                                                    <i className="fa fa-check checker" aria-hidden="true"></i>
+                                                    Alexander
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Ryan
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Nicholas
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Caleb
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Francisco
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    Ethan
+                                                </div>
+                                                <div className="card default unchecked anim-trans-backcolor">
+                                                    James
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="chkSltr-ex-c1 regular-content">
+                                        <div ref="box" className="check-box">
+                                            <div className="content">
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Jacob
+                                                </div>
+                                                <div className="card disabled checked anim-trans-backcolor">
+                                                    <i className="fa fa-check checker" aria-hidden="true"></i>
+                                                    Joshua
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Matthew
+                                                </div>
+                                                <div className="card disabled checked anim-trans-backcolor">
+                                                    <i className="fa fa-check checker" aria-hidden="true"></i>
+                                                    Christopher
+                                                </div>
+                                                <div className="card disabled checked anim-trans-backcolor">
+                                                    <i className="fa fa-check checker" aria-hidden="true"></i>
+                                                    Alexander
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Ryan
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Nicholas
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Caleb
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Francisco
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    Ethan
+                                                </div>
+                                                <div className="card disabled unchecked anim-trans-backcolor">
+                                                    James
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* ******************** component [checkbox selector] <end> ******************** */}
                                 </div>
                             </div>
                             <div className="title-level-04 regular-content title-dialog-components">
