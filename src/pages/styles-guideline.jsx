@@ -1165,7 +1165,6 @@ export default class StylesGuideline extends React.Component {
                                                     Jacob
                                                 </div>
                                                 <div className="card default checked anim-trans-backcolor">
-                                                    {/* <i className="fa fa-check checker" aria-hidden="true"></i> */}
                                                     <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                     Joshua
                                                 </div>
