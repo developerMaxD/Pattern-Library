@@ -66,7 +66,7 @@ module.exports = {
         loaders: ['style-loader', 'css-loader?sourceMap', 'autoprefixer-loader?browsers=last 2 versions', 'sass-loader?sourceMap&outputStyle=expanded']
       },
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel-loader'] },
-      { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
+      { test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
     ],
     noParse: /\.min\.js/
   }

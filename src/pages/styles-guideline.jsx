@@ -217,16 +217,32 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-label">
                                     <li>Label:</li>
                                     {/* ******************** component [Label] <start> ******************** */}
-                                    <div className="label-example-normal lbl-default small-section">
+                                    <div className="label-example-normal label default small-section">
                                         Text in Label, color: Dimgray, size: small-section<br/>*in normal style and multi line *
                                     </div>
-                                    <div className="label-example-shadow lbl-default lbl-shadow regular-content">
+                                    <div className="label-example-shadow label shadow regular-content">
                                         Text in Label, color: Dimgray, size: small-section * in shadow *
                                     </div>
                                     {/* ******************** component [Label] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-image">
                                     <li>Image:</li>
+                                    {/* ******************** component [Image] <start> ******************** */}
+                                    <div className="image-ex-a1 image">
+                                        <img className="thumbnail" src={"http://localhost:9088/images/flower-thumbnail.jpg"} alt="flower" />
+                                        <span className="origin">
+                                            <img src={"http://localhost:9088/images/flower-origin.jpg"} alt="flower" />
+                                        </span>
+                                    </div>
+                                    <div className="image-ex-a2 image">
+                                        <img className="medium" src={"http://localhost:9088/images/flower-medium.jpg"} alt="flower" />
+                                        <div className="overlay">
+                                            <div className="text small-content">
+                                                The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* ******************** component [Image] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-list">
                                     <li>List:</li>

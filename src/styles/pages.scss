@@ -322,19 +322,29 @@
                 }
                 > .title-components-image {
                     top: 105px;
+                    > .image-ex-a1 {
+                        position: absolute;
+                        top: 20px;
+                        left: 40px;
+                    }
+                    > .image-ex-a2 {
+                        position: absolute;
+                        top: 20px;
+                        left: 230px;
+                    }
                 }
                 > .title-components-list {
-                    top: 205px;
+                    top: 385px;
                 }
                 > .title-components-tree-list {
-                    top: 305px;
+                    top: 485px;
                 }
                 > .title-components-progress {
-                    top: 405px;
+                    top: 585px;
                 }
             }
             > .title-input-components {
-                top: 600px;
+                top: 750px;
                 > .title-components-editor {
                     top: 5px;
                     > .editor-example-normal {
@@ -399,7 +409,7 @@
                 }
             }
             > .title-button-components {
-                top: 900px;
+                top: 1050px;
                 > .title-components-standard-button {
                     top: 5px;
                     > .btn-ex-a {
@@ -780,7 +790,7 @@
                 }
             }
             > .title-selector-components {
-                top: 1720px;
+                top: 1870px;
                 > .title-components-combo-selector {
                     top: 5px;
                     > .cmbSltr-ex-a1 {    // normal
@@ -911,7 +921,7 @@
                 }
             }
             > .title-dialog-components {
-                top: 3270px;
+                top: 3420px;
                 > .title-components-standard-dialog {
                     top: 5px;
                 }
@@ -923,7 +933,7 @@
                 }
             }
             > .title-picker-components {
-                top: 3670px;
+                top: 3820px;
                 > .title-components-date-picker {
                     top: 5px;
                 }
@@ -932,7 +942,7 @@
                 }
             }
             > .title-subpage-components {
-                top: 3870px;
+                top: 4020px;
                 > .title-components-pagination {
                     top: 5px;
                 }

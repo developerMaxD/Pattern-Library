@@ -12,30 +12,40 @@ $disabled-color: $gray-level-0 !default;
     outline: none;
     border: 0px solid transparent;
     border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     box-shadow: 0 0 0px transparent;
 }
 %border-base-normal {
     outline: none;
     border: 1px solid $gray-level-5;
     border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     box-shadow: 0 0 0px transparent;
 }
 %border-base-focus {
     outline: none;
     border: 1px solid $sky-base;
     border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     box-shadow: 0 0 6px $aqua-base;
 }
 %border-base-error {
     outline: none;
     border: 1px solid $red-base;
     border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     box-shadow: 0 0 6px $red-light;
 }
 %border-base-disabled {
     outline: none;
     border: 1px solid $disabled-color;
     border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     box-shadow: 0 0 0px transparent;
 }
 // -------------------- Components default styles: border <end> --------------------
