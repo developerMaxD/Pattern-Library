@@ -14,88 +14,169 @@
 // -------------------- Styles of component 'Image' <start> --------------------
 .image {
     display: inline-block;
-    z-index: 0;
     margin: 4px;
     background-color: $whitesmoke;
     padding: 2px;
     box-shadow: 0 0 6px $gray-level-2;
     -moz-box-shadow: 0 0 6px $gray-level-2;
     -webkit-box-shadow: 0 0 6px $gray-level-2;
-    &:hover {
-        z-index: 50;
-        cursor: pointer;
-    }
-    &:hover span {
-        top: -512px;
-        left: 128px;
-    }
-    > .thumbnail {
-        max-height: 128px;
-        max-width: 128px;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-        &:hover {
-            -webkit-filter: blur(5px);
+    cursor: pointer;
+    &.popup {
+        > .thumbnail {
+            max-height: 128px;
+            max-width: 128px;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            &:hover {
+                -webkit-filter: blur(3px);
+            }
+        }
+        > .attachment {
+            position: absolute;
+            left: -99999px;
+            background-color: $whitesmoke;
+            padding: 4px;
+            box-shadow: 0 0 6px $gray-level-2;
+            -moz-box-shadow: 0 0 6px $gray-level-2;
+            -webkit-box-shadow: 0 0 6px $gray-level-2;
+            -webkit-transition: opacity 0.3s linear;
+            -moz-transition: opacity 0.3s linear;
+            -o-transition: opacity 0.3s linear;
+            transition: opacity 0.3s linear;
+            opacity:0;
+            filter:alpha(opacity=0);
+            > .content {
+                max-height: 512px;
+                max-width: 512px;
+            }
+        }
+        &:hover .attachment {
+            z-index: 2048;
+            top: 0px;
+            left: 130px;
+            opacity:100;
+            filter:alpha(opacity=100);
         }
     }
-    > .origin {
-        position: absolute;
-        left: -99999px;
-        background-color: $whitesmoke;
-        padding: 4px;
-        box-shadow: 0 0 6px $gray-level-2;
-        -moz-box-shadow: 0 0 6px $gray-level-2;
-        -webkit-box-shadow: 0 0 6px $gray-level-2;
-        > img {
+    &.overlay {
+        > .thumbnail {
             max-height: 512px;
             max-width: 512px;
+            display: block;
+            width: 100%;
+            height: auto;
         }
-    }
-    // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-    > .medium {
-        max-height: 512px;
-        max-width: 512px;
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-    > .overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #000000;
-        opacity:0.75;
-        overflow: hidden;
-        width: 100%;
-        height: 0;
-        transition: .3s ease;
-        > .text {
-            color: $whitesmoke;
+        > .attachment {
             position: absolute;
-            overflow-x: hidden;
-            overflow-y: auto;
-            top: 50%;
-            margin: 4px;
-            height: 100%;
-            left: 0%;
-            transform: translate(0%, -50%);
-            -ms-transform: translate(0%, -50%);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: $dimgray;
+            opacity:0.75;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .3s ease;
+            > .content {
+                position: absolute;
+                margin: 4px;
+                height: 95%;
+                padding: 2px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                color: $whitesmoke;
+                top: 50%;
+                left: 0%;
+                transform: translate(0%, -50%);
+                -ms-transform: translate(0%, -50%);
+            }
+        }
+        &:hover .attachment {
+            height: 50%;
         }
     }
-    &:hover .overlay {
-        height: 50%;
+    &.disabled {
+        > .thumbnail {
+            max-height: 512px;
+            max-width: 512px;
+            display: block;
+            width: 100%;
+            height: auto;
+            cursor: default;
+            -webkit-filter: grayscale(100%);
+        }
     }
-    // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-    // disabled:
-    // -webkit-filter: grayscale(100%);
 }
 // -------------------- Styles of component 'Image' <end> --------------------
 
 // -------------------- Styles of component 'List' <start> --------------------
+.list {
+    color: $fore-color;
+    background-color: $back-color;
+    &.text {
+        //
+        > .item {
+            &.selectable {
+                //
+                > .selected {
+                    //
+                }
+            }
+            > .text {
+                //
+            }
+        }
+    }
+
+    // .label {
+    //     color: $fore-color;
+    //     background-color: $back-color;
+    //     &.default {
+    //         text-shadow: 0px 0px 0px transparent;
+    //     }
+    //     &.shadow {
+    //         text-shadow: 3px 3px 3px $gray-level-3;
+    //     }
+    // }
+
+    &.name-value {
+        //
+        > .item {
+            // position: relative;
+            max-height: 30px;
+            width: 100%;
+            white-space: nowrap;
+            margin: 2px;
+            border: 0px solid transparent;
+            padding: 2px;
+            &.selectable {
+                &:hover {
+                    //
+                }
+                > .selected {
+                    //
+                }
+            }
+            > .bullet {
+                display: inline-block;
+                margin: 1px 2px 1px 4px;
+            }
+            > .text {
+                display: inline-block;
+                margin: 1px 2px;
+            }
+            > .value {
+                position: absolute;
+                right: 0px;
+                display: inline-block;
+                margin: 1px 4px 1px 2px;
+            }
+        }
+    }
+}
 // -------------------- Styles of component 'List' <end> --------------------
 
 // -------------------- Styles of component 'Tree list' <start> --------------------

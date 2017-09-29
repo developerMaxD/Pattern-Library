@@ -228,24 +228,57 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-image">
                                     <li>Image:</li>
                                     {/* ******************** component [Image] <start> ******************** */}
-                                    <div className="image-ex-a1 image">
+                                    <div className="image-ex-a1 image popup">
                                         <img className="thumbnail" src={"http://localhost:9088/images/flower-thumbnail.jpg"} alt="flower" />
-                                        <span className="origin">
-                                            <img src={"http://localhost:9088/images/flower-origin.jpg"} alt="flower" />
-                                        </span>
+                                        <div className="attachment">
+                                            <img className="content" src={"http://localhost:9088/images/flower-origin.jpg"} alt="flower" />
+                                        </div>
                                     </div>
-                                    <div className="image-ex-a2 image">
-                                        <img className="medium" src={"http://localhost:9088/images/flower-medium.jpg"} alt="flower" />
-                                        <div className="overlay">
-                                            <div className="text small-content">
+                                    <div className="image-ex-a2 image overlay">
+                                        <img className="thumbnail" src={"http://localhost:9088/images/flower-medium.jpg"} alt="flower" />
+                                        <div className="attachment">
+                                            <div className="content small-content">
                                                 The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle.
                                             </div>
                                         </div>
+                                    </div>
+                                    <div className="image-ex-a3 image disabled">
+                                        <img className="thumbnail" src={"http://localhost:9088/images/flower-medium.jpg"} alt="flower" />
                                     </div>
                                     {/* ******************** component [Image] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-list">
                                     <li>List:</li>
+                                    {/* ******************** component [List] <start> ******************** */}
+                                    <div className="list-ex-a1 list name-value regular-content">
+                                        <div className="item selectable">
+                                            <div className="bullet">
+                                                <i className="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div className="text">
+                                                Java
+                                            </div>
+                                            <div>
+                                                <hr />
+                                            </div>
+                                            <div className="value">
+                                                12.96%
+                                            </div>
+                                        </div>
+                                        <div className="item selectable">
+                                            <div className="bullet">
+                                                <i className="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div className="text">
+                                                JavaScript
+                                            </div>
+                                            <hr />
+                                            <div className="value">
+                                                2.10%
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* ******************** component [List] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-tree-list">
                                     <li>Tree list:</li>
