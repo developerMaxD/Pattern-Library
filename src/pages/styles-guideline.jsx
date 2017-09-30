@@ -258,7 +258,7 @@ export default class StylesGuideline extends React.Component {
                                             <div className="text">
                                                 Java
                                             </div>
-                                            <div>
+                                            <div className="line">
                                                 <hr />
                                             </div>
                                             <div className="value">
@@ -272,7 +272,9 @@ export default class StylesGuideline extends React.Component {
                                             <div className="text">
                                                 JavaScript
                                             </div>
-                                            <hr />
+                                            <div className="line">
+                                                <hr />
+                                            </div>
                                             <div className="value">
                                                 2.10%
                                             </div>
