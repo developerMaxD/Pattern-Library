@@ -270,6 +270,34 @@ export default class StylesGuideline extends React.Component {
                                                 <i className="fa fa-star" aria-hidden="true"></i>
                                             </div>
                                             <div className="text">
+                                                C#
+                                            </div>
+                                            <div className="line">
+                                                <hr />
+                                            </div>
+                                            <div className="value">
+                                                4.20%
+                                            </div>
+                                        </div>
+                                        <div className="item selectable selected">
+                                            <div className="bullet">
+                                                <i className="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div className="text">
+                                                Pyhton
+                                            </div>
+                                            <div className="line">
+                                                <hr />
+                                            </div>
+                                            <div className="value">
+                                                3.69%
+                                            </div>
+                                        </div>
+                                        <div className="item selectable">
+                                            <div className="bullet">
+                                                <i className="fa fa-star" aria-hidden="true"></i>
+                                            </div>
+                                            <div className="text">
                                                 JavaScript
                                             </div>
                                             <div className="line">
@@ -280,10 +308,196 @@ export default class StylesGuideline extends React.Component {
                                             </div>
                                         </div>
                                     </div>
+                                    <div className="list-ex-a2 list text-only regular-content">
+                                        <div className="item selectable">
+                                            <div className="text">
+                                                Arts, Crafts & Sewing
+                                            </div>
+                                        </div>
+                                        <div className="item selectable selected">
+                                            <div className="text">
+                                                Beauty & Personal Care
+                                            </div>
+                                        </div>
+                                        <div className="item selectable">
+                                            <div className="text">
+                                                Books
+                                            </div>
+                                        </div>
+                                        <div className="item selectable">
+                                            <div className="text">
+                                                Clothing, Shoes & Jewelry
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="list-ex-a3 list text-only regular-content">
+                                        <div className="item">
+                                            <div className="text">
+                                                Computers
+                                            </div>
+                                        </div>
+                                        <div className="item">
+                                            <div className="text">
+                                                Credit and Payment Cards
+                                            </div>
+                                        </div>
+                                        <div className="item">
+                                            <div className="text">
+                                                Digital Music
+                                            </div>
+                                        </div>
+                                        <div className="item">
+                                            <div className="text">
+                                                Electronics
+                                            </div>
+                                        </div>
+                                    </div>
                                     {/* ******************** component [List] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-tree-list">
                                     <li>Tree list:</li>
+                                    {/* ******************** component [Tree List] <start> ******************** */}
+                                    <div className="tree-list-ex-a1 tree-list  regular-content">
+                                        <div className="root">
+										    <i className="fa fa-minus-square-o icon" aria-hidden="true"></i>
+										    <div className="text">
+                                                Life
+                                            </div>
+										</div>
+                                        <ul className="tree">
+                                            <li>
+                                                <i className="fa fa-minus-square-o icon" aria-hidden="true"></i>
+                                                <div className="text">
+                                                    Animals
+                                                </div>
+                                                <ul>
+                                                    <li>
+                                                        <i className="fa fa-plus-square-o icon" aria-hidden="true"></i>
+                                                        <div className="text">
+                                                            Birds
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <i className="fa fa-minus-square-o icon" aria-hidden="true"></i>
+                                                        <div className="text">
+                                                            Mammals
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                <div className="text selectable">
+                                                                    Elephant
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div className="text selectable">
+                                                                    Mouse
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <i className="fa fa-plus-square-o icon" aria-hidden="true"></i>
+                                                        <div className="text">
+                                                            Reptiles
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <i className="fa fa-minus-square-o icon" aria-hidden="true"></i>
+                                                <div className="text">
+                                                    Plants
+                                                </div>
+                                                <ul>
+                                                    <li>
+                                                        <i className="fa fa-minus-square-o icon" aria-hidden="true"></i>
+                                                        <div className="text">
+                                                            Flowers
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                <i className="fa fa-plus-square-o icon" aria-hidden="true"></i>
+                                                                <div className="text">
+                                                                    Rose
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <i className="fa fa-minus-square-o icon" aria-hidden="true"></i>
+                                                                <div className="text">
+                                                                    Tulip
+                                                                </div>
+                                                                <ul>
+                                                                    <li>
+                                                                        <i className="fa fa-minus-square-o icon" aria-hidden="true"></i>
+                                                                        <div className="text">
+                                                                            Single tulips
+                                                                        </div>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div className="text selectable">
+                                                                                    Single early tulips
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div className="text selectable">
+                                                                                    Single late tulips
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <i className="fa fa-minus-square-o icon" aria-hidden="true"></i>
+                                                                        <div className="text">
+                                                                            Double tulips
+                                                                        </div>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div className="text selectable">
+                                                                                    Double early tulips
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div className="text selectable">
+                                                                                    Double late tulips
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div className="text selectable">
+                                                                            Fosteriana tulips
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div className="text selectable">
+                                                                            Kaufmanniana tulips
+                                                                            </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div className="text selectable">
+                                                                            Greigii tulips
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div className="text selectable">
+                                                                            Triumph tulips
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <i className="fa fa-plus-square-o icon" aria-hidden="true"></i>
+                                                        <div className="text">
+                                                            Trees
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    {/* ******************** component [Tree List] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-progress">
                                     <li>Progress:</li>

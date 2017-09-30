@@ -116,36 +116,8 @@
 .list {
     color: $fore-color;
     background-color: $back-color;
-    &.text {
-        //
+    &.text-only {
         > .item {
-            &.selectable {
-                //
-                > .selected {
-                    //
-                }
-            }
-            > .text {
-                //
-            }
-        }
-    }
-
-    // .label {
-    //     color: $fore-color;
-    //     background-color: $back-color;
-    //     &.default {
-    //         text-shadow: 0px 0px 0px transparent;
-    //     }
-    //     &.shadow {
-    //         text-shadow: 3px 3px 3px $gray-level-3;
-    //     }
-    // }
-
-    &.name-value {
-        //
-        > .item {
-            // position: relative;
             display: flex;
             flex-flow: row;
             max-height: 30px;
@@ -155,42 +127,98 @@
             border: 0px solid transparent;
             padding: 2px;
             &.selectable {
+                cursor: pointer;
                 &:hover {
-                    //
+                    color: $sky-base;
+                    text-shadow: 3px 3px 3px $aqua-base;
                 }
-                > .selected {
-                    //
+                &.selected {
+                    color: $whitesmoke;
+                    background-color: $green-base;
+                    border-color: $green-base;
+                    border-radius: 4px;
+                    box-shadow: 0px 0px 8px $green-light;
+                    &:hover {
+                        color: $whitesmoke;
+                        text-shadow: 0px 0px 0px transparent;
+                    }
+                }
+            }
+            > .text {
+                margin: 1px 2px;
+            }
+        }
+    }
+    &.name-value {
+        > .item {
+            display: flex;
+            flex-flow: row;
+            max-height: 30px;
+            width: 100%;
+            white-space: nowrap;
+            margin: 2px;
+            border: 0px solid transparent;
+            padding: 2px;
+            &.selectable {
+                cursor: pointer;
+                &:hover {
+                    color: $sky-base;
+                    text-shadow: 3px 3px 3px $aqua-base;
+                    > .line {
+                        > hr {
+                            border-top: 2px dotted $sky-base;
+                            box-shadow: 0 0 6px $aqua-base;
+                        }
+                    }
+                }
+                &.selected {
+                    color: $whitesmoke;
+                    background-color: $green-base;
+                    border-color: $green-base;
+                    border-radius: 4px;
+                    box-shadow: 0px 0px 8px $green-light;
+                    > .line {
+                        > hr {
+                            border-top: 2px dotted $whitesmoke;
+                        }
+                    }
+                    &:hover {
+                        color: $whitesmoke;
+                        text-shadow: 0px 0px 0px transparent;
+                        > .line {
+                            > hr {
+                                border-top: 2px dotted $whitesmoke;
+                                box-shadow: 0 0 0px transparent;
+                            }
+                        }
+                    }
                 }
             }
             > .bullet {
-                // position: absolute;
-                // top: 0px;
-                // left: 0px;
-                // display: inline-block;
                 margin: 1px 2px 1px 4px;
+                > i {
+                    position: relative;
+                    transform: translate(0, -50%);
+                    top: 50%;
+                }
             }
             > .text {
-                // position: absolute;
-                // top: 0px;
-                // left: 0px;
-                // display: inline-block;
                 margin: 1px 2px;
             }
             > .line {
-                // flex:1;
-                // position: absolute;
-                // top: 0px;
-                // left: 4px;
-                // right: 4px;
                 height: 100%;
                 width: 100%;
-                margin: 0px 4px 0px 8px;
+                margin: 0px 4px 0px 6px;
+                > hr {
+                    position: relative;
+                    transform: translate(0, -50%);
+                    top: 50%;
+                    height: 0px;
+                    border-top: 2px dotted $fore-color;
+                    border-radius: 0px;
+                }
             }
             > .value {
-                // position: absolute;
-                // right: 0px;
-                // top: 0px;
-                // display: inline-block;
                 margin: 1px 4px 1px 2px;
             }
         }
@@ -199,6 +227,80 @@
 // -------------------- Styles of component 'List' <end> --------------------
 
 // -------------------- Styles of component 'Tree list' <start> --------------------
+.tree-list {
+    > .root {
+        line-height: 1.3em;
+        margin:0 0 0 .5em; /* indentation */
+        cursor: pointer;
+        > .text {
+            display: inline-block;
+            margin-left: 3px;
+        }
+    }
+    > .tree, .tree ul {
+        margin:0 0 0 1em; /* indentation */
+        padding:0;
+        list-style:none;
+        color:$fore-color;
+        position:relative;
+        &:before {
+            content:"";
+            display:block;
+            width:0;
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            margin-left: -2px;
+            border-left:1px dotted;
+        }
+    }
+    > .tree ul {margin-left:.5em} /* (indentation/2) */
+    > .tree li {
+        margin:0;
+        padding:0 1em; /* indentation + .5em */
+        line-height:1.3em; /* default list item's `line-height` */
+        position:relative;
+        &:before {
+            content:"";
+            display:block;
+            width:10px; /* same with indentation */
+            height:0;
+            border-top:1px dotted;
+            // margin-top:-4px; /* border top width */
+            position:absolute;
+            top: 0.65em; /* (line-height/2) */
+            left:0;
+            margin-left: -2px;
+        }
+        &:last-child:before {
+            background:white; /* same with body background */
+            height:auto;
+            top:0.7em; /* (line-height/2) */
+            bottom:0;
+        }
+        > .icon {
+            margin-right: 3px;
+            cursor: pointer;
+            &:hover {
+                color: $sky-base;
+            }
+        }
+        > .text {
+            display: inline-block;
+            border-radius: 4px;
+            padding: 1px 3px;
+            &.selectable {
+                cursor: pointer;
+                &:hover {
+                    color: $sky-base;
+                    background-color: lighten($sky-base, 45%);
+                    box-shadow: 0 0 6px lighten($sky-base, 50%);
+                }
+            }
+        }
+    }
+}
 // -------------------- Styles of component 'Tree list' <end> --------------------
 
 // -------------------- Styles of component 'Progress' <start> --------------------
