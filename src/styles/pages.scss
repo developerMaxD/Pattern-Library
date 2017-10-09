@@ -369,6 +369,13 @@
                 }
                 > .title-components-progress {
                     top: 970px;
+                    > .progress-ex-a1 {
+                        position: absolute;
+                        top: 20px;
+                        left: 40px;
+                        width: 120px;
+                        height: 120px;
+                    }
                 }
             }
             > .title-input-components {
