@@ -502,8 +502,8 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-progress">
                                     <li>Progress:</li>
                                     {/* ******************** component [Progress] <start> ******************** */}
-                                    <div className="progress-ex-a1 progress circle">
-                                        <div className="bar">
+                                    <div className="progress-ex-a1 regular-section progress circle">
+                                        <div className="bar" data-progress="10">
                                             {/* VV */}
                                         </div>
                                     </div>
