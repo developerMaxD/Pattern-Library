@@ -89,7 +89,8 @@
             }
             @if $status != "disabled" {
                 &:hover {
-                    background-color: lighten($sky-base, 50%);
+                    color: $sky-base;
+                    background-color: $focus-back-color;
                     border: 1px solid $sky-base;
                     box-shadow: 0 0 6px $aqua-base;
                 }
@@ -166,7 +167,8 @@
             font-size: 12px;
             cursor: pointer;
             &:hover {
-                background-color: lighten($sky-base, 50%);
+                color: $sky-base;
+                background-color: $focus-back-color;
                 border: 1px solid $sky-base;
                 border-radius: 4px;
                 box-shadow: 0 0 6px $aqua-base;
@@ -192,27 +194,38 @@
             display: inline;
             padding: 1px 4px 3px 22px;
             border: 1px solid transparent;
-            @if $status == "default" {
-                &:hover {
-                    background-color: lighten($sky-base, 50%);
-                    border: 1px solid $sky-base;
-                    box-shadow: 0 0 6px $aqua-base;
+            &.checked {
+                @if $status == "default" {
+                    color: $sky-base;
+                    font-weight: bold;
+                }
+                > .checker {
+                    @if $status == "default" {
+                        // Include from pebble components
+                        @include single-button($top: 4px, $color: $sky-base, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
+                    } @else {
+                        @include single-button($top: 4px, $color: $disabled-color, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: default);
+                    }
                 }
             }
-            > .checker {
+            &.unchecked {
                 @if $status == "default" {
-                    // Include from pebble components
-                    @include single-button($top: 4px, $color: $gray-level-2, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
                     &:hover {
-                        @include single-button($top: 4px, $color: $sky-base, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
+                        color: $sky-base;
+                        background-color: $focus-back-color;
+                        border: 1px solid $sky-base;
+                        box-shadow: 0 0 6px $aqua-base;
                     }
-                    &.checked {
-                        @include single-button($top: 4px, $color: $green-base, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
-                    }
-                } @else {
-                    // Include from pebble components
-                    @include single-button($top: 4px, $color: $disabled-color, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: default);
-                    &.checked {
+                }
+                > .checker {
+                    @if $status == "default" {
+                        // Include from pebble components
+                        @include single-button($top: 4px, $color: $gray-level-2, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
+                        &:hover {
+                            @include single-button($top: 4px, $color: $sky-base, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: pointer);
+                        }
+                    } @else {
+                        // Include from pebble components
                         @include single-button($top: 4px, $color: $disabled-color, $size: 1.0em, $side: left, $sideOffset: 4px, $cursor: default);
                     }
                 }
@@ -237,8 +250,10 @@
         &.checked {
             background: transparent;
             @if $status == "default" {
-                border: 2px solid $green-base;
-                background: linear-gradient(-135deg, $green-base 15px, transparent 0);
+                color: $sky-base;
+                font-weight: bold;
+                border: 2px solid $sky-base;
+                background: linear-gradient(-135deg, $sky-base 15px, transparent 0);
                 > .checker {
                     // Include from pebble components
                     @include single-button($top: 1px, $color: $whitesmoke, $size: 0.7em, $side: right, $sideOffset: 1px, $cursor: pointer);
@@ -256,7 +271,8 @@
             @if $status == "default" {
                 border: 2px solid $gray-level-5;
                 &:hover {
-                    background-color: lighten($sky-base, 50%);
+                    color: $sky-base;
+                    background-color: $focus-back-color;
                     border: 2px solid $sky-base;
                     box-shadow: 0 0 6px $aqua-base;
                 }

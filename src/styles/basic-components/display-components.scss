@@ -127,20 +127,19 @@
             border: 0px solid transparent;
             padding: 2px;
             &.selectable {
+                @extend %border-base-none;
                 cursor: pointer;
                 &:hover {
+                    @extend %border-base-focus;
                     color: $sky-base;
-                    text-shadow: 3px 3px 3px $aqua-base;
+                    background-color: $focus-back-color;
                 }
                 &.selected {
                     color: $whitesmoke;
-                    background-color: $green-base;
-                    border-color: $green-base;
-                    border-radius: 4px;
-                    box-shadow: 0px 0px 8px $green-light;
+                    background-color: $selected-back-color;
+                    border-color: $selected-back-color;
                     &:hover {
-                        color: $whitesmoke;
-                        text-shadow: 0px 0px 0px transparent;
+                        @extend %border-base-none;
                     }
                 }
             }
@@ -160,37 +159,29 @@
             border: 0px solid transparent;
             padding: 2px;
             &.selectable {
+                @extend %border-base-none;
                 cursor: pointer;
                 &:hover {
+                    @extend %border-base-focus;
                     color: $sky-base;
-                    text-shadow: 3px 3px 3px $aqua-base;
+                    background-color: $focus-back-color;
                     > .line {
                         > hr {
                             border-top: 2px dotted $sky-base;
-                            box-shadow: 0 0 6px $aqua-base;
                         }
                     }
                 }
                 &.selected {
                     color: $whitesmoke;
-                    background-color: $green-base;
-                    border-color: $green-base;
-                    border-radius: 4px;
-                    box-shadow: 0px 0px 8px $green-light;
+                    background-color: $selected-back-color;
+                    border-color: $selected-back-color;
                     > .line {
                         > hr {
                             border-top: 2px dotted $whitesmoke;
                         }
                     }
                     &:hover {
-                        color: $whitesmoke;
-                        text-shadow: 0px 0px 0px transparent;
-                        > .line {
-                            > hr {
-                                border-top: 2px dotted $whitesmoke;
-                                box-shadow: 0 0 0px transparent;
-                            }
-                        }
+                        @extend %border-base-none;
                     }
                 }
             }
@@ -267,7 +258,6 @@
             width:10px; /* same with indentation */
             height:0;
             border-top:1px dotted;
-            // margin-top:-4px; /* border top width */
             position:absolute;
             top: 0.65em; /* (line-height/2) */
             left:0;
@@ -291,11 +281,12 @@
             border-radius: 4px;
             padding: 1px 3px;
             &.selectable {
+                @extend %border-base-none;
                 cursor: pointer;
                 &:hover {
+                    @extend %border-base-focus;
                     color: $sky-base;
-                    background-color: lighten($sky-base, 45%);
-                    box-shadow: 0 0 6px lighten($sky-base, 50%);
+                    background-color: $focus-back-color;
                 }
             }
         }
@@ -307,7 +298,7 @@
 .progress {
     &.circle {
         > .bar {
-            background-color: #ddd;
+            background-color: $whitesmoke;
             border-radius: 50%;
             display: inline-block;
             position: relative;
@@ -317,7 +308,8 @@
                 -webkit-box-align: center;
                 -ms-flex-align: center;
                 align-items: center;
-                background-color: #fff;
+                background-color: white;
+                box-shadow: 1px 1px 2px $gray-level-1;
                 border-radius: 50%;
                 content: attr(data-progress)'%';
                 display: -webkit-box;
@@ -337,7 +329,7 @@
                 transition: transform 0.2s ease, -webkit-transform 0.2s ease;
             }
             &:after {
-                background-color: #0083ff;
+                background-color: $blue-base;
                 border-radius: 50%;
                 content: '';
                 display: inline-block;
@@ -347,8 +339,26 @@
         }
     }
     &.straight {
+        display: block;
+        background-color: $whitesmoke;
+        border-radius: 6px;
+        box-shadow: 1px 1px 2px $gray-level-1 inset;
         > .bar {
-            //
+            margin: 1px;
+            height: calc(100% - 3px);
+            display: block;
+            border-top: 1px solid lighten($blue-base, 12%);
+            border-left: 1px solid lighten($blue-base, 12%);
+            border-radius: 6px;
+            box-shadow: -1px -1px 1px darken($blue-base, 30%) inset;
+            background-color: $blue-base;
+            color: $whitesmoke;
+            text-align: center;
+            text-shadow: 0 2px 1px $blue-base, 2px 1px 0px $blue-base, -2px 0px 1px $blue-base, 0px -2px 1px $blue-base;
+            &:before {
+                padding: 0px 10px 0px 10px;
+                content: attr(data-progress)'%';
+            }
         }
     }
 }
@@ -360,14 +370,15 @@ $half: round($loops / 2);
 
 @for $i from 0 through $loops {
     $mark: $i * $step;
-    .progress.circle .bar[data-progress= "#{$mark}" ]:after {
+    .progress.circle >.bar[data-progress= "#{$mark}" ]:after {
         @if $i < $half {
             $next-deg: 90deg + $increment * $i;
-            background-image: linear-gradient(90deg, #DDDDDD 50%, transparent 50%, transparent), linear-gradient($next-deg, #0083FF 50%, #DDDDDD 50%, #DDDDDD);
+            background-image: linear-gradient(90deg, $whitesmoke 50%, transparent 50%, transparent), linear-gradient($next-deg, $blue-base 50%, $whitesmoke 50%, $whitesmoke);
         } @else {
             $next-deg: -90deg + $increment * ($i - $half);
-            background-image: linear-gradient($next-deg, #0083FF 50%, transparent 50%, transparent), linear-gradient(270deg, #0083FF 50%, #DDDDDD 50%, #DDDDDD);
+            background-image: linear-gradient($next-deg, $blue-base 50%, transparent 50%, transparent), linear-gradient(270deg, $blue-base 50%, $whitesmoke 50%, $whitesmoke);
         }
+        box-shadow: 1px 1px 2px $gray-level-1 inset;
     }
 }
 // -------------------- Styles of component 'Progress' <end> --------------------

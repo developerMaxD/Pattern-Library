@@ -5,12 +5,15 @@ $fa-font-path: "../node_modules/font-awesome/fonts";
 $fore-color: $dimgray !default;
 $back-color: transparent !default;
 $disabled-color: $gray-level-0 !default;
+$focus-back-color: lighten($sky-base, 50%) !default;
+$focus-border-color: $sky-base !default;
+$selected-back-color: $sky-base !default;
 // -------------------- Components default values <end> --------------------
 
 // -------------------- Components default styles: border <start> --------------------
 %border-base-none {
     outline: none;
-    border: 0px solid transparent;
+    border: 1px solid transparent;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -26,7 +29,7 @@ $disabled-color: $gray-level-0 !default;
 }
 %border-base-focus {
     outline: none;
-    border: 1px solid $sky-base;
+    border: 1px solid $focus-border-color;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;

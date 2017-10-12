@@ -503,9 +503,38 @@ export default class StylesGuideline extends React.Component {
                                     <li>Progress:</li>
                                     {/* ******************** component [Progress] <start> ******************** */}
                                     <div className="progress-ex-a1 regular-section progress circle">
-                                        <div className="bar" data-progress="10">
-                                            {/* VV */}
-                                        </div>
+                                        <div className="bar" data-progress="3"></div>
+                                    </div>
+                                    <div className="progress-ex-a2 regular-section progress circle">
+                                        <div className="bar" data-progress="5"></div>
+                                    </div>
+                                    <div className="progress-ex-a3 regular-section progress circle">
+                                        <div className="bar" data-progress="10"></div>
+                                    </div>
+                                    <div className="progress-ex-a4 regular-section progress circle">
+                                        <div className="bar" data-progress="25"></div>
+                                    </div>
+                                    <div className="progress-ex-a5 regular-section progress circle">
+                                        <div className="bar" data-progress="50"></div>
+                                    </div>
+                                    <div className="progress-ex-a6 regular-section progress circle">
+                                        <div className="bar" data-progress="62"></div>
+                                    </div>
+                                    <div className="progress-ex-a7 regular-section progress circle">
+                                        <div className="bar" data-progress="97"></div>
+                                    </div>
+
+                                    <div className="progress-ex-b1 tiny-section progress straight">
+                                        <div className="bar" data-progress="0" style={{"width" : "0%"}}></div>
+                                    </div>
+                                    <div className="progress-ex-b2 tiny-section progress straight">
+                                        <div className="bar" data-progress="5" style={{"width" : "5%"}}></div>
+                                    </div>
+                                    <div className="progress-ex-c1 tiny-section progress straight">
+                                        <div className="bar" data-progress="65" style={{"width" : "65%"}}></div>
+                                    </div>
+                                    <div className="progress-ex-c2 tiny-section progress straight">
+                                        <div className="bar" data-progress="100" style={{"width" : "100%"}}></div>
                                     </div>
                                     {/* ******************** component [Progress] <end> ******************** */}
                                 </div>
@@ -1290,67 +1319,67 @@ export default class StylesGuideline extends React.Component {
                                         <div ref="box" className="radio-box">
                                             <div className="content">
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Jacob
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
-                                                        <i className="fa fa-dot-circle-o checker checked" aria-hidden="true"></i>
+                                                    <div className="button checked anim-trans-backcolor">
+                                                        <i className="fa fa-dot-circle-o checker" aria-hidden="true"></i>
                                                         Joshua
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Matthew
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Christopher
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Alexander
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Ryan
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Nicholas
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Caleb
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Francisco
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Ethan
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         James
                                                     </div>
@@ -1362,67 +1391,67 @@ export default class StylesGuideline extends React.Component {
                                         <div ref="box" className="radio-box">
                                             <div className="content">
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Jacob
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
-                                                        <i className="fa fa-dot-circle-o checker checked" aria-hidden="true"></i>
+                                                    <div className="button checked anim-trans-backcolor">
+                                                        <i className="fa fa-dot-circle-o checker" aria-hidden="true"></i>
                                                         Joshua
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Matthew
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Christopher
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Alexander
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Ryan
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Nicholas
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Caleb
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Francisco
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         Ethan
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle-o checker" aria-hidden="true"></i>
                                                         James
                                                     </div>
@@ -1519,67 +1548,67 @@ export default class StylesGuideline extends React.Component {
                                         <div ref="box" className="check-box">
                                             <div className="content">
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Jacob
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
-                                                        <i className="fa fa-check-circle checker checked" aria-hidden="true"></i>
+                                                    <div className="button checked anim-trans-backcolor">
+                                                        <i className="fa fa-check-circle checker" aria-hidden="true"></i>
                                                         Joshua
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Matthew
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
-                                                        <i className="fa fa-check-circle checker checked" aria-hidden="true"></i>
+                                                    <div className="button checked anim-trans-backcolor">
+                                                        <i className="fa fa-check-circle checker" aria-hidden="true"></i>
                                                         Christopher
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
-                                                        <i className="fa fa-check-circle checker checked" aria-hidden="true"></i>
+                                                    <div className="button checked anim-trans-backcolor">
+                                                        <i className="fa fa-check-circle checker" aria-hidden="true"></i>
                                                         Alexander
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Ryan
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Nicholas
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Caleb
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Francisco
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Ethan
                                                     </div>
                                                 </div>
                                                 <div className="button-grid default">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         James
                                                     </div>
@@ -1591,67 +1620,67 @@ export default class StylesGuideline extends React.Component {
                                         <div ref="box" className="check-box">
                                             <div className="content">
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Jacob
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
-                                                        <i className="fa fa-check-circle checker checked" aria-hidden="true"></i>
+                                                    <div className="button checked anim-trans-backcolor">
+                                                        <i className="fa fa-check-circle checker" aria-hidden="true"></i>
                                                         Joshua
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Matthew
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
-                                                        <i className="fa fa-check-circle checker checked" aria-hidden="true"></i>
+                                                    <div className="button checked anim-trans-backcolor">
+                                                        <i className="fa fa-check-circle checker" aria-hidden="true"></i>
                                                         Christopher
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
-                                                        <i className="fa fa-check-circle checker checked" aria-hidden="true"></i>
+                                                    <div className="button checked anim-trans-backcolor">
+                                                        <i className="fa fa-check-circle checker" aria-hidden="true"></i>
                                                         Alexander
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Ryan
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Nicholas
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Caleb
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Francisco
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         Ethan
                                                     </div>
                                                 </div>
                                                 <div className="button-grid disabled">
-                                                    <div className="button anim-trans-backcolor">
+                                                    <div className="button unchecked anim-trans-backcolor">
                                                         <i className="fa fa-circle checker" aria-hidden="true"></i>
                                                         James
                                                     </div>
