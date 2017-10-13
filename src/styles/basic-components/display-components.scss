@@ -295,90 +295,130 @@
 // -------------------- Styles of component 'Tree list' <end> --------------------
 
 // -------------------- Styles of component 'Progress' <start> --------------------
+@mixin progress-bar($facade: "circle", $bar-color: $blue-base) {
+    @if $facade == "circle" {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: $whitesmoke;
+        &:before {
+            position: absolute;
+            left: 1.3rem;
+            right: 1.3rem;
+            top: 1.3rem;
+            bottom: 1.3rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 1px 1px 2px $gray-level-1;
+            content: attr(data-progress)'%';
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-transition: -webkit-transform 0.2s ease;
+            transition: -webkit-transform 0.2s ease;
+            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+        }
+        &:after {
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: $bar-color;
+            box-shadow: 1px 1px 2px $gray-level-1 inset;
+            content: '';
+        }
+        
+        $step: 1;
+        $loops: round(100 / $step);
+        $increment: 360 / $loops;
+        $half: round($loops / 2);
+        @for $i from 0 through $loops {
+            $mark: $i * $step;
+            &[data-progress^="#{$mark}" ]:after {
+                @if $i < $half {
+                    $next-deg: 90deg + $increment * $i;
+                    background-image: linear-gradient(90deg, $whitesmoke 50%, transparent 50%, transparent), linear-gradient($next-deg, $bar-color 50%, $whitesmoke 50%, $whitesmoke);
+                } @else {
+                    $next-deg: -90deg + $increment * ($i - $half);
+                    background-image: linear-gradient($next-deg, $bar-color 50%, transparent 50%, transparent), linear-gradient(270deg, $bar-color 50%, $whitesmoke 50%, $whitesmoke);
+                }
+            }
+        }
+    } @else if $facade == "straight" {
+        display: block;
+        margin: 1px;
+        border-top: 1px solid lighten($bar-color, 12%);
+        border-left: 1px solid lighten($bar-color, 12%);
+        border-radius: 6px;
+        height: calc(100% - 3px);
+        background-color: $bar-color;
+        box-shadow: -1px -1px 1px darken($bar-color, 30%) inset;
+        color: $whitesmoke;
+        text-align: center;
+        text-shadow: 0 2px 1px $bar-color, 2px 1px 0px $bar-color, -2px 0px 1px $bar-color, 0px -2px 1px $bar-color;
+        &:before {
+            padding: 0px 10px 0px 10px;
+            content: attr(data-progress)'%';
+        }
+    }
+}
 .progress {
     &.circle {
         > .bar {
-            background-color: $whitesmoke;
-            border-radius: 50%;
-            display: inline-block;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            &:before {
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-                background-color: white;
-                box-shadow: 1px 1px 2px $gray-level-1;
-                border-radius: 50%;
-                content: attr(data-progress)'%';
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-                position: absolute;
-                left: 1.3rem;
-                right: 1.3rem;
-                top: 1.3rem;
-                bottom: 1.3rem;
-                -webkit-transition: -webkit-transform 0.2s ease;
-                transition: -webkit-transform 0.2s ease;
-                transition: transform 0.2s ease;
-                transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+            &.red {
+                @include progress-bar($facade: "circle", $bar-color: $red-base);
             }
-            &:after {
-                background-color: $blue-base;
-                border-radius: 50%;
-                content: '';
-                display: inline-block;
-                height: 100%;
-                width: 100%;
+            &.orange {
+                @include progress-bar($facade: "circle", $bar-color: $orange-base);
+            }
+            &.green {
+                @include progress-bar($facade: "circle", $bar-color: $green-base);
+            }
+            &.blue {
+                @include progress-bar($facade: "circle", $bar-color: $blue-base);
+            }
+            &.violet {
+                @include progress-bar($facade: "circle", $bar-color: $violet-base);
+            }
+            &.pink {
+                @include progress-bar($facade: "circle", $bar-color: $pink-base);
             }
         }
     }
     &.straight {
         display: block;
-        background-color: $whitesmoke;
         border-radius: 6px;
+        background-color: $whitesmoke;
         box-shadow: 1px 1px 2px $gray-level-1 inset;
         > .bar {
-            margin: 1px;
-            height: calc(100% - 3px);
-            display: block;
-            border-top: 1px solid lighten($blue-base, 12%);
-            border-left: 1px solid lighten($blue-base, 12%);
-            border-radius: 6px;
-            box-shadow: -1px -1px 1px darken($blue-base, 30%) inset;
-            background-color: $blue-base;
-            color: $whitesmoke;
-            text-align: center;
-            text-shadow: 0 2px 1px $blue-base, 2px 1px 0px $blue-base, -2px 0px 1px $blue-base, 0px -2px 1px $blue-base;
-            &:before {
-                padding: 0px 10px 0px 10px;
-                content: attr(data-progress)'%';
+            &.red {
+                @include progress-bar($facade: "straight", $bar-color: $red-base);
+            }
+            &.orange {
+                @include progress-bar($facade: "straight", $bar-color: $orange-base);
+            }
+            &.green {
+                @include progress-bar($facade: "straight", $bar-color: $green-base);
+            }
+            &.blue {
+                @include progress-bar($facade: "straight", $bar-color: $blue-base);
+            }
+            &.violet {
+                @include progress-bar($facade: "straight", $bar-color: $violet-base);
+            }
+            &.pink {
+                @include progress-bar($facade: "straight", $bar-color: $pink-base);
             }
         }
-    }
-}
-
-$step: 1;
-$loops: round(100 / $step);
-$increment: 360 / $loops;
-$half: round($loops / 2);
-
-@for $i from 0 through $loops {
-    $mark: $i * $step;
-    .progress.circle >.bar[data-progress= "#{$mark}" ]:after {
-        @if $i < $half {
-            $next-deg: 90deg + $increment * $i;
-            background-image: linear-gradient(90deg, $whitesmoke 50%, transparent 50%, transparent), linear-gradient($next-deg, $blue-base 50%, $whitesmoke 50%, $whitesmoke);
-        } @else {
-            $next-deg: -90deg + $increment * ($i - $half);
-            background-image: linear-gradient($next-deg, $blue-base 50%, transparent 50%, transparent), linear-gradient(270deg, $blue-base 50%, $whitesmoke 50%, $whitesmoke);
-        }
-        box-shadow: 1px 1px 2px $gray-level-1 inset;
     }
 }
 // -------------------- Styles of component 'Progress' <end> --------------------

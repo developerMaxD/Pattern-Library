@@ -279,7 +279,7 @@ export default class StylesGuideline extends React.Component {
                                                 4.20%
                                             </div>
                                         </div>
-                                        <div className="item selectable selected">
+                                        <div className="item selectable selected anim-trans-backcolor">
                                             <div className="bullet">
                                                 <i className="fa fa-star" aria-hidden="true"></i>
                                             </div>
@@ -314,7 +314,7 @@ export default class StylesGuideline extends React.Component {
                                                 Arts, Crafts & Sewing
                                             </div>
                                         </div>
-                                        <div className="item selectable selected">
+                                        <div className="item selectable selected anim-trans-backcolor">
                                             <div className="text">
                                                 Beauty & Personal Care
                                             </div>
@@ -502,39 +502,58 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-progress">
                                     <li>Progress:</li>
                                     {/* ******************** component [Progress] <start> ******************** */}
-                                    <div className="progress-ex-a1 regular-section progress circle">
-                                        <div className="bar" data-progress="3"></div>
+                                    <div className="progress-ex-a1 tiny-section progress circle">
+                                        <div className="bar blue" data-progress="3.0"></div>
                                     </div>
-                                    <div className="progress-ex-a2 regular-section progress circle">
-                                        <div className="bar" data-progress="5"></div>
+                                    <div className="progress-ex-a2 tiny-section progress circle">
+                                        <div className="bar blue" data-progress="5.2"></div>
                                     </div>
-                                    <div className="progress-ex-a3 regular-section progress circle">
-                                        <div className="bar" data-progress="10"></div>
+                                    <div className="progress-ex-a3 tiny-section progress circle">
+                                        <div className="bar blue" data-progress="10.0"></div>
                                     </div>
-                                    <div className="progress-ex-a4 regular-section progress circle">
-                                        <div className="bar" data-progress="25"></div>
+                                    <div className="progress-ex-a4 tiny-section progress circle">
+                                        <div className="bar blue" data-progress="25.0"></div>
                                     </div>
-                                    <div className="progress-ex-a5 regular-section progress circle">
-                                        <div className="bar" data-progress="50"></div>
+                                    <div className="progress-ex-a5 tiny-section progress circle">
+                                        <div className="bar blue" data-progress="50.8"></div>
                                     </div>
-                                    <div className="progress-ex-a6 regular-section progress circle">
-                                        <div className="bar" data-progress="62"></div>
+                                    <div className="progress-ex-a6 tiny-section progress circle">
+                                        <div className="bar blue" data-progress="62.9"></div>
                                     </div>
-                                    <div className="progress-ex-a7 regular-section progress circle">
-                                        <div className="bar" data-progress="97"></div>
+                                    <div className="progress-ex-a7 tiny-section progress circle">
+                                        <div className="bar blue" data-progress="97.1"></div>
                                     </div>
 
                                     <div className="progress-ex-b1 tiny-section progress straight">
-                                        <div className="bar" data-progress="0" style={{"width" : "0%"}}></div>
+                                        <div className="bar blue" data-progress="0" style={{"width" : "0%"}}></div>
                                     </div>
                                     <div className="progress-ex-b2 tiny-section progress straight">
-                                        <div className="bar" data-progress="5" style={{"width" : "5%"}}></div>
+                                        <div className="bar blue" data-progress="5.2" style={{"width" : "5.2%"}}></div>
                                     </div>
                                     <div className="progress-ex-c1 tiny-section progress straight">
-                                        <div className="bar" data-progress="65" style={{"width" : "65%"}}></div>
+                                        <div className="bar blue" data-progress="65.8" style={{"width" : "65.8%"}}></div>
                                     </div>
                                     <div className="progress-ex-c2 tiny-section progress straight">
-                                        <div className="bar" data-progress="100" style={{"width" : "100%"}}></div>
+                                        <div className="bar blue" data-progress="100" style={{"width" : "100%"}}></div>
+                                    </div>
+
+                                    <div className="progress-ex-d1 tiny-section progress circle">
+                                        <div className="bar red" data-progress="25.0"></div>
+                                    </div>
+                                    <div className="progress-ex-d2 tiny-section progress circle">
+                                        <div className="bar orange" data-progress="25.0"></div>
+                                    </div>
+                                    <div className="progress-ex-d3 tiny-section progress circle">
+                                        <div className="bar green" data-progress="25.0"></div>
+                                    </div>
+                                    <div className="progress-ex-d4 tiny-section progress circle">
+                                        <div className="bar blue" data-progress="25.0"></div>
+                                    </div>
+                                    <div className="progress-ex-d5 tiny-section progress circle">
+                                        <div className="bar violet" data-progress="25.0"></div>
+                                    </div>
+                                    <div className="progress-ex-d6 tiny-section progress circle">
+                                        <div className="bar pink" data-progress="25.0"></div>
                                     </div>
                                     {/* ******************** component [Progress] <end> ******************** */}
                                 </div>
@@ -1779,6 +1798,47 @@ export default class StylesGuideline extends React.Component {
                                 5. Dialog components:
                                 <div className="title-level-05 regular-content-italic title-components-standard-dialog">
                                     <li>Standard dialog:</li>
+                                    {/* ******************** Button for open dialog <start> ******************** */}
+                                    <div unselectable="on" className="open-standard-dialog-button anim-trans-backcolor btn primary clickable" id="open-standard-dialog-button">
+                                        <div className="regular-text">
+                                            Open standard dialog
+                                        </div>
+                                    </div>
+                                    {/* ******************** Button for open dialog <end> ******************** */}
+
+                                    {/* ******************** component [standard dialog] <start> ******************** */}
+                                    <div className="dialog-overlay dialog-closed" id="standard-dialog-overlay"></div>
+                                    <div className="dialog dialog-closed regular-content" id="standard-dialog">
+                                    {/* <div className="dialog" id="standard-dialog"> */}
+                                        <div className="title tiny-section">
+                                            Title of dialog
+                                            <span className="fa-stack close-button" id="close-button">
+                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <div className="icon">
+                                            <i className="fa fa-question-circle" aria-hidden="true"></i>
+                                        </div>
+                                        <div className="content regular-content">
+                                            <p>content of dialog.</p>
+                                        </div>
+                                        <div className="buttons">
+                                        </div>
+                                    </div>
+                                    {/* ******************** component [standard dialog] <end> ******************** */}
+
+                                    {/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */}
+
+                                    {/* <div className="dialog-overlay dialog-closed" id="standard-dialog-overlay"></div>
+                                    <div className="dialog dialog-closed regular-content" id="standard-dialog">
+                                        <button className="close-button" id="close-button">Obvious Close Button</button>
+                                        <div className="modal-guts">
+                                            <h1>Modal Example</h1>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae expedita corrupti laudantium aperiam, doloremque explicabo ipsum earum dicta saepe delectus totam vitae ipsam doloribus et obcaecati facilis eius assumenda, cumque.</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae expedita corrupti laudantium aperiam, doloremque explicabo ipsum earum dicta saepe delectus totam vitae ipsam doloribus et obcaecati facilis eius assumenda, cumque.</p>
+                                        </div>
+                                    </div> */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-feature-dialog">
                                     <li>Feature dialog:</li>
@@ -1808,4 +1868,22 @@ export default class StylesGuideline extends React.Component {
             </div>
         );
     }
+
+    componentDidMount() {
+        var dialog = document.querySelector("#standard-dialog");
+        var dialogOverlay = document.querySelector("#standard-dialog-overlay");
+        var closeButton = document.querySelector("#close-button");
+        var openButton = document.querySelector("#open-standard-dialog-button");
+        
+        closeButton.addEventListener("click", function() {
+            dialog.classList.toggle("dialog-closed");
+            dialogOverlay.classList.toggle("dialog-closed");
+        });
+        
+        openButton.addEventListener("click", function() {
+            dialog.classList.toggle("dialog-closed");
+            dialogOverlay.classList.toggle("dialog-closed");
+        });
+    }
+
 }
