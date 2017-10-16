@@ -49,21 +49,21 @@
     min-height: 24px;
     min-width: 30px;
     #{$marginSide}: $marginOffset;
-    padding: 4px 8px;
+    padding: 4px 8px 2px 8px;
 }
 @mixin regular-button-text($marginSide: margin-left, $marginOffset: 0px) {
     @extend .regular-content;
     min-height: 20px;
     min-width: 20px;
     #{$marginSide}: $marginOffset;
-    padding: 4px 8px;
+    padding: 4px 8px 2px 8px;
 }
 @mixin small-button-text($marginSide: margin-left, $marginOffset: 0px) {
     @extend .small-content;
     min-height: 16px;
     min-width: 18px;
     #{$marginSide}: $marginOffset;
-    padding: 2px 8px;
+    padding: 2px 8px 1px 8px;
 }
 @mixin icon($top, $side, $offset, $size, $singleSize: 0px) {
     @if $singleSize == 0px {

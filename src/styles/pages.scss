@@ -1071,10 +1071,25 @@
                 top: 4050px;
                 > .title-components-standard-dialog {
                     top: 5px;
-                    > .open-standard-dialog-button {
+                    > .stdialog-ex-a {
                         position: absolute;
                         top: 40px;
                         left: 40px;
+                    }
+                    > .stdialog-ex-b {
+                        position: absolute;
+                        top: 40px;
+                        left: 240px;
+                    }
+                    > .stdialog-ex-c {
+                        position: absolute;
+                        top: 40px;
+                        left: 440px;
+                    }
+                    > .stdialog-ex-d {
+                        position: absolute;
+                        top: 40px;
+                        left: 660px;
                     }
                 }
                 > .title-components-feature-dialog {

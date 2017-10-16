@@ -6,25 +6,41 @@
     width: 100%;
     height: 100%;
     z-index: 999999;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.25);
 }
-// -------------------- Common styles of dialogs <end> --------------------
+@mixin dialog-buttons($count: 2) {
+    // ############ design ############
+    // border: 1px dashed violet;
+    // ############ design ############
+    position: absolute;
+    top: 180px;
+    left: 0px;
+    height: 60px;
+    width: 100%;
 
-// -------------------- Styles of component 'Standard dialog' <start> --------------------
-.dialog {
-    display: block;
-    z-index: 1000000;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    max-width: 100%;
-    height: 300px;
-    max-height: 100%;
-    border-radius: 12px;
-    background: $whitesmoke;
-    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.9);
+    $right-offset: 15px;
+    @for $i from $count through 1 {
+        .btn:nth-child(#{$i}) {
+            position: absolute;
+            transform: translate(0, -50%);
+            top: 50%;
+            right: $right-offset;
+            width: 65px;
+            // color: $fore-color;
+            // background-color: $whitesmoke;
+            // border: 1px solid $gray-level-5;
+        }
+        $right-offset: $right-offset + 80px;
+    }
+    $hidden-formula: 'n+' + ($count + 1);
+    .btn:nth-child(#{$hidden-formula}) {
+        position: absolute;
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+}
+@mixin dialog-layout($base-color: $sky-base) {
     > .title {
         position: absolute;
         top: 0px;
@@ -35,14 +51,14 @@
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
         color: $whitesmoke;
-        background-color: $orange-base;
+        background-color: $base-color;
         padding: 0px 15px;
         > .close-button {
             // Include from pebble components
-            @include close-button($top: 7px, $color: $whitesmoke, $size: 1.8em, $offset: 6px, $side: right, $sideOffset: 20px, $cursor: pointer);
+            @include close-button($top: 7px, $color: $whitesmoke, $size: 1.5em, $offset: 5px, $side: right, $sideOffset: 20px, $cursor: pointer);
         }
     }
-    > .icon {
+    > .images {
         // ############ design ############
         // border: 1px dashed red;
         // ############ design ############
@@ -51,79 +67,84 @@
         left: 0px;
         height: calc(100% - 32px - 60px);
         width: 100px;
+        > .icon {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            color: $base-color;
+            font-size: 4.5em;
+        }
     }
     > .content {
         // ############ design ############
-        // border: 1px dashed black;
+        // border: 1px dashed blue;
         // ############ design ############
         position: absolute;
         top: 32px;
         left: 100px;
         height: calc(100% - 32px - 60px);
         width: calc(100% - 100px);
+        > .text {
+            position: absolute;
+            transform: translate(0, -50%);
+            top: 50%;
+            left: 0;
+            padding-right: 20px;
+            color: $base-color;
+        }
+    }
+}
+// -------------------- Common styles of dialogs <end> --------------------
+
+// -------------------- Styles of component 'Standard dialog' <start> --------------------
+.dialog {
+    display: block;
+    z-index: 1000000;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 520px;
+    max-width: 100%;
+    height: 240px;
+    max-height: 100%;
+    border-radius: 12px;
+    background: $whitesmoke;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.9);
+    &.information {
+        @include dialog-layout($base-color: $sky-base);
+    }
+    &.confirmation {
+        @include dialog-layout($base-color: $sky-base);
+    }
+    &.warning {
+        @include dialog-layout($base-color: $orange-base);
+    }
+    &.error {
+        @include dialog-layout($base-color: $red-base);
     }
     > .buttons {
-        // ############ design ############
-        // border: 1px dashed violet;
-        // ############ design ############
-        position: absolute;
-        top: 240px;
-        left: 0px;
-        height: 60px;
-        width: 100%;
+        &.ok {
+            @include dialog-buttons($count: 1);
+        }
+        &.ok-cancel {
+            @include dialog-buttons($count: 2);
+        }
+        &.retry-cancel {
+            @include dialog-buttons($count: 2);
+        }
+        &.yes-no {
+            @include dialog-buttons($count: 2);
+        }
+        &.yes-no-cancel {
+            @include dialog-buttons($count: 3);
+        }
+        &.abort-retry-ignore {
+            @include dialog-buttons($count: 3);
+        }
     }
 }
-
-// .modal-overlay {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 50;
-//     background: rgba(0, 0, 0, 0.6);
-// }
-.modal-guts {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% - 55px);
-    height: 100%;
-    overflow: auto;
-    padding: 20px 35px 20px 20px;
-}
-p {
-    margin: 0 0 10px 0;
-}
-h1 {
-    margin: 0 0 20px 0;
-}
-.modal .close-button {
-    position: absolute;
-    /* don't need to go crazy with z-index here, just sits over .modal-guts */
-    z-index: 1;
-    top: 10px;
-    /* needs to look OK with or without scrollbar */
-    right: 20px;
-    border: 0;
-    background: black;
-    color: white;
-    padding: 5px 10px;
-    font-size: 1.3rem;
-}
-.open-button {
-    border: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: lightgreen;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 21px;
-}
-// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 // -------------------- Styles of component 'Standard dialog' <end> --------------------
 
 // -------------------- Styles of component 'Feature dialog' <start> --------------------
@@ -133,7 +154,37 @@ h1 {
 // -------------------- Styles of component 'Toaster' <end> --------------------
 
 // -------------------- Common styles of dialogs <start> --------------------
-.dialog-closed {
+.dialog-hidden {
     display: none;
+}
+.dialog-fade {
+    opacity: 0;
+    &.down {
+        display: block;
+        animation: fadeDown 0.3s ease-in both;
+    }
+    &.up {
+        animation: fadeUp 0.3s ease-out both;
+    }
+}
+@keyframes fadeDown {
+	from {
+		opacity: 0;
+		transform: translate3d(-50%, -230%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(-50%, -30%, 10);
+	}
+}
+@keyframes fadeUp {
+	from {
+		opacity: 1;
+        transform: translate3d(-50%, -30%, 10);
+	}
+	to {
+        opacity: 0;
+		transform: translate3d(-50%, -230%, 0);
+	}
 }
 // -------------------- Common styles of dialogs <end> --------------------
