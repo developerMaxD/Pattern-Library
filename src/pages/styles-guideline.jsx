@@ -2,6 +2,23 @@ import React from 'react';
 
 export default class StylesGuideline extends React.Component {
     render() {
+        // ************************************ Web browser detector ************************************
+        // Opera 8.0+
+        const isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+        // Firefox 1.0+
+        const isFirefox = typeof InstallTrigger !== 'undefined';
+        // Safari 3.0+ "[object HTMLElementConstructor]" 
+        const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+        // Internet Explorer 6-11
+        const isIE = /*@cc_on!@*/false || !!document.documentMode;
+        // Edge 20+
+        const isEdge = !isIE && !!window.StyleMedia;
+        // Chrome 1+
+        const isChrome = !!window.chrome && !!window.chrome.webstore;
+        // ************************************ Web browser detector ************************************
+
+        let isSpecialBrowser = isIE || isSafari;
+
         return (
             <div>
                 <div className="title-level-01 regular-section title-guideline">
@@ -229,13 +246,16 @@ export default class StylesGuideline extends React.Component {
                                     <li>Image:</li>
                                     {/* ******************** component [Image] <start> ******************** */}
                                     <div className="image-ex-a1 image popup">
-                                        <img className="thumbnail" src={"http://localhost:9088/images/flower-thumbnail.jpg"} alt="flower" />
+                                        {/* <img className="thumbnail" src={"http://localhost:9088/images/flower-thumbnail.jpg"} alt="flower" /> */}
+                                        <img className="thumbnail" src={"http://img.hb.aicdn.com/4b25a49fb9e3707894b8305865fc3d6f52077d269310-29zp33_fw658"} alt="flower" />
                                         <div className="attachment">
-                                            <img className="content" src={"http://localhost:9088/images/flower-origin.jpg"} alt="flower" />
+                                            {/* <img className="content" src={"http://localhost:9088/images/flower-origin.jpg"} alt="flower" /> */}
+                                            <img className="content" src={"http://img.hb.aicdn.com/7a7658c0e324d54590f3a03354767de894baffde3962f-Loj7qc_fw658"} alt="flower" />
                                         </div>
                                     </div>
                                     <div className="image-ex-a2 image overlay">
-                                        <img className="thumbnail" src={"http://localhost:9088/images/flower-medium.jpg"} alt="flower" />
+                                        {/* <img className="thumbnail" src={"http://localhost:9088/images/flower-medium.jpg"} alt="flower" /> */}
+                                        <img className="thumbnail" src={"http://img.hb.aicdn.com/f8730e12f3c93f7155ed81ae8d35c3a782063250152ab-xdttq4_fw658"} alt="flower" />
                                         <div className="attachment">
                                             <div className="content small-content">
                                                 The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle.
@@ -243,7 +263,7 @@ export default class StylesGuideline extends React.Component {
                                         </div>
                                     </div>
                                     <div className="image-ex-a3 image disabled">
-                                        <img className="thumbnail" src={"http://localhost:9088/images/flower-medium.jpg"} alt="flower" />
+                                        <img className="thumbnail" src={"http://img.hb.aicdn.com/f8730e12f3c93f7155ed81ae8d35c3a782063250152ab-xdttq4_fw658"} alt="flower" />
                                     </div>
                                     {/* ******************** component [Image] <end> ******************** */}
                                 </div>

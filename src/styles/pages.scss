@@ -28,12 +28,12 @@
     }
     > .index-page-navigater-styles {
         position: absolute;
-        left: 630px;
+        left: 685px;
         top: 6px;
     }
     > .index-page-navigater-components {
         position: absolute;
-        left: 770px;
+        left: 830px;
         top: 6px;
     }
 }
@@ -498,21 +498,25 @@
                         position: absolute;
                         top: 25px;
                         left: 40px;
+                        width: 180px;
                     }
                     > .editor-example-focus {
                         position: absolute;
                         top: 25px;
                         left: 240px;
+                        width: 180px;
                     }
                     > .editor-example-error {
                         position: absolute;
                         top: 25px;
                         left: 440px;
+                        width: 180px;
                     }
                     > .editor-example-disabled {
                         position: absolute;
                         top: 25px;
                         left: 640px;
+                        width: 180px;
                     }
                 }
                 > .title-components-search-editor {
