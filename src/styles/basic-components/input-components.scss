@@ -13,6 +13,9 @@
 
 // -------------------- Styles of component 'Editor' <start> --------------------
 .editor {
+    input[type=text]::-ms-clear {
+        display: none;
+    }
     &.default {
         @extend %border-base-normal;
         min-height: 24px;
@@ -72,6 +75,9 @@
 
 // -------------------- Styles of component 'Search Editor' <start> --------------------
 .search-editor {
+    input[type=text]::-ms-clear {
+        display: none;
+    }
     &.default {
         @extend %border-base-normal;
         min-height: 24px;

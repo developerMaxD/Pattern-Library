@@ -57,6 +57,9 @@
             -o-filter: blur(3px);
             filter: blur(3px);
         }
+        &:hover .thumbnail svg image {
+            filter:url(#image-blur-effect);
+        }
         &:hover .attachment {
             z-index: 2048;
             top: 0px;

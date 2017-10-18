@@ -1,23 +1,90 @@
 import React from 'react';
 
 export default class StylesGuideline extends React.Component {
-    render() {
-        // ************************************ Web browser detector ************************************
+    
+    constructor(props) {
+        super(props);
+        this.getPictureSize = this.getPictureSize.bind(this);
+        this.setPictureSize = this.setPictureSize.bind(this);
+        this.setThumbnailSize = this.setThumbnailSize.bind(this);
+        // ******************** Web browser detector ********************
         // Opera 8.0+
-        const isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+        const isOpera = (!!window.opr && !!opr.addons) || 
+                        !!window.opera || 
+                        navigator.userAgent.indexOf(' OPR/') >= 0;
         // Firefox 1.0+
         const isFirefox = typeof InstallTrigger !== 'undefined';
         // Safari 3.0+ "[object HTMLElementConstructor]" 
-        const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+        const isSafari = /constructor/i.test(window.HTMLElement) || 
+                         (function (p) { 
+                             return p.toString() === "[object SafariRemoteNotification]"; 
+                          })(!window['safari'] || safari.pushNotification);
         // Internet Explorer 6-11
         const isIE = /*@cc_on!@*/false || !!document.documentMode;
         // Edge 20+
         const isEdge = !isIE && !!window.StyleMedia;
         // Chrome 1+
         const isChrome = !!window.chrome && !!window.chrome.webstore;
-        // ************************************ Web browser detector ************************************
+        // UC Browser
+        const isUCBrowser = /^Mozilla\/5\.0 .+ Gecko/.test(navigator.userAgent);
+        // ******************** Web browser detector ********************
+        this.state = { onChrome: isChrome,
+                       onSafari: isSafari,
+                       onFireFox: isFirefox,
+                       onOpera: isOpera,
+                       onIE: isIE,
+                       onEdge: isEdge,
+                       onUCBrowser: isUCBrowser,
+                       picWidth: 0, 
+                       picHeight: 0,
+                       thmWidth: 0,
+                       thmHeight: 0 } ;
+    }
 
-        let isSpecialBrowser = isIE || isSafari;
+    componentWillMount() {
+        // if (this.state.onIE && 
+        //     (this.state.picWidth == 0 || this.state.picHeight == 0 || this.state.thmWidth == 0 || this.state.thmHeight == 0)) {
+        if (this.state.picWidth == 0 || this.state.picHeight == 0 || this.state.thmWidth == 0 || this.state.thmHeight == 0) {
+            let url = 'http://img.hb.aicdn.com/f8730e12f3c93f7155ed81ae8d35c3a782063250152ab-xdttq4_fw658';
+            this.getPictureSize(url, this.setPictureSize);
+            url = 'http://img.hb.aicdn.com/4b25a49fb9e3707894b8305865fc3d6f52077d269310-29zp33_fw658';
+            this.getPictureSize(url, this.setThumbnailSize);
+        }
+    }
+
+    getPictureSize(url, callback) {
+        let imgbg = new Image();
+        imgbg.onload = function() {
+            callback(this.width, this.height);
+        }
+        imgbg.src = url;
+    }
+
+    setPictureSize(pWidth, pHeight) {
+        this.setState({ picWidth: pWidth, picHeight: pHeight });
+    }
+
+    setThumbnailSize(pWidth, pHeight) {
+        this.setState({ thmWidth: pWidth, thmHeight: pHeight });
+    }
+
+    render() {
+        let isSvgImgBrowser = this.state.onIE || this.state.onUCBrowser;
+
+        let blurThumbnail = '';
+        let blackWhitePic = '';
+
+        if (isSvgImgBrowser) {
+            blurThumbnail = '<svg id="svg-image-blur"><filter id="image-blur-effect"><feGaussianBlur stdDeviation="3" /></filter>' + 
+                '<image id="svg-image" width="128" height="128" xlink:href="http://img.hb.aicdn.com/4b25a49fb9e3707894b8305865fc3d6f52077d269310-29zp33_fw658" /></svg>';
+            blackWhitePic = 
+                '<svg xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 ' + this.state.picWidth + ' ' + this.state.picHeight + 
+                '" width="' + this.state.picWidth + '" height="' + this.state.picHeight + '"><defs><filter id="filtersPicture">' + 
+                '<feComposite result="inputTo_38" in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0" k4="0" />' + 
+                '<feColorMatrix id="filter_38" type="saturate" values="0" data-filterid="38" /></filter></defs>' + 
+                '<image filter="url(&quot;#filtersPicture&quot;)" x="0" y="0" width="100%" height="100%" xmlns:xlink="http://www.w3.org/1999/xlink" ' + 
+                'xlink:href="http://img.hb.aicdn.com/f8730e12f3c93f7155ed81ae8d35c3a782063250152ab-xdttq4_fw658" /></svg>';
+        }
 
         return (
             <div>
@@ -247,7 +314,12 @@ export default class StylesGuideline extends React.Component {
                                     {/* ******************** component [Image] <start> ******************** */}
                                     <div className="image-ex-a1 image popup">
                                         {/* <img className="thumbnail" src={"http://localhost:9088/images/flower-thumbnail.jpg"} alt="flower" /> */}
-                                        <img className="thumbnail" src={"http://img.hb.aicdn.com/4b25a49fb9e3707894b8305865fc3d6f52077d269310-29zp33_fw658"} alt="flower" />
+                                        { isSvgImgBrowser ? 
+                                          (
+                                            <div className="thumbnail" dangerouslySetInnerHTML={{ __html: blurThumbnail }} />
+                                          ) : (
+                                            <img className="thumbnail" src={"http://img.hb.aicdn.com/4b25a49fb9e3707894b8305865fc3d6f52077d269310-29zp33_fw658"} alt="flower" />
+                                          )}
                                         <div className="attachment">
                                             {/* <img className="content" src={"http://localhost:9088/images/flower-origin.jpg"} alt="flower" /> */}
                                             <img className="content" src={"http://img.hb.aicdn.com/7a7658c0e324d54590f3a03354767de894baffde3962f-Loj7qc_fw658"} alt="flower" />
@@ -262,9 +334,14 @@ export default class StylesGuideline extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="image-ex-a3 image disabled">
-                                        <img className="thumbnail" src={"http://img.hb.aicdn.com/f8730e12f3c93f7155ed81ae8d35c3a782063250152ab-xdttq4_fw658"} alt="flower" />
-                                    </div>
+                                    { isSvgImgBrowser ? 
+                                      (
+                                        <div className="image-ex-a3 image disabled" dangerouslySetInnerHTML={{ __html: blackWhitePic }} />
+                                      ) : (
+                                        <div className="image-ex-a3 image disabled">
+                                            <img className="thumbnail" src={"http://img.hb.aicdn.com/f8730e12f3c93f7155ed81ae8d35c3a782063250152ab-xdttq4_fw658"} alt="flower" />
+                                        </div>
+                                      )}
                                     {/* ******************** component [Image] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-list">

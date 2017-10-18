@@ -127,6 +127,9 @@
     }
 }
 .combo-box {
+    input[type=text]::-ms-clear {
+        display: none;
+    }
     &.default {
         @include combo-box($status: "default");
     }
