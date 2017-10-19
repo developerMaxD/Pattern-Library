@@ -7,6 +7,8 @@ export default class StylesGuideline extends React.Component {
         this.getPictureSize = this.getPictureSize.bind(this);
         this.setPictureSize = this.setPictureSize.bind(this);
         this.setThumbnailSize = this.setThumbnailSize.bind(this);
+        this.removeSpecificClass = this.removeSpecificClass.bind(this);
+        this.showHindStandardDialogListener = this.showHindStandardDialogListener.bind(this);
         // ******************** Web browser detector ********************
         // Opera 8.0+
         const isOpera = (!!window.opr && !!opr.addons) || 
@@ -70,6 +72,7 @@ export default class StylesGuideline extends React.Component {
 
     render() {
         let isSvgImgBrowser = this.state.onIE || this.state.onUCBrowser;
+        let isSpDlgBrowser = this.state.onIE || this.state.onEdge;
 
         let blurThumbnail = '';
         let blackWhitePic = '';
@@ -1921,125 +1924,254 @@ export default class StylesGuideline extends React.Component {
                                     {/* ******************** component [standard dialog] <start> ******************** */}
                                     <div className="dialog-overlay dialog-hidden" id="standard-dialog-overlay"></div>
                                     {/* ******************** E.X.1 component [standard dialog - information] <start> ******************** */}
-                                    <div className="dialog information dialog-hidden dialog-fade up" id="standard-dialog-i">
-                                        <div className="title regular-content">
-                                            Title of information dialog
-                                            <span className="fa-stack close-button" id="close-button-i">
-                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
-                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
-                                            </span>
-                                        </div>
-                                        <div className="images">
-                                            <i className="fa fa-info-circle icon" aria-hidden="true"></i>
-                                        </div>
-                                        <div className="content regular-content">
-                                            <p className="text">Content of dialog.<br/>This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.</p>
-                                        </div>
-                                        <div className="buttons ok">
-                                            <div unselectable="on" className="anim-trans-backcolor btn primary clickable">
-                                                <div className="regular-text">
-                                                    OK
+                                    { isSpDlgBrowser ? 
+                                      (
+                                        <div className="dialog information dialog-fade up" id="standard-dialog-i">
+                                            <div className="title regular-content">
+                                                Title of information dialog
+                                                <span className="fa-stack close-button" id="close-button-i">
+                                                    <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true" id="close-button-i-l"></i>
+                                                    <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true" id="close-button-i-r"></i>
+                                                </span>
+                                            </div>
+                                            <div className="images">
+                                                <i className="fa fa-info-circle icon" aria-hidden="true"></i>
+                                            </div>
+                                            <div className="content regular-content">
+                                                <p className="text">Content of dialog.<br/>This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.</p>
+                                            </div>
+                                            <div className="buttons ok">
+                                                <div unselectable="on" className="anim-trans-backcolor btn primary clickable">
+                                                    <div className="regular-text">
+                                                        OK
+                                                   </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                      ) : (
+                                        <div className="dialog information dialog-hidden dialog-fade up" id="standard-dialog-i">
+                                            <div className="title regular-content">
+                                                Title of information dialog
+                                                <span className="fa-stack close-button" id="close-button-i">
+                                                    <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true" id="close-button-i-l"></i>
+                                                    <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true" id="close-button-i-r"></i>
+                                                </span>
+                                            </div>
+                                            <div className="images">
+                                                <i className="fa fa-info-circle icon" aria-hidden="true"></i>
+                                            </div>
+                                            <div className="content regular-content">
+                                                <p className="text">Content of dialog.<br/>This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.</p>
+                                            </div>
+                                            <div className="buttons ok">
+                                                <div unselectable="on" className="anim-trans-backcolor btn primary clickable">
+                                                    <div className="regular-text">
+                                                        OK
+                                                   </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      )}
                                     {/* ******************** E.X.1 component [standard dialog - information] <end> ******************** */}
                                     {/* ******************** E.X.2 component [standard dialog - confirmation] <start> ******************** */}
-                                    <div className="dialog confirmation dialog-hidden dialog-fade up" id="standard-dialog-c">
-                                        <div className="title regular-content">
-                                            Title of confirmation dialog
-                                            <span className="fa-stack close-button" id="close-button-c">
-                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
-                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
-                                            </span>
-                                        </div>
-                                        <div className="images">
-                                            <i className="fa fa-question-circle icon" aria-hidden="true"></i>
-                                        </div>
-                                        <div className="content regular-content">
-                                            <p className="text">Content of dialog.<br/>This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.</p>
-                                        </div>
-                                        <div className="buttons yes-no">
-                                            <div unselectable="on" className="anim-trans-backcolor btn primary clickable">
-                                                <div className="regular-text">
-                                                    Yes
+                                    { isSpDlgBrowser ? 
+                                      (
+                                        <div className="dialog confirmation dialog-fade up" id="standard-dialog-c">
+                                            <div className="title regular-content">
+                                                Title of confirmation dialog
+                                                <span className="fa-stack close-button" id="close-button-c">
+                                                    <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true" id="close-button-c-l"></i>
+                                                    <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true" id="close-button-c-r"></i>
+                                                </span>
+                                            </div>
+                                            <div className="images">
+                                                <i className="fa fa-question-circle icon" aria-hidden="true"></i>
+                                            </div>
+                                            <div className="content regular-content">
+                                                <p className="text">Content of dialog.<br/>This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.</p>
+                                            </div>
+                                            <div className="buttons yes-no">
+                                                <div unselectable="on" className="anim-trans-backcolor btn primary clickable">
+                                                    <div className="regular-text">
+                                                        Yes
+                                                    </div>
+                                                </div>
+                                                <div unselectable="on" className="anim-trans-backcolor btn primary clickable">
+                                                    <div className="regular-text">
+                                                        No
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div unselectable="on" className="anim-trans-backcolor btn primary clickable">
-                                                <div className="regular-text">
-                                                    No
+                                        </div>
+                                      ) : (
+                                        <div className="dialog confirmation dialog-hidden dialog-fade up" id="standard-dialog-c">
+                                            <div className="title regular-content">
+                                                Title of confirmation dialog
+                                                <span className="fa-stack close-button" id="close-button-c">
+                                                    <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true" id="close-button-c-l"></i>
+                                                    <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true" id="close-button-c-r"></i>
+                                                </span>
+                                            </div>
+                                            <div className="images">
+                                                <i className="fa fa-question-circle icon" aria-hidden="true"></i>
+                                            </div>
+                                            <div className="content regular-content">
+                                                <p className="text">Content of dialog.<br/>This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.</p>
+                                            </div>
+                                            <div className="buttons yes-no">
+                                                <div unselectable="on" className="anim-trans-backcolor btn primary clickable">
+                                                    <div className="regular-text">
+                                                        Yes
+                                                    </div>
+                                                </div>
+                                                <div unselectable="on" className="anim-trans-backcolor btn primary clickable">
+                                                    <div className="regular-text">
+                                                        No
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                      )}
                                     {/* ******************** E.X.2 component [standard dialog - confirmation] <end> ******************** */}
                                     {/* ******************** E.X.3 component [standard dialog - warning] <start> ******************** */}
-                                    <div className="dialog warning dialog-hidden dialog-fade up" id="standard-dialog-w">
-                                        <div className="title regular-content">
-                                            Title of warning dialog
-                                            <span className="fa-stack close-button" id="close-button-w">
-                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
-                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
-                                            </span>
-                                        </div>
-                                        <div className="images">
-                                            <i className="fa fa-exclamation-triangle icon" aria-hidden="true"></i>
-                                        </div>
-                                        <div className="content regular-content">
-                                            <p className="text">Content of dialog.<br/>This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.</p>
-                                        </div>
-                                        <div className="buttons yes-no-cancel">
-                                            <div unselectable="on" className="anim-trans-backcolor btn warning clickable">
-                                                <div className="regular-text">
-                                                    Yes
+                                    { isSpDlgBrowser ? 
+                                      (
+                                        <div className="dialog warning dialog-fade up" id="standard-dialog-w">
+                                            <div className="title regular-content">
+                                                Title of warning dialog
+                                                <span className="fa-stack close-button" id="close-button-w">
+                                                    <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true" id="close-button-w-l"></i>
+                                                    <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true" id="close-button-w-r"></i>
+                                                </span>
+                                            </div>
+                                            <div className="images">
+                                                <i className="fa fa-exclamation-triangle icon" aria-hidden="true"></i>
+                                            </div>
+                                            <div className="content regular-content">
+                                                <p className="text">Content of dialog.<br/>This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.</p>
+                                            </div>
+                                            <div className="buttons yes-no-cancel">
+                                                <div unselectable="on" className="anim-trans-backcolor btn warning clickable">
+                                                    <div className="regular-text">
+                                                        Yes
+                                                    </div>
+                                                </div>
+                                                <div unselectable="on" className="anim-trans-backcolor btn warning clickable">
+                                                    <div className="regular-text">
+                                                        No
+                                                    </div>
+                                                </div>
+                                                <div unselectable="on" className="anim-trans-backcolor btn warning clickable">
+                                                    <div className="regular-text">
+                                                        Cancel
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div unselectable="on" className="anim-trans-backcolor btn warning clickable">
-                                                <div className="regular-text">
-                                                    No
-                                                </div>
+                                        </div>
+                                      ) : (
+                                        <div className="dialog warning dialog-hidden dialog-fade up" id="standard-dialog-w">
+                                            <div className="title regular-content">
+                                                Title of warning dialog
+                                                <span className="fa-stack close-button" id="close-button-w">
+                                                    <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true" id="close-button-w-l"></i>
+                                                    <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true" id="close-button-w-r"></i>
+                                                </span>
                                             </div>
-                                            <div unselectable="on" className="anim-trans-backcolor btn warning clickable">
-                                                <div className="regular-text">
-                                                    Cancel
+                                            <div className="images">
+                                                <i className="fa fa-exclamation-triangle icon" aria-hidden="true"></i>
+                                            </div>
+                                            <div className="content regular-content">
+                                                <p className="text">Content of dialog.<br/>This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.</p>
+                                            </div>
+                                            <div className="buttons yes-no-cancel">
+                                                <div unselectable="on" className="anim-trans-backcolor btn warning clickable">
+                                                    <div className="regular-text">
+                                                        Yes
+                                                    </div>
+                                                </div>
+                                                <div unselectable="on" className="anim-trans-backcolor btn warning clickable">
+                                                    <div className="regular-text">
+                                                        No
+                                                    </div>
+                                                </div>
+                                                <div unselectable="on" className="anim-trans-backcolor btn warning clickable">
+                                                    <div className="regular-text">
+                                                        Cancel
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                      )}
                                     {/* ******************** E.X.3 component [standard dialog - warning] <end> ******************** */}
                                     {/* ******************** E.X.e component [standard dialog - error] <start> ******************** */}
-                                    <div className="dialog error dialog-hidden dialog-fade up" id="standard-dialog-e">
-                                        <div className="title regular-content">
-                                            Title of error dialog
-                                            <span className="fa-stack close-button" id="close-button-e">
-                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
-                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
-                                            </span>
-                                        </div>
-                                        <div className="images">
-                                            <i className="fa fa-times-circle icon" aria-hidden="true"></i>
-                                        </div>
-                                        <div className="content regular-content">
-                                            <p className="text">Content of dialog.<br/>This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.</p>
-                                        </div>
-                                        <div className="buttons abort-retry-ignore">
-                                            <div unselectable="on" className="anim-trans-backcolor btn alarm clickable">
-                                                <div className="regular-text">
-                                                    Abort
+                                    { isSpDlgBrowser ? 
+                                      (
+                                        <div className="dialog error dialog-fade up" id="standard-dialog-e">
+                                            <div className="title regular-content">
+                                                Title of error dialog
+                                                <span className="fa-stack close-button" id="close-button-e">
+                                                    <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true" id="close-button-e-l"></i>
+                                                    <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true" id="close-button-e-r"></i>
+                                                </span>
+                                            </div>
+                                            <div className="images">
+                                                <i className="fa fa-times-circle icon" aria-hidden="true"></i>
+                                            </div>
+                                            <div className="content regular-content">
+                                                <p className="text">Content of dialog.<br/>This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.</p>
+                                            </div>
+                                            <div className="buttons abort-retry-ignore">
+                                                <div unselectable="on" className="anim-trans-backcolor btn alarm clickable">
+                                                    <div className="regular-text">
+                                                        Abort
+                                                    </div>
+                                                </div>
+                                                <div unselectable="on" className="anim-trans-backcolor btn alarm clickable">
+                                                    <div className="regular-text">
+                                                        Retry
+                                                    </div>
+                                                </div>
+                                                <div unselectable="on" className="anim-trans-backcolor btn alarm clickable">
+                                                    <div className="regular-text">
+                                                        Ignore
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div unselectable="on" className="anim-trans-backcolor btn alarm clickable">
-                                                <div className="regular-text">
-                                                    Retry
-                                                </div>
+                                        </div>
+                                      ) : (
+                                        <div className="dialog error dialog-hidden dialog-fade up" id="standard-dialog-e">
+                                            <div className="title regular-content">
+                                                Title of error dialog
+                                                <span className="fa-stack close-button" id="close-button-e">
+                                                    <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true" id="close-button-e-l"></i>
+                                                    <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true" id="close-button-e-r"></i>
+                                                </span>
                                             </div>
-                                            <div unselectable="on" className="anim-trans-backcolor btn alarm clickable">
-                                                <div className="regular-text">
-                                                    Ignore
+                                            <div className="images">
+                                                <i className="fa fa-times-circle icon" aria-hidden="true"></i>
+                                            </div>
+                                            <div className="content regular-content">
+                                                <p className="text">Content of dialog.<br/>This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.This is a text for text of dialog to check display.</p>
+                                            </div>
+                                            <div className="buttons abort-retry-ignore">
+                                                <div unselectable="on" className="anim-trans-backcolor btn alarm clickable">
+                                                    <div className="regular-text">
+                                                        Abort
+                                                    </div>
+                                                </div>
+                                                <div unselectable="on" className="anim-trans-backcolor btn alarm clickable">
+                                                    <div className="regular-text">
+                                                        Retry
+                                                    </div>
+                                                </div>
+                                                <div unselectable="on" className="anim-trans-backcolor btn alarm clickable">
+                                                    <div className="regular-text">
+                                                        Ignore
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                      )}
                                     {/* ******************** E.X.4 component [standard dialog - error] <end> ******************** */}
                                     {/* ******************** component [standard dialog] <end> ******************** */}
                                 </div>
@@ -2073,74 +2205,91 @@ export default class StylesGuideline extends React.Component {
     }
 
     componentDidMount() {
-        var dialogOverlay = document.querySelector("#standard-dialog-overlay");
-        // ******************** For information dialog <start> ********************
         var openButtonInfo = document.querySelector("#open-standard-dialog-button-i");
-        var dialogInfo = document.querySelector("#standard-dialog-i");
-        var closeButtonInfo = document.querySelector("#close-button-i");
-        openButtonInfo.addEventListener("click", function() {
-            dialogInfo.classList.remove("dialog-hidden");
-            dialogInfo.classList.toggle("down");
-            dialogInfo.classList.toggle("up");
-            dialogOverlay.classList.toggle("dialog-hidden");
-        });
-        closeButtonInfo.addEventListener("click", function() {
-            dialogInfo.classList.toggle("down");
-            dialogInfo.classList.toggle("up");
-            dialogOverlay.classList.toggle("dialog-hidden");
-        });
-        // ******************** For information dialog <end> ********************
-        
-        // ******************** For confirmation dialog <start> ********************
         var openButtonConf = document.querySelector("#open-standard-dialog-button-c");
-        var dialogConf = document.querySelector("#standard-dialog-c");
-        var closeButtonConf = document.querySelector("#close-button-c");
-        openButtonConf.addEventListener("click", function() {
-            dialogConf.classList.remove("dialog-hidden");
-            dialogConf.classList.toggle("down");
-            dialogConf.classList.toggle("up");
-            dialogOverlay.classList.toggle("dialog-hidden");
-        });
-        closeButtonConf.addEventListener("click", function() {
-            dialogConf.classList.toggle("down");
-            dialogConf.classList.toggle("up");
-            dialogOverlay.classList.toggle("dialog-hidden");
-        });
-        // ******************** For confirmation dialog <end> ********************
-
-        // ******************** For warning dialog <start> ********************
         var openButtonWarn = document.querySelector("#open-standard-dialog-button-w");
-        var dialogWarn = document.querySelector("#standard-dialog-w");
-        var closeButtonWarn = document.querySelector("#close-button-w");
-        openButtonWarn.addEventListener("click", function() {
-            dialogWarn.classList.remove("dialog-hidden");
-            dialogWarn.classList.toggle("down");
-            dialogWarn.classList.toggle("up");
-            dialogOverlay.classList.toggle("dialog-hidden");
-        });
-        closeButtonWarn.addEventListener("click", function() {
-            dialogWarn.classList.toggle("down");
-            dialogWarn.classList.toggle("up");
-            dialogOverlay.classList.toggle("dialog-hidden");
-        });
-        // ******************** For warning dialog <end> ********************
-
-        // ******************** For error dialog <start> ********************
         var openButtonErr = document.querySelector("#open-standard-dialog-button-e");
-        var dialogErr = document.querySelector("#standard-dialog-e");
+
+        var closeButtonInfo = document.querySelector("#close-button-i");
+        var closeButtonConf = document.querySelector("#close-button-c");
+        var closeButtonWarn = document.querySelector("#close-button-w");
         var closeButtonErr = document.querySelector("#close-button-e");
-        openButtonErr.addEventListener("click", function() {
-            dialogErr.classList.remove("dialog-hidden");
-            dialogErr.classList.toggle("down");
-            dialogErr.classList.toggle("up");
-            dialogOverlay.classList.toggle("dialog-hidden");
-        });
-        closeButtonErr.addEventListener("click", function() {
-            dialogErr.classList.toggle("down");
-            dialogErr.classList.toggle("up");
-            dialogOverlay.classList.toggle("dialog-hidden");
-        });
-        // ******************** For error dialog <end> ********************
+
+        openButtonInfo.addEventListener('click', this.showHindStandardDialogListener, false);
+        openButtonConf.addEventListener('click', this.showHindStandardDialogListener, false);
+        openButtonWarn.addEventListener('click', this.showHindStandardDialogListener, false);
+        openButtonErr.addEventListener('click', this.showHindStandardDialogListener, false);
+
+        closeButtonInfo.addEventListener('click', this.showHindStandardDialogListener, false);
+        closeButtonConf.addEventListener('click', this.showHindStandardDialogListener, false);
+        closeButtonWarn.addEventListener('click', this.showHindStandardDialogListener, false);
+        closeButtonErr.addEventListener('click', this.showHindStandardDialogListener, false);
+    }
+    
+    showHindStandardDialogListener(event) {
+        var dialogOverlay = document.querySelector("#standard-dialog-overlay");
+        
+        var openButtonInfo = document.querySelector("#open-standard-dialog-button-i");
+        var openButtonConf = document.querySelector("#open-standard-dialog-button-c");
+        var openButtonWarn = document.querySelector("#open-standard-dialog-button-w");
+        var openButtonErr = document.querySelector("#open-standard-dialog-button-e");
+
+        var closeButtonInfo = document.querySelector("#close-button-i");
+        var closeButtonInfoL = document.querySelector("#close-button-i-l");
+        var closeButtonInfoR = document.querySelector("#close-button-i-r");
+        var closeButtonConf = document.querySelector("#close-button-c");
+        var closeButtonConfL = document.querySelector("#close-button-c-l");
+        var closeButtonConfR = document.querySelector("#close-button-c-r");
+        var closeButtonWarn = document.querySelector("#close-button-w");
+        var closeButtonWarnL = document.querySelector("#close-button-w-l");
+        var closeButtonWarnR = document.querySelector("#close-button-w-r");
+        var closeButtonErr = document.querySelector("#close-button-e");
+        var closeButtonErrL = document.querySelector("#close-button-e-l");
+        var closeButtonErrR = document.querySelector("#close-button-e-r");
+
+        var dialogElement;
+        if (event.target == openButtonInfo) {
+            dialogElement = document.querySelector("#standard-dialog-i");
+            // this.removeSpecificClass(dialogElement, "dialog-hidden");
+        } else if (event.target ==  openButtonConf) {
+            dialogElement = document.querySelector("#standard-dialog-c");
+            // this.removeSpecificClass(dialogElement, "dialog-hidden");
+        } else if (event.target ==  openButtonWarn) {
+            dialogElement = document.querySelector("#standard-dialog-w");
+            // this.removeSpecificClass(dialogElement, "dialog-hidden");
+        } else if (event.target ==  openButtonErr) {
+            dialogElement = document.querySelector("#standard-dialog-e");
+            // this.removeSpecificClass(dialogElement, "dialog-hidden");
+        } else if (event.target == closeButtonInfo || event.target == closeButtonInfoL || event.target == closeButtonInfoR) {
+            dialogElement = document.querySelector("#standard-dialog-i");
+        } else if (event.target == closeButtonConf || event.target == closeButtonConfL || event.target == closeButtonConfR) {
+            dialogElement = document.querySelector("#standard-dialog-c");
+        } else if (event.target == closeButtonWarn || event.target == closeButtonWarnL || event.target == closeButtonWarnR) {
+            dialogElement = document.querySelector("#standard-dialog-w");
+        } else if (event.target == closeButtonErr || event.target == closeButtonErrL || event.target == closeButtonErrR) {
+            dialogElement = document.querySelector("#standard-dialog-e");
+        }
+
+        dialogElement.classList.remove("dialog-hidden");
+        dialogElement.classList.toggle("down");
+        dialogElement.classList.toggle("up");
+        dialogOverlay.classList.toggle("dialog-hidden");
+    }
+
+    removeSpecificClass(element, name) {
+        // if (this.state.onIE || this.state.onEdge) {
+        //     var newClassName = "";
+        //     var i;
+        //     var classes = element.className.split(" ");
+        //     for(i = 0; i < classes.length; i++) {
+        //         if(classes[i] !== name) {
+        //             newClassName += classes[i] + " ";
+        //         }
+        //     }
+        //     element.className = newClassName;
+        // } else {
+        //     element.classList.remove(name);
+        // }
     }
 
 }

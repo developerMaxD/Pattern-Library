@@ -160,7 +160,7 @@
 .dialog-fade {
     opacity: 0;
     &.down {
-        display: block;
+        // display: block;
         animation: fadeDown 0.3s ease-in both;
     }
     &.up {

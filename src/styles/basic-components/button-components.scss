@@ -43,6 +43,9 @@
         margin-top: 0px;
         cursor: default;
     }
+    > div {
+        pointer-events: none;
+    }
 }
 @mixin large-button-text($marginSide: margin-left, $marginOffset: 0px) {
     @extend .regular-section;
