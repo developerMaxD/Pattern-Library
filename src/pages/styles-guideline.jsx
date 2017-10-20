@@ -25,10 +25,26 @@ export default class StylesGuideline extends React.Component {
         const isIE = /*@cc_on!@*/false || !!document.documentMode;
         // Edge 20+
         const isEdge = !isIE && !!window.StyleMedia;
-        // Chrome 1+
-        const isChrome = !!window.chrome && !!window.chrome.webstore;
+
+        var isChrome = false;
+        var isUCBrowser = false;
+        if (!!window.chrome && !!window.chrome.webstore) {
+            if (/UBrowser/.test(navigator.userAgent)) {
+                // Chrome 1+
+                isChrome = false;
+                // UC Browser
+                isUCBrowser = true;
+            } else {
+                // Chrome 1+
+                isChrome = true;
+                // UC Browser
+                isUCBrowser = false;
+            }
+        }
         // UC Browser
-        const isUCBrowser = /^Mozilla\/5\.0 .+ Gecko/.test(navigator.userAgent);
+        // const isUCBrowser = (isChrome || isSafari) ? false : /^Mozilla\/5\.0 .+ Gecko/.test(navigator.userAgent);
+        // console.log('Chrome: ', isChrome, '; Safari: ', isSafari, '; UC: ', isUCBrowser, ';   userAgent: ', navigator.userAgent);
+
         // ******************** Web browser detector ********************
         this.state = { onChrome: isChrome,
                        onSafari: isSafari,
@@ -44,9 +60,9 @@ export default class StylesGuideline extends React.Component {
     }
 
     componentWillMount() {
-        // if (this.state.onIE && 
-        //     (this.state.picWidth == 0 || this.state.picHeight == 0 || this.state.thmWidth == 0 || this.state.thmHeight == 0)) {
-        if (this.state.picWidth == 0 || this.state.picHeight == 0 || this.state.thmWidth == 0 || this.state.thmHeight == 0) {
+        if ((this.state.onIE || this.state.onUCBrowser || this.state.onSafari) && 
+            (this.state.picWidth == 0 || this.state.picHeight == 0 || this.state.thmWidth == 0 || this.state.thmHeight == 0)) {
+        // if (this.state.picWidth == 0 || this.state.picHeight == 0 || this.state.thmWidth == 0 || this.state.thmHeight == 0) {
             let url = 'http://img.hb.aicdn.com/f8730e12f3c93f7155ed81ae8d35c3a782063250152ab-xdttq4_fw658';
             this.getPictureSize(url, this.setPictureSize);
             url = 'http://img.hb.aicdn.com/4b25a49fb9e3707894b8305865fc3d6f52077d269310-29zp33_fw658';
@@ -78,8 +94,10 @@ export default class StylesGuideline extends React.Component {
         let blackWhitePic = '';
 
         if (isSvgImgBrowser) {
-            blurThumbnail = '<svg id="svg-image-blur"><filter id="image-blur-effect"><feGaussianBlur stdDeviation="3" /></filter>' + 
+            blurThumbnail = '<svg id="svg-image-blur"><filter id="image-blur-effect"><feGaussianBlur stdDeviation="3" color-interpolation-filters="sRGB"/></filter>' + 
                 '<image id="svg-image" width="128" height="128" xlink:href="http://img.hb.aicdn.com/4b25a49fb9e3707894b8305865fc3d6f52077d269310-29zp33_fw658" /></svg>';
+        }
+        if (isSvgImgBrowser || this.state.onSafari) {
             blackWhitePic = 
                 '<svg xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 ' + this.state.picWidth + ' ' + this.state.picHeight + 
                 '" width="' + this.state.picWidth + '" height="' + this.state.picHeight + '"><defs><filter id="filtersPicture">' + 
@@ -337,7 +355,7 @@ export default class StylesGuideline extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    { isSvgImgBrowser ? 
+                                    { (isSvgImgBrowser || this.state.onSafari) ? 
                                       (
                                         <div className="image-ex-a3 image disabled" dangerouslySetInnerHTML={{ __html: blackWhitePic }} />
                                       ) : (
@@ -2103,7 +2121,7 @@ export default class StylesGuideline extends React.Component {
                                         </div>
                                       )}
                                     {/* ******************** E.X.3 component [standard dialog - warning] <end> ******************** */}
-                                    {/* ******************** E.X.e component [standard dialog - error] <start> ******************** */}
+                                    {/* ******************** E.X.4 component [standard dialog - error] <start> ******************** */}
                                     { isSpDlgBrowser ? 
                                       (
                                         <div className="dialog error dialog-fade up" id="standard-dialog-e">

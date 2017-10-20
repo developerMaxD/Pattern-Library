@@ -105,6 +105,7 @@
     top: 30%;
     left: 50%;
     transform: translate(-50%, -30%);
+    -webkit-transform: translate(-50%, -30%);
     width: 520px;
     max-width: 100%;
     height: 240px;
@@ -160,31 +161,52 @@
 .dialog-fade {
     opacity: 0;
     &.down {
-        // display: block;
         animation: fadeDown 0.3s ease-in both;
+        -webkit-animation: fadeDown 0.3s ease-in both;
     }
     &.up {
         animation: fadeUp 0.3s ease-out both;
+        -webkit-animation: fadeUp 0.3s ease-out both;
     }
 }
 @keyframes fadeDown {
 	from {
 		opacity: 0;
-		transform: translate3d(-50%, -230%, 0);
+        transform: translate3d(-50%, -230%, 0);
 	}
 	to {
 		opacity: 1;
-		transform: translate3d(-50%, -30%, 10);
+        transform: translate3d(-50%, -30%, 0);
 	}
 }
 @keyframes fadeUp {
 	from {
 		opacity: 1;
-        transform: translate3d(-50%, -30%, 10);
+        transform: translate3d(-50%, -30%, 0);
 	}
 	to {
         opacity: 0;
-		transform: translate3d(-50%, -230%, 0);
+        transform: translate3d(-50%, -230%, 0);
+	}
+}
+@-webkit-keyframes fadeDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-50%, -230%, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(-50%, -30%, 0);
+	}
+}
+@-webkit-keyframes fadeUp {
+	from {
+		opacity: 1;
+        -webkit-transform: translate3d(-50%, -30%, 0);
+	}
+	to {
+        opacity: 0;
+		-webkit-transform: translate3d(-50%, -230%, 0);
 	}
 }
 // -------------------- Common styles of dialogs <end> --------------------

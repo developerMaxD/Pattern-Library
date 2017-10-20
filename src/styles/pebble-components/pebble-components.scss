@@ -3,6 +3,8 @@
     border-style: none;
     outline: none;
     color: $color;
+    -webkit-text-fill-color: $color;
+    -webkit-opacity: 1;
     background-color: $back-color;
     margin: 3px 8px;
     min-height: 24px;
@@ -17,6 +19,7 @@
     height: $height;
     line-height: $height;
     transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
     top: 50%;
     border-style: none;
     outline: none;
