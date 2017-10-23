@@ -159,7 +159,7 @@
     display: none;
 }
 .dialog-fade {
-    opacity: 0;
+    // opacity: 0;
     &.down {
         animation: fadeDown 0.3s ease-in both;
         -webkit-animation: fadeDown 0.3s ease-in both;

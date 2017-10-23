@@ -1962,7 +1962,7 @@ export default class StylesGuideline extends React.Component {
                                                 <div unselectable="on" className="anim-trans-backcolor btn primary clickable">
                                                     <div className="regular-text">
                                                         OK
-                                                   </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1985,7 +1985,7 @@ export default class StylesGuideline extends React.Component {
                                                 <div unselectable="on" className="anim-trans-backcolor btn primary clickable">
                                                     <div className="regular-text">
                                                         OK
-                                                   </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
