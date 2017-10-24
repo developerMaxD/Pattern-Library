@@ -7,7 +7,7 @@ export default class StylesGuideline extends React.Component {
         this.getPictureSize = this.getPictureSize.bind(this);
         this.setPictureSize = this.setPictureSize.bind(this);
         this.setThumbnailSize = this.setThumbnailSize.bind(this);
-        this.removeSpecificClass = this.removeSpecificClass.bind(this);
+        // this.removeSpecificClass = this.removeSpecificClass.bind(this);
         this.showHindStandardDialogListener = this.showHindStandardDialogListener.bind(this);
         // ******************** Web browser detector ********************
         // Opera 8.0+
@@ -2294,20 +2294,20 @@ export default class StylesGuideline extends React.Component {
         dialogOverlay.classList.toggle("dialog-hidden");
     }
 
-    removeSpecificClass(element, name) {
-        // if (this.state.onIE || this.state.onEdge) {
-        //     var newClassName = "";
-        //     var i;
-        //     var classes = element.className.split(" ");
-        //     for(i = 0; i < classes.length; i++) {
-        //         if(classes[i] !== name) {
-        //             newClassName += classes[i] + " ";
-        //         }
-        //     }
-        //     element.className = newClassName;
-        // } else {
-        //     element.classList.remove(name);
-        // }
-    }
+    // removeSpecificClass(element, name) {
+    //     // if (this.state.onIE || this.state.onEdge) {
+    //     //     var newClassName = "";
+    //     //     var i;
+    //     //     var classes = element.className.split(" ");
+    //     //     for(i = 0; i < classes.length; i++) {
+    //     //         if(classes[i] !== name) {
+    //     //             newClassName += classes[i] + " ";
+    //     //         }
+    //     //     }
+    //     //     element.className = newClassName;
+    //     // } else {
+    //     //     element.classList.remove(name);
+    //     // }
+    // }
 
 }
