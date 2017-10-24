@@ -2268,16 +2268,12 @@ export default class StylesGuideline extends React.Component {
         var dialogElement;
         if (event.target == openButtonInfo) {
             dialogElement = document.querySelector("#standard-dialog-i");
-            // this.removeSpecificClass(dialogElement, "dialog-hidden");
         } else if (event.target ==  openButtonConf) {
             dialogElement = document.querySelector("#standard-dialog-c");
-            // this.removeSpecificClass(dialogElement, "dialog-hidden");
         } else if (event.target ==  openButtonWarn) {
             dialogElement = document.querySelector("#standard-dialog-w");
-            // this.removeSpecificClass(dialogElement, "dialog-hidden");
         } else if (event.target ==  openButtonErr) {
             dialogElement = document.querySelector("#standard-dialog-e");
-            // this.removeSpecificClass(dialogElement, "dialog-hidden");
         } else if (event.target == closeButtonInfo || event.target == closeButtonInfoL || event.target == closeButtonInfoR) {
             dialogElement = document.querySelector("#standard-dialog-i");
         } else if (event.target == closeButtonConf || event.target == closeButtonConfL || event.target == closeButtonConfR) {
@@ -2288,26 +2284,13 @@ export default class StylesGuideline extends React.Component {
             dialogElement = document.querySelector("#standard-dialog-e");
         }
 
-        dialogElement.classList.remove("dialog-hidden");
+        if (this.state.onSafari) {
+            dialogElement.classList.toggle("dialog-hidden");
+        } else {
+            dialogElement.classList.remove("dialog-hidden");
+        }
         dialogElement.classList.toggle("down");
         dialogElement.classList.toggle("up");
         dialogOverlay.classList.toggle("dialog-hidden");
     }
-
-    // removeSpecificClass(element, name) {
-    //     // if (this.state.onIE || this.state.onEdge) {
-    //     //     var newClassName = "";
-    //     //     var i;
-    //     //     var classes = element.className.split(" ");
-    //     //     for(i = 0; i < classes.length; i++) {
-    //     //         if(classes[i] !== name) {
-    //     //             newClassName += classes[i] + " ";
-    //     //         }
-    //     //     }
-    //     //     element.className = newClassName;
-    //     // } else {
-    //     //     element.classList.remove(name);
-    //     // }
-    // }
-
 }
