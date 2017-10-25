@@ -167,6 +167,8 @@
     &.name-value {
         > .item {
             display: flex;
+            display: -webkit-box;  /* FOR OLD Safari 3.1-6 */
+            display: -webkit-flex; /* FOR NEW Safari 7+ */
             flex-flow: row;
             max-height: 30px;
             width: 100%;
