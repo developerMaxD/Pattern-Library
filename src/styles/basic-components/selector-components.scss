@@ -299,7 +299,8 @@
         display: flex;
         display: -webkit-flex;
         flex-flow: row wrap;
-        -webkit-flex-flow: row wrap;
+        -webkit-flex-direction: row;
+        -webkit-flex-wrap: wrap;
         justify-content: flex-start;
         -webkit-justify-content: flex-start;
         align-items: flex-start;
