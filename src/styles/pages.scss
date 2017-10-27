@@ -1154,6 +1154,11 @@
                 }
                 > .title-components-toaster {
                     top: 205px;
+                    > .toaster-ex-a {
+                        position: absolute;
+                        top: 40px;
+                        left: 40px;
+                    }
                 }
             }
             > .title-picker-components {

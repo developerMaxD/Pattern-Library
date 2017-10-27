@@ -2229,6 +2229,13 @@ export default class StylesGuideline extends React.Component {
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-toaster">
                                     <li>Toaster:</li>
+                                    {/* ******************** Button for show a Toaster <start> ******************** */}
+                                    <div unselectable="on" className="toaster-ex-a anim-trans-backcolor btn primary clickable" id="open-feature-dialog-button">
+                                        <div className="regular-text">
+                                            Show toaster<br/>(one by one)
+                                        </div>
+                                    </div>
+                                    {/* ******************** Button for show a Toaster <end> ******************** */}
                                 </div>
                             </div>
                             <div className="title-level-04 regular-content title-picker-components">
