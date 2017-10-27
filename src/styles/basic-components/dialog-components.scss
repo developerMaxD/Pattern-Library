@@ -9,11 +9,8 @@
     background: rgba(0, 0, 0, 0.25);
 }
 @mixin dialog-buttons($count: 2) {
-    // ############ design ############
-    // border: 1px dashed violet;
-    // ############ design ############
     position: absolute;
-    top: 180px;
+    bottom: 0px;
     left: 0px;
     height: 60px;
     width: 100%;
@@ -40,7 +37,30 @@
         height: 0px;
     }
 }
-@mixin dialog-layout($base-color: $sky-base) {
+@mixin dialog-layout($facade: "standard", $base-color: $sky-base) {
+    z-index: 1000000;
+    position: fixed;
+    left: 50%;
+    border-radius: 12px;
+    background: $whitesmoke;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.9);
+    @if $facade == "standard" {
+        top: 30%;
+        transform: translate(-50%, -30%);
+        -webkit-transform: translate(-50%, -30%);
+        width: 520px;
+        max-width: 100%;
+        height: 240px;
+        max-height: 100%;
+    } @else if $facade == "feature" {
+        top: 10%;
+        transform: translate(-50%, -10%);
+        -webkit-transform: translate(-50%, -10%);
+        width: 700px;
+        max-width: 90%;
+        height: 90%;
+        max-height: 90%;
+    }
     > .title {
         position: absolute;
         top: 0px;
@@ -58,40 +78,55 @@
             @include close-button($top: 7px, $color: $whitesmoke, $size: 1.5em, $offset: 5px, $side: right, $sideOffset: 20px, $cursor: pointer);
         }
     }
-    > .images {
-        // ############ design ############
-        // border: 1px dashed red;
-        // ############ design ############
-        position: absolute;
-        top: 32px;
-        left: 0px;
-        height: calc(100% - 32px - 60px);
-        width: 100px;
-        > .icon {
+    @if $facade == "standard" {
+        > .images {
             position: absolute;
-            transform: translate(-50%, -50%);
-            top: 50%;
-            left: 50%;
-            color: $base-color;
-            font-size: 4.5em;
+            top: 32px;
+            left: 0px;
+            height: calc(100% - 32px - 60px);
+            width: 100px;
+            > .icon {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                color: $base-color;
+                font-size: 4.5em;
+            }
         }
-    }
-    > .content {
-        // ############ design ############
-        // border: 1px dashed blue;
-        // ############ design ############
-        position: absolute;
-        top: 32px;
-        left: 100px;
-        height: calc(100% - 32px - 60px);
-        width: calc(100% - 100px);
-        > .text {
+        > .content {
             position: absolute;
-            transform: translate(0, -50%);
-            top: 50%;
-            left: 0;
-            padding-right: 20px;
-            color: $base-color;
+            top: 32px;
+            left: 100px;
+            height: calc(100% - 32px - 60px);
+            width: calc(100% - 100px);
+            > .text {
+                position: absolute;
+                transform: translate(0, -50%);
+                top: 50%;
+                left: 0;
+                padding-right: 20px;
+                color: $base-color;
+            }
+        }
+    } @else if $facade == "feature" {
+        > .sub-page {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            -webkit-transform: translate(-50%, 0);
+            width: 96%;
+            height: calc(100% - 32px - 60px);
+            > iframe {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                border: 0px solid transparent;
+                overflow-y: scroll;
+            }
         }
     }
 }
@@ -99,20 +134,6 @@
 
 // -------------------- Styles of component 'Standard dialog' <start> --------------------
 .dialog {
-    display: block;
-    z-index: 1000000;
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    -webkit-transform: translate(-50%, -30%);
-    width: 520px;
-    max-width: 100%;
-    height: 240px;
-    max-height: 100%;
-    border-radius: 12px;
-    background: $whitesmoke;
-    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.9);
     &.information {
         @include dialog-layout($base-color: $sky-base);
     }
@@ -124,6 +145,9 @@
     }
     &.error {
         @include dialog-layout($base-color: $red-base);
+    }
+    &.feature {
+        @include dialog-layout($facade: "feature", $base-color: $sky-base);
     }
     > .buttons {
         &.ok {
@@ -149,6 +173,7 @@
 // -------------------- Styles of component 'Standard dialog' <end> --------------------
 
 // -------------------- Styles of component 'Feature dialog' <start> --------------------
+// Reference: <.dialog .feature>
 // -------------------- Styles of component 'Feature dialog' <end> --------------------
 
 // -------------------- Styles of component 'Toaster' <start> --------------------
@@ -159,7 +184,6 @@
     display: none;
 }
 .dialog-fade {
-    // opacity: 0;
     &.down {
         animation: fadeDown 0.3s ease-in both;
         -webkit-animation: fadeDown 0.3s ease-in both;
@@ -167,6 +191,14 @@
     &.up {
         animation: fadeUp 0.3s ease-out both;
         -webkit-animation: fadeUp 0.3s ease-out both;
+    }
+    &.in {
+        animation: fadeIn 0.3s ease-in both;
+        -webkit-animation: fadeIn 0.3s ease-in both;
+    }
+    &.out {
+        animation: fadeOut 0.3s ease-out both;
+        -webkit-animation: fadeOut 0.3s ease-out both;
     }
 }
 @keyframes fadeDown {
@@ -207,6 +239,38 @@
     to {
         opacity: 0;
         -webkit-transform: translate3d(-50%, -230%, 0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 // -------------------- Common styles of dialogs <end> --------------------

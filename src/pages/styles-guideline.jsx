@@ -2195,6 +2195,37 @@ export default class StylesGuideline extends React.Component {
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-feature-dialog">
                                     <li>Feature dialog:</li>
+                                    {/* ******************** Button for open dialog <start> ******************** */}
+                                    <div unselectable="on" className="ftdialog-ex-a anim-trans-backcolor btn primary clickable" id="open-feature-dialog-button">
+                                        <div className="regular-text">
+                                            Open feature dialog<br/>(show static html page)
+                                        </div>
+                                    </div>
+                                    {/* ******************** Button for open dialog <end> ******************** */}
+
+                                    {/* ******************** component [feature dialog] <start> ******************** */}
+                                    {/* ******************** E.X.1 component [feature dialog] <start> ******************** */}
+                                    <div className="dialog feature dialog-hidden dialog-fade out" id="feature-dialog">
+                                        <div className="title regular-content">
+                                            Title of feature dialog
+                                            <span className="fa-stack close-button" id="close-button-f">
+                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true" id="close-button-f-l"></i>
+                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true" id="close-button-f-r"></i>
+                                            </span>
+                                        </div>
+                                        <div className="sub-page">
+                                            <iframe id="sub-page-frame" src="http://localhost:9088/pages/feature-example.html" scrolling="auto" frameborder="0"></iframe>
+                                        </div>
+                                        <div className="buttons ok">
+                                            <div unselectable="on" className="anim-trans-backcolor btn primary clickable">
+                                                <div className="regular-text">
+                                                    OK
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* ******************** E.X.1 component [feature dialog] <end> ******************** */}
+                                    {/* ******************** component [feature dialog] <end> ******************** */}
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-toaster">
                                     <li>Toaster:</li>
@@ -2227,30 +2258,51 @@ export default class StylesGuideline extends React.Component {
         var openButtonConf = document.querySelector("#open-standard-dialog-button-c");
         var openButtonWarn = document.querySelector("#open-standard-dialog-button-w");
         var openButtonErr = document.querySelector("#open-standard-dialog-button-e");
+        var openButtonFtr = document.querySelector("#open-feature-dialog-button");
 
         var closeButtonInfo = document.querySelector("#close-button-i");
         var closeButtonConf = document.querySelector("#close-button-c");
         var closeButtonWarn = document.querySelector("#close-button-w");
         var closeButtonErr = document.querySelector("#close-button-e");
+        var closeButtonFtr = document.querySelector("#close-button-f");
 
         openButtonInfo.addEventListener('click', this.showHindStandardDialogListener, false);
         openButtonConf.addEventListener('click', this.showHindStandardDialogListener, false);
         openButtonWarn.addEventListener('click', this.showHindStandardDialogListener, false);
         openButtonErr.addEventListener('click', this.showHindStandardDialogListener, false);
+        openButtonFtr.addEventListener('click', this.showHindStandardDialogListener, false);
 
         closeButtonInfo.addEventListener('click', this.showHindStandardDialogListener, false);
         closeButtonConf.addEventListener('click', this.showHindStandardDialogListener, false);
         closeButtonWarn.addEventListener('click', this.showHindStandardDialogListener, false);
         closeButtonErr.addEventListener('click', this.showHindStandardDialogListener, false);
+        closeButtonFtr.addEventListener('click', this.showHindStandardDialogListener, false);
+
+        // ===================== common: dialog popup and combbox drop scroll control =====================
+        (function(w) {
+            var cntl = { scrollX: 0, scrollY: 0 };
+            var dialogOverlay = document.querySelector("#standard-dialog-overlay");
+        
+            document.addEventListener('scroll', function() {
+                if (dialogOverlay.classList.contains("dialog-hidden")) {
+                    cntl.scrollX = w.scrollX;
+                    cntl.scrollY = w.scrollY;
+                } else {
+                    w.scrollTo(cntl.scrollX, cntl.scrollY);
+                }
+            });
+        })(window);
+        // ===================== common: dialog popup and combbox drop scroll control =====================
     }
     
     showHindStandardDialogListener(event) {
         var dialogOverlay = document.querySelector("#standard-dialog-overlay");
-        
+
         var openButtonInfo = document.querySelector("#open-standard-dialog-button-i");
         var openButtonConf = document.querySelector("#open-standard-dialog-button-c");
         var openButtonWarn = document.querySelector("#open-standard-dialog-button-w");
         var openButtonErr = document.querySelector("#open-standard-dialog-button-e");
+        var openButtonFtr = document.querySelector("#open-feature-dialog-button");
 
         var closeButtonInfo = document.querySelector("#close-button-i");
         var closeButtonInfoL = document.querySelector("#close-button-i-l");
@@ -2264,8 +2316,12 @@ export default class StylesGuideline extends React.Component {
         var closeButtonErr = document.querySelector("#close-button-e");
         var closeButtonErrL = document.querySelector("#close-button-e-l");
         var closeButtonErrR = document.querySelector("#close-button-e-r");
+        var closeButtonFtr = document.querySelector("#close-button-f");
+        var closeButtonFtrL = document.querySelector("#close-button-f-l");
+        var closeButtonFtrR = document.querySelector("#close-button-f-r");
 
         var dialogElement;
+        var toggleFadeInOut = false;
         if (event.target == openButtonInfo) {
             dialogElement = document.querySelector("#standard-dialog-i");
         } else if (event.target ==  openButtonConf) {
@@ -2274,6 +2330,9 @@ export default class StylesGuideline extends React.Component {
             dialogElement = document.querySelector("#standard-dialog-w");
         } else if (event.target ==  openButtonErr) {
             dialogElement = document.querySelector("#standard-dialog-e");
+        } else if (event.target ==  openButtonFtr) {
+            dialogElement = document.querySelector("#feature-dialog");
+            toggleFadeInOut = true;
         } else if (event.target == closeButtonInfo || event.target == closeButtonInfoL || event.target == closeButtonInfoR) {
             dialogElement = document.querySelector("#standard-dialog-i");
         } else if (event.target == closeButtonConf || event.target == closeButtonConfL || event.target == closeButtonConfR) {
@@ -2282,15 +2341,28 @@ export default class StylesGuideline extends React.Component {
             dialogElement = document.querySelector("#standard-dialog-w");
         } else if (event.target == closeButtonErr || event.target == closeButtonErrL || event.target == closeButtonErrR) {
             dialogElement = document.querySelector("#standard-dialog-e");
+        } else if (event.target == closeButtonFtr || event.target == closeButtonFtrL || event.target == closeButtonFtrR) {
+            dialogElement = document.querySelector("#feature-dialog");
+            toggleFadeInOut = true;
         }
+
+        dialogOverlay.classList.toggle("dialog-hidden");
 
         if (this.state.onSafari) {
             dialogElement.classList.toggle("dialog-hidden");
         } else {
             dialogElement.classList.remove("dialog-hidden");
         }
-        dialogElement.classList.toggle("down");
-        dialogElement.classList.toggle("up");
-        dialogOverlay.classList.toggle("dialog-hidden");
+
+        if (toggleFadeInOut) {
+            dialogElement.classList.toggle("in");
+            dialogElement.classList.toggle("out");
+            if (dialogOverlay.classList.contains("dialog-hidden")) {
+                dialogElement.classList.add("dialog-hidden");
+            }
+        } else {
+            dialogElement.classList.toggle("down");
+            dialogElement.classList.toggle("up");
+        }
     }
 }
