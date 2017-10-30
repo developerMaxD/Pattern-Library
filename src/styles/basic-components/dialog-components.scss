@@ -177,6 +177,32 @@
 // -------------------- Styles of component 'Feature dialog' <end> --------------------
 
 // -------------------- Styles of component 'Toaster' <start> --------------------
+.toaster {
+    // display: none;
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: black;
+    color: $whitesmoke;
+    text-align: center;
+    border-radius: 6px;
+    padding: 16px;
+    position: fixed;
+    z-index: 999999;
+    right: 15px;
+    bottom: 15px;
+    &.eject {
+        // display: block;
+        visibility: visible;
+        animation: fadeeject 0.3s ease-in both;
+        -webkit-animation: fadeeject 0.3s ease-in both;
+    }
+    &.shrink {
+        animation: fadeshrink 0.3s ease-out both;
+        -webkit-animation: fadeshrink 0.3s ease-out both;
+        // visibility: hidden;
+    }
+}
 // -------------------- Styles of component 'Toaster' <end> --------------------
 
 // -------------------- Common styles of dialogs <start> --------------------
@@ -185,23 +211,23 @@
 }
 .dialog-fade {
     &.down {
-        animation: fadeDown 0.3s ease-in both;
-        -webkit-animation: fadeDown 0.3s ease-in both;
+        animation: fadedown 0.3s ease-in both;
+        -webkit-animation: fadedown 0.3s ease-in both;
     }
     &.up {
-        animation: fadeUp 0.3s ease-out both;
-        -webkit-animation: fadeUp 0.3s ease-out both;
+        animation: fadeup 0.3s ease-out both;
+        -webkit-animation: fadeup 0.3s ease-out both;
     }
     &.in {
-        animation: fadeIn 0.3s ease-in both;
-        -webkit-animation: fadeIn 0.3s ease-in both;
+        animation: fadein 0.3s ease-in both;
+        -webkit-animation: fadein 0.3s ease-in both;
     }
     &.out {
-        animation: fadeOut 0.3s ease-out both;
-        -webkit-animation: fadeOut 0.3s ease-out both;
+        animation: fadeout 0.3s ease-out both;
+        -webkit-animation: fadeout 0.3s ease-out both;
     }
 }
-@keyframes fadeDown {
+@keyframes fadedown {
     from {
         opacity: 0;
         transform: translate3d(-50%, -230%, 0);
@@ -211,7 +237,7 @@
         transform: translate3d(-50%, -30%, 0);
     }
 }
-@keyframes fadeUp {
+@keyframes fadeup {
     from {
         opacity: 1;
         transform: translate3d(-50%, -30%, 0);
@@ -221,7 +247,7 @@
         transform: translate3d(-50%, -230%, 0);
     }
 }
-@-webkit-keyframes fadeDown {
+@-webkit-keyframes fadedown {
     from {
         opacity: 0;
         -webkit-transform: translate3d(-50%, -230%, 0);
@@ -231,7 +257,7 @@
         -webkit-transform: translate3d(-50%, -30%, 0);
     }
 }
-@-webkit-keyframes fadeUp {
+@-webkit-keyframes fadeup {
     from {
         opacity: 1;
         -webkit-transform: translate3d(-50%, -30%, 0);
@@ -241,7 +267,7 @@
         -webkit-transform: translate3d(-50%, -230%, 0);
     }
 }
-@keyframes fadeIn {
+@keyframes fadein {
     from {
         opacity: 0;
     }
@@ -249,7 +275,7 @@
         opacity: 1;
     }
 }
-@keyframes fadeOut {
+@keyframes fadeout {
     from {
         opacity: 1;
     }
@@ -257,7 +283,7 @@
         opacity: 0;
     }
 }
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fadein {
     from {
         opacity: 0;
     }
@@ -265,9 +291,41 @@
         opacity: 1;
     }
 }
-@-webkit-keyframes fadeOut {
+@-webkit-keyframes fadeout {
     from {
         opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes fadeeject {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.6;
+    }
+}
+@keyframes fadeshrink {
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes fadeeject {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.6;
+    }
+}
+@-webkit-keyframes fadeshrink {
+    from {
+        opacity: 0.6;
     }
     to {
         opacity: 0;

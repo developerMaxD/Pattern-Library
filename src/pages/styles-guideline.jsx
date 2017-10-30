@@ -7,6 +7,7 @@ export default class StylesGuideline extends React.Component {
         this.getPictureSize = this.getPictureSize.bind(this);
         this.setPictureSize = this.setPictureSize.bind(this);
         this.setThumbnailSize = this.setThumbnailSize.bind(this);
+        this.ejectToasterBar = this.ejectToasterBar.bind(this);
         // this.removeSpecificClass = this.removeSpecificClass.bind(this);
         this.showHindStandardDialogListener = this.showHindStandardDialogListener.bind(this);
         // ******************** Web browser detector ********************
@@ -2230,18 +2231,78 @@ export default class StylesGuideline extends React.Component {
                                 <div className="title-level-05 regular-content-italic title-components-toaster">
                                     <li>Toaster:</li>
                                     {/* ******************** Button for show a Toaster <start> ******************** */}
-                                    <div unselectable="on" className="toaster-ex-a anim-trans-backcolor btn primary clickable" id="open-feature-dialog-button">
+                                    <div unselectable="on" className="toaster-ex-a anim-trans-backcolor btn primary clickable" id="show-toaster-on-bottom-right">
                                         <div className="regular-text">
                                             Show toaster<br/>(one by one)
                                         </div>
                                     </div>
                                     {/* ******************** Button for show a Toaster <end> ******************** */}
+
+                                    {/* ******************** component [toaster] <start> ******************** */}
+                                    <div id="toaster-bar-bottom-right" className="dialog-hidden">Some text some message..</div>
+                                    {/* ******************** component [toaster] <end> ******************** */}
                                 </div>
                             </div>
                             <div className="title-level-04 regular-content title-picker-components">
                                 6. Picker components:
                                 <div className="title-level-05 regular-content-italic title-components-date-picker">
                                     <li>Date picker:</li>
+                                    <div className="calendar">
+                                        <div className="month">
+                                            <ul>
+                                                <li className="prev">&#10094;</li>
+                                                <li className="next">&#10095;</li>
+                                                <li>
+                                                    August<br/>
+                                                    <span style={{"font-size":"18px"}}>2017</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <ul className="weekdays">
+                                            <li>Mo</li>
+                                            <li>Tu</li>
+                                            <li>We</li>
+                                            <li>Th</li>
+                                            <li>Fr</li>
+                                            <li>Sa</li>
+                                            <li>Su</li>
+                                        </ul>
+
+                                        <ul className="days">
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                            <li>4</li>
+                                            <li>5</li>
+                                            <li>6</li>
+                                            <li>7</li>
+                                            <li>8</li>
+                                            <li>9</li>
+                                            <li><span className="active">10</span></li>
+                                            <li>11</li>
+                                            <li>12</li>
+                                            <li>13</li>
+                                            <li>14</li>
+                                            <li>15</li>
+                                            <li>16</li>
+                                            <li>17</li>
+                                            <li>18</li>
+                                            <li>19</li>
+                                            <li>20</li>
+                                            <li>21</li>
+                                            <li>22</li>
+                                            <li>23</li>
+                                            <li>24</li>
+                                            <li>25</li>
+                                            <li>26</li>
+                                            <li>27</li>
+                                            <li>28</li>
+                                            <li>29</li>
+                                            <li>30</li>
+                                            <li>31</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-time-picker">
                                     <li>Time picker:</li>
@@ -2267,6 +2328,8 @@ export default class StylesGuideline extends React.Component {
         var openButtonErr = document.querySelector("#open-standard-dialog-button-e");
         var openButtonFtr = document.querySelector("#open-feature-dialog-button");
 
+        var openButtonToaster = document.querySelector("#show-toaster-on-bottom-right");
+
         var closeButtonInfo = document.querySelector("#close-button-i");
         var closeButtonConf = document.querySelector("#close-button-c");
         var closeButtonWarn = document.querySelector("#close-button-w");
@@ -2279,6 +2342,8 @@ export default class StylesGuideline extends React.Component {
         openButtonErr.addEventListener('click', this.showHindStandardDialogListener, false);
         openButtonFtr.addEventListener('click', this.showHindStandardDialogListener, false);
 
+        openButtonToaster.addEventListener('click', this.ejectToasterBar, false);
+        
         closeButtonInfo.addEventListener('click', this.showHindStandardDialogListener, false);
         closeButtonConf.addEventListener('click', this.showHindStandardDialogListener, false);
         closeButtonWarn.addEventListener('click', this.showHindStandardDialogListener, false);
@@ -2371,5 +2436,16 @@ export default class StylesGuideline extends React.Component {
             dialogElement.classList.toggle("down");
             dialogElement.classList.toggle("up");
         }
+    }
+
+    ejectToasterBar() {
+        // Get the toaster bar
+        var bar = document.querySelector("#toaster-bar-bottom-right")
+    
+        // Add the "show" class to DIV
+        bar.className = "toaster eject";
+    
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function(){ bar.className = "toaster shrink"; }, 3000);
     }
 }
