@@ -2247,61 +2247,146 @@ export default class StylesGuideline extends React.Component {
                                 6. Picker components:
                                 <div className="title-level-05 regular-content-italic title-components-date-picker">
                                     <li>Date picker:</li>
-                                    <div className="calendar">
-                                        <div className="month">
-                                            <ul>
-                                                <li className="prev">&#10094;</li>
-                                                <li className="next">&#10095;</li>
+                                    <div className="date-picker-ex-a regular-content">
+                                        <div ref="picker" className="combo-box focus">
+                                            <span className="placeholder">Please select name.</span>
+                                            <div className="content">
+                                                <input type="text" className="searcher"/>
+                                            </div>
+                                            <span className="fa-stack close-button">
+                                                <i className="fa fa-angle-right fa-stack-1x close-button-left" aria-hidden="true"></i>
+                                                <i className="fa fa-angle-left fa-stack-1x close-button-right" aria-hidden="true"></i>
+                                            </span>
+                                            <i className="fa fa-angle-up list-button" aria-hidden="true"></i>
+                                        </div>
+                                        <div className="calendar small-content">
+                                            <div className="month">
+                                                <ul>
+                                                    {/* <li className="prev">&#10094;</li>
+                                                    <li className="next">&#10095;</li> */}
+                                                    <li className="prev">
+                                                        <i className="fa fa-angle-left fa-stack-1x" aria-hidden="true"></i>
+                                                    </li>
+                                                    <li className="next">
+                                                        <i className="fa fa-angle-right fa-stack-1x" aria-hidden="true"></i>
+                                                    </li>
+                                                    <li>
+                                                        August<br/>
+                                                        {/* <span style={{"font-size":"18px"}}>2017</span> */}
+                                                        <span>2017</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+    
+                                            <ul className="weekdays">
+                                                <li>Mo</li>
+                                                <li>Tu</li>
+                                                <li>We</li>
+                                                <li>Th</li>
+                                                <li>Fr</li>
+                                                <li>Sa</li>
+                                                <li>Su</li>
+                                            </ul>
+    
+                                            <ul className="days">
                                                 <li>
-                                                    August<br/>
-                                                    <span style={{"font-size":"18px"}}>2017</span>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <span>1</span>
+                                                </li>
+                                                <li>
+                                                    <span>2</span>
+                                                </li>
+                                                <li>
+                                                    <span>3</span>
+                                                </li>
+                                                <li>
+                                                    <span>4</span>
+                                                </li>
+                                                <li>
+                                                    <span>5</span>
+                                                </li>
+                                                <li>
+                                                    <span>6</span>
+                                                </li>
+                                                <li>
+                                                    <span>7</span>
+                                                </li>
+                                                <li>
+                                                    <span>8</span>
+                                                </li>
+                                                <li>
+                                                    <span>9</span>
+                                                </li>
+                                                <li>
+                                                    <span>10</span>
+                                                </li>
+                                                <li>
+                                                    <span>11</span>
+                                                </li>
+                                                <li>
+                                                    <span>12</span>
+                                                </li>
+                                                <li>
+                                                    <span>13</span>
+                                                </li>
+                                                <li>
+                                                    <span>14</span>
+                                                </li>
+                                                <li>
+                                                    <span>15</span>
+                                                </li>
+                                                <li>
+                                                    <span>16</span>
+                                                </li>
+                                                <li>
+                                                    <span>17</span>
+                                                </li>
+                                                <li>
+                                                    <span>18</span>
+                                                </li>
+                                                <li>
+                                                    <span>19</span>
+                                                </li>
+                                                <li>
+                                                    <span>20</span>
+                                                </li>
+                                                <li>
+                                                    <span>21</span>
+                                                </li>
+                                                <li>
+                                                    <span>22</span>
+                                                </li>
+                                                <li>
+                                                    <span>23</span>
+                                                </li>
+                                                <li>
+                                                    <span>24</span>
+                                                </li>
+                                                <li>
+                                                    <span>25</span>
+                                                </li>
+                                                <li>
+                                                    <span>26</span>
+                                                </li>
+                                                <li>
+                                                    <span>27</span>
+                                                </li>
+                                                <li>
+                                                    <span>28</span>
+                                                </li>
+                                                <li>
+                                                    <span>29</span>
+                                                </li>
+                                                <li>
+                                                    <span>30</span>
+                                                </li>
+                                                <li>
+                                                    <span>31</span>
                                                 </li>
                                             </ul>
                                         </div>
-
-                                        <ul className="weekdays">
-                                            <li>Mo</li>
-                                            <li>Tu</li>
-                                            <li>We</li>
-                                            <li>Th</li>
-                                            <li>Fr</li>
-                                            <li>Sa</li>
-                                            <li>Su</li>
-                                        </ul>
-
-                                        <ul className="days">
-                                            <li>1</li>
-                                            <li>2</li>
-                                            <li>3</li>
-                                            <li>4</li>
-                                            <li>5</li>
-                                            <li>6</li>
-                                            <li>7</li>
-                                            <li>8</li>
-                                            <li>9</li>
-                                            <li><span className="active">10</span></li>
-                                            <li>11</li>
-                                            <li>12</li>
-                                            <li>13</li>
-                                            <li>14</li>
-                                            <li>15</li>
-                                            <li>16</li>
-                                            <li>17</li>
-                                            <li>18</li>
-                                            <li>19</li>
-                                            <li>20</li>
-                                            <li>21</li>
-                                            <li>22</li>
-                                            <li>23</li>
-                                            <li>24</li>
-                                            <li>25</li>
-                                            <li>26</li>
-                                            <li>27</li>
-                                            <li>28</li>
-                                            <li>29</li>
-                                            <li>30</li>
-                                            <li>31</li>
-                                        </ul>
                                     </div>
                                 </div>
                                 <div className="title-level-05 regular-content-italic title-components-time-picker">
@@ -2448,4 +2533,7 @@ export default class StylesGuideline extends React.Component {
         // After 3 seconds, remove the show class from DIV
         setTimeout(function(){ bar.className = "toaster shrink"; }, 3000);
     }
+
+    /* ******************** Functions for build calendar <start> ******************** */
+    /* ******************** Functions for build calendar <end> ******************** */
 }

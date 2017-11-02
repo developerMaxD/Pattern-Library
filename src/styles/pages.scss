@@ -1165,9 +1165,16 @@
                 top: 4400px;
                 > .title-components-date-picker {
                     top: 5px;
+                    > .date-picker-ex-a {
+                        position: absolute;
+                        top: 30px;
+                        left: 40px;
+                        height: 32px;
+                        width: 240px;
+                    }
                 }
                 > .title-components-time-picker {
-                    top: 205px;
+                    top: 255px;
                 }
             }
             > .title-subpage-components {
